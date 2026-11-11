@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "parent_commit": "585569b0ce18ec06a4b5d5971c16321b7decf906",
+  "source_sha256": "a45098673dafa29527f9e11bc8679ed5d9798844c525a1210517c2fa142f5339",
+  "summary_comparisons": 6,
+  "paired_percentage_deltas_verified": 18,
+  "accuracy_percentages_verified": 6,
+  "numeric_values_verified": 584,
+  "winner_markers_verified": 92,
+  "ties_preserved": true,
+  "github_rendered_tables": 3,
+  "github_rendered_footnotes": 15,
+  "github_preserves_highlight_markup": true,
+  "light_and_dark_theme_backgrounds_verified": true,
+  "baseline_measurements_unchanged": true,
+  "harness_unchanged": true,
+  "new_model_calls": 0
+}

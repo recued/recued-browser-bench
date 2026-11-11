@@ -17,19 +17,20 @@ different fixed context costs across stacks.[^catalog]
 
 ## Recued against each arm
 
-**Recued + Bridge: 28 correct / 28 runs.** Each speed/token comparison below uses the
-same task and repetition **where both arms were correct**, rather than comparing
-different successful task sets.[^paired] The tasks were developed against Recued;
-the two repetitions describe this setup and its observed outcomes.[^scope]
+**Recued + Bridge: 100% correct (28/28).** Time, token and native-round Δs are
+**median paired percentage differences** on the same task and repetition where
+both arms were correct.[^paired] **Negative means Bridge uses less; positive means
+Bridge uses more.** Correctness covers all 28 runs. The tasks were developed
+against Recued; two repetitions describe this setup and its observed outcomes.[^scope]
 
-| Compared with | Other arm correct / 28 | Bridge faster / paired successes | Bridge fewer tokens / paired successes | Takeaway |
-| --- | ---: | ---: | ---: | --- |
-| Recued + Playwright MCP | 11 / 28 | 11 / 11 | 11 / 11 | Bridge completed more tasks under the same Recued chat budget. The frozen MCP integration has a snapshot-reference limitation.[^mcp] |
-| browser-use standalone | 24 / 28 | 22 / 24 | 9 / 24 | Bridge was usually faster; browser-use used fewer tokens in 15/24 shared successes. Its browser-focused catalog is a different token baseline.[^catalog] |
-| Stagehand | 18 / 28 | 18 / 18 | 12 / 18 | Bridge completed more tasks and was faster in all shared successes. This compares Stagehand’s native v3 agent.[^versions] |
-| OpenClaw + browser-use | 23 / 28 | 23 / 23 | 22 / 23 | Both are general agents steering a browser layer. Bridge was faster in all shared successes and used fewer tokens in 22/23. |
-| OpenClaw + built-in browser | 24 / 28 | 22 / 24 | 21 / 24 | Bridge was faster and used fewer tokens in most shared successes. Separate cohort and download conditions qualify speed comparisons.[^timing] |
-| Hermes Agent | 24 / 28 | 23 / 24 | 20 / 24 | Bridge was faster in 23/24 shared successes and used fewer tokens in 20/24. Native round definitions differ.[^rounds] |
+| Compared with | Other arm correct | Bridge answer time Δ | Bridge tokens Δ | Native AI rounds Δ[^rounds] | Takeaway |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Recued + Playwright MCP | 39.3% (11/28) | -48.2% | -68.0% | -66.7% | Bridge completed more tasks under the same Recued chat budget. The frozen MCP integration has a snapshot-reference limitation.[^mcp] |
+| browser-use standalone | 85.7% (24/28) | -48.5% | +64.5% | -41.7% | Bridge was usually faster; browser-use used fewer tokens in 15/24 shared successes. Its browser-focused catalog is a different token baseline.[^catalog] |
+| Stagehand | 64.3% (18/28) | -39.9% | -24.1% | -75.0% | Bridge completed more tasks and was faster in all shared successes. This compares Stagehand’s native v3 agent.[^versions] |
+| OpenClaw + browser-use | 82.1% (23/28) | -61.5% | -69.5% | -81.8% | Both are general agents steering a browser layer. Bridge was faster in all shared successes and used fewer tokens in 22/23. |
+| OpenClaw + built-in browser | 85.7% (24/28) | -59.3% | -56.0% | -75.0% | Bridge was faster and used fewer tokens in most shared successes. Separate cohort and download conditions qualify speed comparisons.[^timing] |
+| Hermes Agent | 85.7% (24/28) | -59.8% | -55.6% | -80.9% | Bridge was faster in 23/24 shared successes and used fewer tokens in 20/24. Native round definitions differ.[^rounds] |
 
 Three strict Hacker News points checks may reflect page drift after the answer;
 their original wrong verdicts and the uncertainty remain visible.[^grading]
@@ -37,8 +38,9 @@ their original wrong verdicts and the uncertainty remain visible.[^grading]
 ## Full results by round
 
 R1 and R2 are the two recorded repetitions. Each arm has **tokens, seconds, AI
-rounds, correct/wrong** for every task. **Bold numbers are the lowest displayed
-values among correct answers in that row; displayed ties are all highlighted.**
+rounds, correct/wrong** for every task. **★ and a highlighted background mark the
+lowest displayed values among correct answers in that row; every displayed tie
+gets the same marker.**
 Wrong results remain visible and do not win a metric. Missing counters stay —.
 AI rounds use each framework’s native definition.[^rounds]
 
@@ -90,9 +92,9 @@ AI rounds use each framework’s native definition.[^rounds]
   <tbody>
     <tr>
       <th>A · Compare programming languages</th>
-      <td><strong>41,175</strong></td>
-      <td><strong>24.4</strong></td>
-      <td><strong>1</strong></td>
+      <td><mark><strong>★ 41,175</strong></mark></td>
+      <td><mark><strong>★ 24.4</strong></mark></td>
+      <td><mark><strong>★ 1</strong></mark></td>
       <td>CORRECT</td>
       <td>283,479</td>
       <td>115.0</td>
@@ -121,9 +123,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>B · Hacker News top story</th>
-      <td><strong>29,039</strong></td>
-      <td><strong>16.7</strong></td>
-      <td><strong>1</strong></td>
+      <td><mark><strong>★ 29,039</strong></mark></td>
+      <td><mark><strong>★ 16.7</strong></mark></td>
+      <td><mark><strong>★ 1</strong></mark></td>
       <td>CORRECT</td>
       <td>88,299</td>
       <td>31.5</td>
@@ -142,7 +144,7 @@ AI rounds use each framework’s native definition.[^rounds]
       <td>6</td>
       <td>CORRECT</td>
       <td>34,725</td>
-      <td><strong>16.7</strong></td>
+      <td><mark><strong>★ 16.7</strong></mark></td>
       <td>3</td>
       <td>CORRECT</td>
       <td>32,034</td>
@@ -152,9 +154,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>C · Wikipedia image caption</th>
-      <td><strong>62,260</strong></td>
-      <td><strong>43.4</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 62,260</strong></mark></td>
+      <td><mark><strong>★ 43.4</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>563,549</td>
       <td>107.9</td>
@@ -184,16 +186,16 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>D · Last See also entry</th>
       <td>61,371</td>
-      <td><strong>19.2</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 19.2</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>215,994</td>
       <td>56.7</td>
       <td>4</td>
       <td>CORRECT</td>
-      <td><strong>34,787</strong></td>
+      <td><mark><strong>★ 34,787</strong></mark></td>
       <td>43.9</td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>179,759</td>
       <td>35.4</td>
@@ -214,9 +216,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>E · Three-sentence work summary</th>
-      <td><strong>30,909</strong></td>
-      <td><strong>21.8</strong></td>
-      <td><strong>1</strong></td>
+      <td><mark><strong>★ 30,909</strong></mark></td>
+      <td><mark><strong>★ 21.8</strong></mark></td>
+      <td><mark><strong>★ 1</strong></mark></td>
       <td>CORRECT</td>
       <td>192,866</td>
       <td>42.1</td>
@@ -246,16 +248,16 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>F · Submit pizza form</th>
       <td>109,227</td>
-      <td><strong>49.1</strong></td>
+      <td><mark><strong>★ 49.1</strong></mark></td>
       <td>4</td>
       <td>CORRECT</td>
       <td>325,209</td>
       <td>189.6</td>
       <td>11</td>
       <td>WRONG</td>
-      <td><strong>21,433</strong></td>
+      <td><mark><strong>★ 21,433</strong></mark></td>
       <td>50.8</td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>66,882</td>
       <td>84.6</td>
@@ -278,7 +280,7 @@ AI rounds use each framework’s native definition.[^rounds]
       <th>G · Count quotes across pages</th>
       <td>85,219</td>
       <td>56.0</td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>326,279</td>
       <td>162.8</td>
@@ -300,24 +302,24 @@ AI rounds use each framework’s native definition.[^rounds]
       <td>57.2</td>
       <td>7</td>
       <td>CORRECT</td>
-      <td><strong>34,580</strong></td>
-      <td><strong>35.2</strong></td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 34,580</strong></mark></td>
+      <td><mark><strong>★ 35.2</strong></mark></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
     </tr>
     <tr>
       <th>H · Read delayed quotes</th>
       <td>53,126</td>
-      <td><strong>29.6</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 29.6</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>74,316</td>
       <td>42.3</td>
       <td>3</td>
       <td>CORRECT</td>
-      <td><strong>13,239</strong></td>
+      <td><mark><strong>★ 13,239</strong></mark></td>
       <td>40.1</td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>17,766</td>
       <td>43.1</td>
@@ -338,9 +340,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>I · Cheapest Travel book</th>
-      <td><strong>57,506</strong></td>
-      <td><strong>33.0</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 57,506</strong></mark></td>
+      <td><mark><strong>★ 33.0</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>219,316</td>
       <td>69.2</td>
@@ -371,15 +373,15 @@ AI rounds use each framework’s native definition.[^rounds]
       <th>J · Upload attached file</th>
       <td>54,629</td>
       <td>52.4</td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>314,928</td>
       <td>164.1</td>
       <td>11</td>
       <td>WRONG</td>
-      <td><strong>13,597</strong></td>
-      <td><strong>37.0</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 13,597</strong></mark></td>
+      <td><mark><strong>★ 37.0</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>365,403</td>
       <td>374.7</td>
@@ -401,16 +403,16 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>K · Read linked PDF</th>
       <td>85,525</td>
-      <td><strong>42.5</strong></td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 42.5</strong></mark></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>336,190</td>
       <td>139.5</td>
       <td>11</td>
       <td>WRONG</td>
-      <td><strong>23,380</strong></td>
+      <td><mark><strong>★ 23,380</strong></mark></td>
       <td>50.8</td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>—</td>
       <td>480.0</td>
@@ -431,9 +433,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>L · Download file and exact bytes</th>
-      <td><strong>89,295</strong></td>
-      <td><strong>54.8</strong></td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 89,295</strong></mark></td>
+      <td><mark><strong>★ 54.8</strong></mark></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>523,273</td>
       <td>157.4</td>
@@ -463,8 +465,8 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>X · Delete Bob’s invoice in a changing inbox</th>
       <td>52,599</td>
-      <td><strong>16.1</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 16.1</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>286,297</td>
       <td>84.3</td>
@@ -474,7 +476,7 @@ AI rounds use each framework’s native definition.[^rounds]
       <td>32.4</td>
       <td>2</td>
       <td>WRONG</td>
-      <td><strong>17,813</strong></td>
+      <td><mark><strong>★ 17,813</strong></mark></td>
       <td>23.6</td>
       <td>6</td>
       <td>CORRECT</td>
@@ -494,14 +496,14 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>Y · Open Winter tyres in a rotating banner</th>
       <td>52,596</td>
-      <td><strong>18.3</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 18.3</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>283,007</td>
       <td>114.4</td>
       <td>11</td>
       <td>WRONG</td>
-      <td><strong>18,860</strong></td>
+      <td><mark><strong>★ 18,860</strong></mark></td>
       <td>33.8</td>
       <td>3</td>
       <td>CORRECT</td>
@@ -573,9 +575,9 @@ AI rounds use each framework’s native definition.[^rounds]
   <tbody>
     <tr>
       <th>A · Compare programming languages</th>
-      <td><strong>41,930</strong></td>
-      <td><strong>34.7</strong></td>
-      <td><strong>1</strong></td>
+      <td><mark><strong>★ 41,930</strong></mark></td>
+      <td><mark><strong>★ 34.7</strong></mark></td>
+      <td><mark><strong>★ 1</strong></mark></td>
       <td>CORRECT</td>
       <td>1,541,206</td>
       <td>164.2</td>
@@ -605,16 +607,16 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>B · Hacker News top story</th>
       <td>29,003</td>
-      <td><strong>14.5</strong></td>
-      <td><strong>1</strong></td>
+      <td><mark><strong>★ 14.5</strong></mark></td>
+      <td><mark><strong>★ 1</strong></mark></td>
       <td>CORRECT</td>
       <td>88,375</td>
       <td>34.4</td>
       <td>3</td>
       <td>CORRECT</td>
-      <td><strong>14,158</strong></td>
+      <td><mark><strong>★ 14,158</strong></mark></td>
       <td>24.5</td>
-      <td><strong>1</strong></td>
+      <td><mark><strong>★ 1</strong></mark></td>
       <td>CORRECT</td>
       <td>32,749</td>
       <td>40.3</td>
@@ -636,16 +638,16 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>C · Wikipedia image caption</th>
       <td>125,537</td>
-      <td><strong>44.8</strong></td>
-      <td><strong>4</strong></td>
+      <td><mark><strong>★ 44.8</strong></mark></td>
+      <td><mark><strong>★ 4</strong></mark></td>
       <td>CORRECT</td>
       <td>680,338</td>
       <td>108.7</td>
       <td>11</td>
       <td>WRONG</td>
-      <td><strong>69,484</strong></td>
+      <td><mark><strong>★ 69,484</strong></mark></td>
       <td>60.4</td>
-      <td><strong>4</strong></td>
+      <td><mark><strong>★ 4</strong></mark></td>
       <td>CORRECT</td>
       <td>260,453</td>
       <td>61.8</td>
@@ -666,9 +668,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>D · Last See also entry</th>
-      <td><strong>61,301</strong></td>
-      <td><strong>21.7</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 61,301</strong></mark></td>
+      <td><mark><strong>★ 21.7</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>191,366</td>
       <td>38.8</td>
@@ -698,14 +700,14 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>E · Three-sentence work summary</th>
       <td>64,424</td>
-      <td><strong>28.1</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 28.1</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>191,676</td>
       <td>39.5</td>
       <td>3</td>
       <td>CORRECT</td>
-      <td><strong>33,462</strong></td>
+      <td><mark><strong>★ 33,462</strong></mark></td>
       <td>44.9</td>
       <td>3</td>
       <td>CORRECT</td>
@@ -729,16 +731,16 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>F · Submit pizza form</th>
       <td>109,105</td>
-      <td><strong>45.7</strong></td>
+      <td><mark><strong>★ 45.7</strong></mark></td>
       <td>4</td>
       <td>CORRECT</td>
       <td>334,074</td>
       <td>280.9</td>
       <td>11</td>
       <td>WRONG</td>
-      <td><strong>21,350</strong></td>
+      <td><mark><strong>★ 21,350</strong></mark></td>
       <td>49.1</td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>75,972</td>
       <td>146.5</td>
@@ -760,8 +762,8 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>G · Count quotes across pages</th>
       <td>56,997</td>
-      <td><strong>48.5</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 48.5</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>334,059</td>
       <td>153.5</td>
@@ -771,7 +773,7 @@ AI rounds use each framework’s native definition.[^rounds]
       <td>99.6</td>
       <td>7</td>
       <td>CORRECT</td>
-      <td><strong>55,847</strong></td>
+      <td><mark><strong>★ 55,847</strong></mark></td>
       <td>66.0</td>
       <td>11</td>
       <td>CORRECT</td>
@@ -792,7 +794,7 @@ AI rounds use each framework’s native definition.[^rounds]
       <th>H · Read delayed quotes</th>
       <td>53,103</td>
       <td>31.8</td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>74,410</td>
       <td>39.5</td>
@@ -802,7 +804,7 @@ AI rounds use each framework’s native definition.[^rounds]
       <td>70.9</td>
       <td>5</td>
       <td>CORRECT</td>
-      <td><strong>23,689</strong></td>
+      <td><mark><strong>★ 23,689</strong></mark></td>
       <td>45.9</td>
       <td>6</td>
       <td>CORRECT</td>
@@ -811,7 +813,7 @@ AI rounds use each framework’s native definition.[^rounds]
       <td>8</td>
       <td>CORRECT</td>
       <td>30,869</td>
-      <td><strong>28.3</strong></td>
+      <td><mark><strong>★ 28.3</strong></mark></td>
       <td>3</td>
       <td>CORRECT</td>
       <td>34,826</td>
@@ -821,9 +823,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>I · Cheapest Travel book</th>
-      <td><strong>57,538</strong></td>
-      <td><strong>30.6</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 57,538</strong></mark></td>
+      <td><mark><strong>★ 30.6</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>193,703</td>
       <td>61.7</td>
@@ -860,9 +862,9 @@ AI rounds use each framework’s native definition.[^rounds]
       <td>192.4</td>
       <td>11</td>
       <td>WRONG</td>
-      <td><strong>13,719</strong></td>
-      <td><strong>35.7</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 13,719</strong></mark></td>
+      <td><mark><strong>★ 35.7</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>306,806</td>
       <td>273.4</td>
@@ -884,16 +886,16 @@ AI rounds use each framework’s native definition.[^rounds]
     <tr>
       <th>K · Read linked PDF</th>
       <td>115,236</td>
-      <td><strong>40.3</strong></td>
+      <td><mark><strong>★ 40.3</strong></mark></td>
       <td>4</td>
       <td>CORRECT</td>
       <td>329,349</td>
       <td>150.3</td>
       <td>11</td>
       <td>WRONG</td>
-      <td><strong>22,190</strong></td>
+      <td><mark><strong>★ 22,190</strong></mark></td>
       <td>40.7</td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>220,559</td>
       <td>151.6</td>
@@ -914,9 +916,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>L · Download file and exact bytes</th>
-      <td><strong>89,089</strong></td>
-      <td><strong>48.5</strong></td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 89,089</strong></mark></td>
+      <td><mark><strong>★ 48.5</strong></mark></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>494,664</td>
       <td>199.1</td>
@@ -945,9 +947,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>X · Delete Bob’s invoice in a changing inbox</th>
-      <td><strong>79,902</strong></td>
-      <td><strong>31.5</strong></td>
-      <td><strong>3</strong></td>
+      <td><mark><strong>★ 79,902</strong></mark></td>
+      <td><mark><strong>★ 31.5</strong></mark></td>
+      <td><mark><strong>★ 3</strong></mark></td>
       <td>CORRECT</td>
       <td>286,488</td>
       <td>84.7</td>
@@ -976,9 +978,9 @@ AI rounds use each framework’s native definition.[^rounds]
     </tr>
     <tr>
       <th>Y · Open Winter tyres in a rotating banner</th>
-      <td><strong>52,453</strong></td>
-      <td><strong>18.2</strong></td>
-      <td><strong>2</strong></td>
+      <td><mark><strong>★ 52,453</strong></mark></td>
+      <td><mark><strong>★ 18.2</strong></mark></td>
+      <td><mark><strong>★ 2</strong></mark></td>
       <td>CORRECT</td>
       <td>283,851</td>
       <td>94.8</td>
@@ -1053,10 +1055,12 @@ this is Recued’s independent comparison and does not imply their endorsement.[
     The general-agent catalog distinction is part of the measured stack, not a measured
     attribution of every token difference. No catalog-normalized score or monetary cost
     comparison is claimed. See [agent configuration and measurements](docs/benchmark-notes.md#measures-and-fairness).
-[^paired]: Counts use unrounded recorded seconds and complete native input/output totals
-    for matched correct task/repetition pairs. Full tables display one-decimal seconds,
-    so displayed ties can differ from unrounded comparisons. The counters and paired ratios
-    are retained in [summary data](release/summary.json).
+[^paired]: Each Δ is the median of `100 × (Bridge − other) / other` for matched
+    task/repetition pairs where both arms were correct. It uses unrounded answer seconds
+    and complete native input/output totals. Full tables display one-decimal seconds, so
+    displayed ties can differ from unrounded comparisons. Correctness percentages use all
+    28 scheduled runs per arm. Pair counts, ratios and percentage changes are retained in
+    [summary data](release/summary.json).
 [^scope]: Recued’s Browser Toolkit was developed and tuned against these tasks. Fresh
     Chromium profiles do not measure its ability to act in a user’s existing signed-in
     Chrome. [Full scope and controls](docs/benchmark-notes.md#measures-and-fairness).

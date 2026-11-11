@@ -2,7 +2,7 @@
   "schema": 1,
   "source": "results/showcase/2026-11-10-qwen3.7-plus-seven-arms/records.json",
   "source_sha256": "a45098673dafa29527f9e11bc8679ed5d9798844c525a1210517c2fa142f5339",
-  "method": "Latest attempt; both correct on the same task and repetition; unrounded seconds and complete native input/output counts.",
+  "method": "Latest attempt; both correct on the same task and repetition; unrounded seconds and complete native input/output counts. Each percent delta is the median of 100 * (Bridge - other) / other over these matched correct pairs; negative is lower for Bridge. Accuracy uses all 28 scheduled runs per arm. Native round definitions remain framework-specific.",
   "recued_bridge_correct": 28,
   "scheduled_runs": 196,
   "physical_attempts": 201,
@@ -17,23 +17,27 @@
           "lower": 11,
           "ties": 0,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.518282121248072
+          "median_ratio_bridge_to_other": 0.518282121248072,
+          "median_percent_change_bridge_vs_other": -48.1717878751928
         },
         "tokens": {
           "pairs": 11,
           "lower": 11,
           "ties": 0,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.32033381060376453
+          "median_ratio_bridge_to_other": 0.32033381060376453,
+          "median_percent_change_bridge_vs_other": -67.96661893962354
         },
         "rounds": {
           "pairs": 11,
           "lower": 11,
           "ties": 0,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.3333333333333333
+          "median_ratio_bridge_to_other": 0.3333333333333333,
+          "median_percent_change_bridge_vs_other": -66.66666666666667
         }
-      }
+      },
+      "accuracy_percent": 39.285714285714285
     },
     {
       "arm": "browser-use",
@@ -45,23 +49,27 @@
           "lower": 22,
           "ties": 0,
           "higher": 2,
-          "median_ratio_bridge_to_other": 0.5145021414598208
+          "median_ratio_bridge_to_other": 0.5145021414598208,
+          "median_percent_change_bridge_vs_other": -48.54978585401793
         },
         "tokens": {
           "pairs": 24,
           "lower": 9,
           "ties": 0,
           "higher": 15,
-          "median_ratio_bridge_to_other": 1.6449174572702527
+          "median_ratio_bridge_to_other": 1.6449174572702527,
+          "median_percent_change_bridge_vs_other": 64.49174572702528
         },
         "rounds": {
           "pairs": 24,
           "lower": 14,
           "ties": 6,
           "higher": 4,
-          "median_ratio_bridge_to_other": 0.5833333333333333
+          "median_ratio_bridge_to_other": 0.5833333333333333,
+          "median_percent_change_bridge_vs_other": -41.66666666666667
         }
-      }
+      },
+      "accuracy_percent": 85.71428571428571
     },
     {
       "arm": "stagehand",
@@ -73,23 +81,27 @@
           "lower": 18,
           "ties": 0,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.601196593667096
+          "median_ratio_bridge_to_other": 0.601196593667096,
+          "median_percent_change_bridge_vs_other": -39.8803406332904
         },
         "tokens": {
           "pairs": 18,
           "lower": 12,
           "ties": 0,
           "higher": 6,
-          "median_ratio_bridge_to_other": 0.7589600058715726
+          "median_ratio_bridge_to_other": 0.7589600058715726,
+          "median_percent_change_bridge_vs_other": -24.103999412842736
         },
         "rounds": {
           "pairs": 18,
           "lower": 18,
           "ties": 0,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.25
+          "median_ratio_bridge_to_other": 0.25,
+          "median_percent_change_bridge_vs_other": -75.0
         }
-      }
+      },
+      "accuracy_percent": 64.28571428571429
     },
     {
       "arm": "openclaw-browser-use",
@@ -101,23 +113,27 @@
           "lower": 23,
           "ties": 0,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.38482090295702576
+          "median_ratio_bridge_to_other": 0.38482090295702576,
+          "median_percent_change_bridge_vs_other": -61.51790970429742
         },
         "tokens": {
           "pairs": 23,
           "lower": 22,
           "ties": 0,
           "higher": 1,
-          "median_ratio_bridge_to_other": 0.3052230098734202
+          "median_ratio_bridge_to_other": 0.3052230098734202,
+          "median_percent_change_bridge_vs_other": -69.47769901265798
         },
         "rounds": {
           "pairs": 23,
           "lower": 23,
           "ties": 0,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.18181818181818182
+          "median_ratio_bridge_to_other": 0.18181818181818182,
+          "median_percent_change_bridge_vs_other": -81.81818181818181
         }
-      }
+      },
+      "accuracy_percent": 82.14285714285714
     },
     {
       "arm": "openclaw-browser",
@@ -129,23 +145,27 @@
           "lower": 22,
           "ties": 0,
           "higher": 2,
-          "median_ratio_bridge_to_other": 0.4067312636472985
+          "median_ratio_bridge_to_other": 0.4067312636472985,
+          "median_percent_change_bridge_vs_other": -59.32687363527015
         },
         "tokens": {
           "pairs": 24,
           "lower": 21,
           "ties": 0,
           "higher": 3,
-          "median_ratio_bridge_to_other": 0.44001814724275945
+          "median_ratio_bridge_to_other": 0.44001814724275945,
+          "median_percent_change_bridge_vs_other": -55.998185275724055
         },
         "rounds": {
           "pairs": 24,
           "lower": 24,
           "ties": 0,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.25
+          "median_ratio_bridge_to_other": 0.25,
+          "median_percent_change_bridge_vs_other": -75.0
         }
-      }
+      },
+      "accuracy_percent": 85.71428571428571
     },
     {
       "arm": "hermes",
@@ -157,23 +177,28 @@
           "lower": 23,
           "ties": 0,
           "higher": 1,
-          "median_ratio_bridge_to_other": 0.4016068847501404
+          "median_ratio_bridge_to_other": 0.4016068847501404,
+          "median_percent_change_bridge_vs_other": -59.83931152498596
         },
         "tokens": {
           "pairs": 24,
           "lower": 20,
           "ties": 0,
           "higher": 4,
-          "median_ratio_bridge_to_other": 0.44428846972968644
+          "median_ratio_bridge_to_other": 0.44428846972968644,
+          "median_percent_change_bridge_vs_other": -55.57115302703135
         },
         "rounds": {
           "pairs": 24,
           "lower": 23,
           "ties": 1,
           "higher": 0,
-          "median_ratio_bridge_to_other": 0.19090909090909092
+          "median_ratio_bridge_to_other": 0.19090909090909092,
+          "median_percent_change_bridge_vs_other": -80.9090909090909
         }
-      }
+      },
+      "accuracy_percent": 85.71428571428571
     }
-  ]
+  ],
+  "recued_bridge_accuracy_percent": 100
 }
