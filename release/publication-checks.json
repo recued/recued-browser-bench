@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "edition": "baseline-26.11.9",
+  "source_sha256": "a45098673dafa29527f9e11bc8679ed5d9798844c525a1210517c2fa142f5339",
+  "unit_tests": {
+    "passed": 41,
+    "failed": 0
+  },
+  "scheduled_runs": 196,
+  "physical_attempts": 201,
+  "full_tables": 2,
+  "task_rows_per_table": 14,
+  "arms": 7,
+  "numeric_values_verified": 584,
+  "best_values_verified": 92,
+  "wrong_repetitions": 44,
+  "readme_footnotes_verified": 15,
+  "local_markdown_links_verified": 55,
+  "baseline_files_preserved_except_readme": 172,
+  "development_repository_unchanged": true,
+  "wip_imported": false,
+  "source_history_imported": false,
+  "report_regenerates_byte_identically": true,
+  "vectors_regenerate_identically": true,
+  "fresh_npm_ci": true,
+  "hermes_native_accounting_verified": true,
+  "public_artifact_privacy_scan": "passed",
+  "new_model_calls": 0,
+  "fresh_full_setup_run": false,
+  "qualification_scope": "Fresh npm install, all frozen harness tests, raw-data/table/report/accounting/link/privacy checks. Dated live/setup receipts retained; no new model benchmark or full seven-arm setup run.",
+  "github_markdown_rendering": {
+    "passed": true,
+    "tables": 3,
+    "footnote_definitions": 15
+  }
+}
