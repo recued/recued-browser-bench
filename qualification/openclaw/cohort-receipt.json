@@ -1,0 +1,175 @@
+{
+  "date": "2026-11-10T10:39:45.040Z",
+  "arm": "openclaw-browser-use",
+  "measured_source_commit": "900e284bae5009314d3ac4462436827230b0a458",
+  "platform": "darwin-arm64",
+  "model": "qwen3.7-plus",
+  "settings": {
+    "model": "qwen3.7-plus",
+    "baseUrlEnvironment": "BENCH_BASE_URL",
+    "apiKeyEnvironment": "BENCH_API_KEY",
+    "thinking": "off",
+    "temperature": 0.2,
+    "maxOutputTokens": 4000,
+    "recuedCatalogMode": "full",
+    "arms": [
+      "openclaw-browser-use"
+    ],
+    "tasks": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "X",
+      "Y"
+    ],
+    "runs": 2,
+    "maxSeconds": 480,
+    "maxSteps": 30,
+    "minFreeMemoryMiB": 1800,
+    "memoryWaitSeconds": 180
+  },
+  "versions": {
+    "recued": "26.11.9",
+    "bridge": "0.0.8",
+    "browserUse": "0.13.14",
+    "playwrightMcp": "0.0.85",
+    "stagehand": "3.7.3",
+    "playwright": "1.61.1",
+    "openclaw": "2026.11.2",
+    "triple": "macos-arm64",
+    "browserHarness": "0.1.13",
+    "node": "v24.19.0",
+    "platform": "darwin-arm64",
+    "benchmark_commit": "900e284bae5009314d3ac4462436827230b0a458",
+    "benchmark_source_dirty": false
+  },
+  "initial": {
+    "scheduled": 28,
+    "attempts": 28,
+    "right": 21,
+    "records": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/records.json",
+    "sha256": "5d6911b3a2df8a675213ffd9f7ff9da678f57311096cb70caf52f8de73bd52ce"
+  },
+  "after_technical_retries": {
+    "scheduled": 28,
+    "attempts": 30,
+    "right": 23,
+    "wrong": 5,
+    "remaining_retryable": 0,
+    "records": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/records.json",
+    "sha256": "abf578f9f98fb91ee9e12555d688e063aeff28e8dff025077a4bbc12e2246d86",
+    "retry_results": [
+      {
+        "task": "C",
+        "run": 1,
+        "attempt": 2,
+        "retry_of": 4,
+        "right": true,
+        "seconds": 121.679,
+        "rounds": 13,
+        "tokens": {
+          "input": 202115,
+          "output": 1867,
+          "cached": 161664
+        }
+      },
+      {
+        "task": "G",
+        "run": 1,
+        "attempt": 2,
+        "retry_of": 12,
+        "right": true,
+        "seconds": 93.518,
+        "rounds": 12,
+        "tokens": {
+          "input": 203425,
+          "output": 2489,
+          "cached": 171776
+        }
+      }
+    ]
+  },
+  "combined": {
+    "records": "results/showcase/2026-11-10-qwen3.7-plus-five-arms/records.json",
+    "sha256": "6b8a43d54e695206a52afa903b08c5df086f1ce4623d41138990e4198483413b",
+    "scheduled": 140,
+    "attempts": 144,
+    "current_right": 104,
+    "current_wrong": 36,
+    "sources": [
+      {
+        "sha256": "69dd6f5be1b7a2c34ca7458a759f8635927bd52fdde27be41377027083f51022",
+        "offset": 0,
+        "attempts": 114
+      },
+      {
+        "sha256": "abf578f9f98fb91ee9e12555d688e063aeff28e8dff025077a4bbc12e2246d86",
+        "offset": 114,
+        "attempts": 30
+      }
+    ],
+    "original_prefix_identical": true,
+    "retry_links_rebased_only": true
+  },
+  "checks": {
+    "unit_tests": 32,
+    "unit_failures": 0,
+    "browser_file_checks": 5,
+    "browser_file_model_calls": 0,
+    "all_measured_records_clean": true,
+    "all_model_calls_requested_thinking_off": true,
+    "native_gateway_accounting": "All complete native totals were checked against the separate gateway ledger; unknown native counters retained as null.",
+    "vectors_and_reports_reproduced": true
+  },
+  "thinking_evidence": {
+    "attempts": 144,
+    "accepted": 136,
+    "unqualified": 8,
+    "explicit_counter_verified": 0
+  },
+  "limitations": [
+    "OpenClaw was measured on November 10 in a separate batch, without rerunning the four original arms. Timings describe separate cohorts.",
+    "Both download repetitions reached the native 480-second budget during observed slow browser transfers; incomplete files were retained in evidence. These runs do not isolate model capability.",
+    "B/R2 failed the live points check (238 in the answer, 242 in the later checker); page drift may cause a false negative.",
+    "X/R1 claimed deletion but the fixture recorded none. Y/R1 opened Summer sale before Winter tyres; the extra action fails. Neither was retried.",
+    "New OpenClaw qualification is on macOS arm64. Linux setup qualification remains pending because dependency downloads did not finish in the preliminary window; no Linux model task ran.",
+    "The built-in browser arm is selectable for the later batch and is not included in these results."
+  ],
+  "privacy_processing": "privacy-receipt.json",
+  "original_four_arm_files": [
+    {
+      "path": "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/records.json",
+      "sha256": "69dd6f5be1b7a2c34ca7458a759f8635927bd52fdde27be41377027083f51022"
+    },
+    {
+      "path": "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/report.md",
+      "sha256": "bcc9bfe28b49008fecb5a1aa85cb060b0d599631d7961b2b862ba98c56e56772"
+    },
+    {
+      "path": "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/results.json",
+      "sha256": "046d5a94eda9ade4018d03102243842a71ed1df5e27e75bcad67825640bff554"
+    },
+    {
+      "path": "results/showcase/2026-11-09-qwen3.7-plus/records.json",
+      "sha256": "12d2f07b2944cd1a16cace617cdc761e2e6591531b76f3638c52b9e4ca7a1101"
+    },
+    {
+      "path": "results/showcase/2026-11-09-qwen3.7-plus/report.md",
+      "sha256": "319c37b97aaf73aa9754eabb367a6c86fbf2ed0e729388a92893e415ea49fe6f"
+    },
+    {
+      "path": "results/showcase/2026-11-09-qwen3.7-plus/results.json",
+      "sha256": "4cb2920c357613f3aced5518dc0dcaeee0e3c2cad08d4a684a9044d523b89851"
+    }
+  ],
+  "publication": "local only; no remote or push"
+}

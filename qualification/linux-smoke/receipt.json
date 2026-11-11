@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-09",
+  "setup_source_commit": "331a94701bf002056e3ccdec0d9287a282f7a769",
+  "run_source_commit": "aaa505fd199fb3f387194bbc84e13e48c98c7464",
+  "clean_clone": true,
+  "environment": "Debian 13 Linux arm64 container; Node 24.19.0",
+  "image": "sha256:dc2c2c12067695b17c9a8dad63af672b85330d22928dca110b703e9affe1fa43",
+  "method": "Setup ran in a clean container built from a local clean clone. Final clone sources were mounted read-only over the same isolated dependencies; lockfiles and setup script were unchanged. procps was installed before live runs.",
+  "dependency_inputs": {
+    "package-lock.json": "a5ba6dbbedc8304aa2d735fe8885df683d84a9a93dcba15073d26967ae4b5d19",
+    "harness/browser-use/requirements.lock.txt": "d81924c99a30db357ac4660e2b25ed3be89d4f7b884c7f608165e49aaa3437bc",
+    "scripts/setup.mjs": "55a089b83093390c97fe7523e1d0ccf11ce65de7ef9af0dd07beaeaf812003c9"
+  },
+  "tests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "live": {
+    "attempts": 4,
+    "arms": [
+      {
+        "arm": "recued-bridge",
+        "task": "B",
+        "right": true,
+        "answer_streamed": true,
+        "model_calls": 1,
+        "error": null,
+        "missing": []
+      },
+      {
+        "arm": "recued-playwright",
+        "task": "B",
+        "right": true,
+        "answer_streamed": true,
+        "model_calls": 3,
+        "error": null,
+        "missing": []
+      },
+      {
+        "arm": "browser-use",
+        "task": "B",
+        "right": true,
+        "answer_streamed": null,
+        "model_calls": 3,
+        "error": null,
+        "missing": []
+      },
+      {
+        "arm": "stagehand",
+        "task": "B",
+        "right": false,
+        "answer_streamed": null,
+        "model_calls": 7,
+        "error": null,
+        "missing": [
+          "current top story points"
+        ]
+      }
+    ]
+  },
+  "host_gateway": {
+    "calls": 14,
+    "all_requested_off": true,
+    "provider_failures": 0
+  },
+  "limitations": [
+    "DashScope omitted explicit reasoning_tokens counters; requested thinking-off is verified, counter-zero is not.",
+    "The Stagehand task failed the post-answer Hacker News point-count check."
+  ]
+}

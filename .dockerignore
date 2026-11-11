@@ -1,0 +1,8 @@
+.git
+.bench
+node_modules
+results
+bench.config.json
+.env
+PROMPT.md
+.playwright-mcp

@@ -1,0 +1,1280 @@
+{
+  "schema": 1,
+  "date": "2026-11-09",
+  "model": "qwen3.7-plus",
+  "settings": {
+    "model": "qwen3.7-plus",
+    "baseUrlEnvironment": "BENCH_BASE_URL",
+    "apiKeyEnvironment": "BENCH_API_KEY",
+    "thinking": "off",
+    "temperature": 0.2,
+    "maxOutputTokens": 4000,
+    "recuedCatalogMode": "full",
+    "arms": [
+      "recued-bridge",
+      "recued-playwright",
+      "browser-use",
+      "stagehand"
+    ],
+    "tasks": [
+      "E"
+    ],
+    "runs": 1,
+    "maxSeconds": 180,
+    "maxSteps": 30,
+    "minFreeMemoryMiB": 1800,
+    "memoryWaitSeconds": 180
+  },
+  "versions": {
+    "recued": "26.11.9",
+    "bridge": "0.0.8",
+    "browserUse": "0.13.14",
+    "playwrightMcp": "0.0.85",
+    "stagehand": "3.7.3",
+    "playwright": "1.61.1",
+    "triple": "linux-arm64",
+    "node": "v24.19.0",
+    "platform": "linux-arm64",
+    "benchmark_commit": null,
+    "benchmark_source_dirty": null
+  },
+  "records": [
+    {
+      "task": "On the Ada Lovelace Wikipedia article (https://en.wikipedia.org/wiki/Ada_Lovelace) in my browser, read the section about her work and sum it up in three sentences, from what the page says.",
+      "arm": "recued-bridge",
+      "run": 1,
+      "task_id": "E",
+      "started_at": "2026-11-09T22:14:48.141Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "Ada Lovelace translated an article by Luigi Menabrea about Charles Babbage's Analytical Engine and augmented it with extensive notes that explained the machine's function and differences from earlier calculators. Her notes included a detailed method for calculating Bernoulli numbers, which is widely regarded as the first published computer program, although historians note that Babbage had written earlier unpublished algorithms. Lovelace uniquely envisioned the engine's potential to process symbols beyond mere numbers, such as musical notes, while also asserting that the machine could only follow instructions and could not originate original ideas.",
+      "seconds": 26.395,
+      "timed_out": false,
+      "stored_seconds": 26.429,
+      "answer_streamed": true,
+      "error": null,
+      "rounds": 2,
+      "tokens": {
+        "input": 63742,
+        "cached": 0,
+        "output": 738
+      },
+      "chat_tokens": {
+        "input": 63742,
+        "cached": 0,
+        "output": 738
+      },
+      "recipe_tokens": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "calls": 0
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "recued-core/inspect-web-page",
+          "status": "ok"
+        },
+        {
+          "tool": "recued-core/read-web-text",
+          "status": "ok"
+        }
+      ],
+      "evidence": {
+        "browser_toolkit": {
+          "version": 4,
+          "catalog_tag": "catalog/26.11.9.1",
+          "manifest_sha256": "d1ccfdea8ebfe4d9131c1681fbd36a6b64cdc7ac74e44c49c71645c7e0251885",
+          "recipes_verified": 15,
+          "recipes": [
+            {
+              "slug": "list-browser-tabs",
+              "version": 2,
+              "installed_sha256": "d18b4d184060f94ae288be3897851c7f771c28ec9fe688bfe89ac1b8dbe7b80b",
+              "lowered": true
+            },
+            {
+              "slug": "open-web-page",
+              "version": 3,
+              "installed_sha256": "8107a5d9272b85719594047da4ca6760dd5e5dab868489d5efcd4423a7960fe9",
+              "lowered": true
+            },
+            {
+              "slug": "inspect-web-page",
+              "version": 4,
+              "installed_sha256": "d5c006ac3adce7d96d7f970d62860c43b50498994c3f4e2857e8ae3b1bc5ff57",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-text",
+              "version": 1,
+              "installed_sha256": "61b5a0a72f53aa943aebb3ff47fa4cec91efcfe72f6c5561f71d28492ec3de14",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-element",
+              "version": 4,
+              "installed_sha256": "637af8ed08eebc24d06fcdef4568d96613ea4dc57117c0c93ce8be60e1fc2306",
+              "lowered": true
+            },
+            {
+              "slug": "wait-for-web-element",
+              "version": 3,
+              "installed_sha256": "160c1be18892f4bc4238a9907cdd8bdf28dbf12c478fa1757dae67cb6284a6aa",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-table",
+              "version": 3,
+              "installed_sha256": "919abf6792804d0559979cffccc9e13eaff368909bd252d6bec87dfeea22d6f5",
+              "lowered": true
+            },
+            {
+              "slug": "save-web-file",
+              "version": 1,
+              "installed_sha256": "f995e8261f3208be1ed95fcd9d91a4007e5d59a965a2d2a83bccad06736a5ca6",
+              "lowered": true
+            },
+            {
+              "slug": "screenshot-web-page",
+              "version": 3,
+              "installed_sha256": "0fa034bceb1cea8c1506b5bddb1018b3963851d709fdfbdce34dfa1fbcaefbf6",
+              "lowered": true
+            },
+            {
+              "slug": "ask-web-page",
+              "version": 1,
+              "installed_sha256": "03f3320be5c96a58abd7a6d6725292322b5970090ed7846fc947098ed658b9e9",
+              "lowered": true
+            },
+            {
+              "slug": "scroll-web-page",
+              "version": 1,
+              "installed_sha256": "eb0a938adb0598c42fa09dd14428292e5a65f865c90aa91dc9805e4f8d50e4ce",
+              "lowered": true
+            },
+            {
+              "slug": "type-into-web-page",
+              "version": 3,
+              "installed_sha256": "00c3be3333031c6de644620d93c7c5156f3129a207a1bd33f5c6a1dd5fe09445",
+              "lowered": true
+            },
+            {
+              "slug": "click-web-element",
+              "version": 3,
+              "installed_sha256": "539bd39a80adb24ae3c22aa7cacddd641b52f4f1025269aac646bba5d29a4eec",
+              "lowered": true
+            },
+            {
+              "slug": "press-on-web-page",
+              "version": 1,
+              "installed_sha256": "317822f9496f50070b3f28ba6c65ee6cf5d465a7e7e2a47e78bba0785772e9e9",
+              "lowered": true
+            },
+            {
+              "slug": "act-on-web-page",
+              "version": 2,
+              "installed_sha256": "f30e2145c5161f0e1342ab4c3f59cbfb2ee34c4080ffe1c07ea6f861d53bfce0",
+              "lowered": true
+            }
+          ]
+        },
+        "uploaded": false,
+        "saved_file": false,
+        "model_call_failures": [],
+        "turn_statuses": [
+          "completed"
+        ],
+        "pending_asks": [],
+        "tool_errors": [
+          "recued-core/inspect-web-page: {\"ok\":true,\"result\":{\"ran_without_asking\":\"What this did in the browser ran without asking the user, since “Don’t ask about browser actions” is on in this chat.\",\"recipe_id\":\"inspect-web-page\",\"recipe_hash\":\"c2432b3a\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"page\":\"1486938549:F7FE657366A660F209DE0DAAB95AAA6A\",\"url\":\"https://en.wikipedia.org/wiki/Ada_Lovelace\",\"title\":\"Ada Lovelace - Wikipedia\",\"outline\":\"[Jump to content](e1 #bodyContent)\\n[checkbox \\\"Main menu\\\"](e2 #vector-main-menu-dropdown-checkbox)\\n[[image: Wikipedia][image: The Free Encyclopedia]](e3)\\n[search box \\\"Search Wikipedia\\\"](e4 #searchInput)\\n[Search](e5)\\n- [Donate](e6)\\n- [Create account](e7)\\n- [Log in](e8)\\n## Contents\\n[hide](e9)\\n- [(Top)](e10)\\n- [Biography](e11 #Biography, line 68) [Toggle Biography subsection](e12)\\n- [Work](e13 #Work, line 104) [Toggle Work subsection](e14)\\n- [Commemoration](e15 #Commemoration, line 143) [Toggle Commemorat",
+          "recued-core/read-web-text: {\"ok\":true,\"result\":{\"recipe_id\":\"read-web-text\",\"recipe_hash\":\"3ab86e47\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"page\":\"1486938549:F7FE657366A660F209DE0DAAB95AAA6A\",\"url\":\"https://en.wikipedia.org/wiki/Ada_Lovelace\",\"title\":\"Ada Lovelace - Wikipedia\",\"find\":\"Work\",\"matches\":18,\"sections\":1,\"text\":\"## Work\\nThroughout her life, Lovelace was strongly interested in scientific developments and fads of the day, including phrenology [50] and mesmerism.[51] After her work with Babbage, Lovelace continued to work on other projects. In 1844, she commented to a friend Woronzow Greig about her desire to create a mathematical model for how the brain gives rise to thoughts and nerves to feelings (\\\"a calculus of the nervous system\\\").[52] She never achieved this, however. In part, her interest in the brain came from a long-running preoccupation, inherited from her mother, about her \\\"potential\\\" madness. As part of her research int"
+        ]
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:15:36.269Z",
+          "seconds": 9.695,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 227,
+            "prompt_tokens": 30321,
+            "prompt_tokens_details": {
+              "text_tokens": 30321,
+              "cached_tokens": 0
+            },
+            "total_tokens": 30548
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [
+            "recued-core/read-web-text"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:15:46.025Z",
+          "seconds": 11.297,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 511,
+            "prompt_tokens": 33421,
+            "prompt_tokens_details": {
+              "text_tokens": 33421,
+              "cached_tokens": 0
+            },
+            "total_tokens": 33932
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 2,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {},
+      "live_events": []
+    },
+    {
+      "task": "On the Ada Lovelace Wikipedia article (https://en.wikipedia.org/wiki/Ada_Lovelace) in my browser, read the section about her work and sum it up in three sentences, from what the page says.",
+      "arm": "recued-playwright",
+      "run": 1,
+      "task_id": "E",
+      "started_at": "2026-11-09T22:15:59.786Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "Ada Lovelace translated an article by Luigi Menabrea about Charles Babbage's Analytical Engine and supplemented it with a series of detailed notes that exceeded the length of the original text. In these notes, particularly Note G, she described an algorithm for calculating Bernoulli numbers, which is widely regarded as the first published computer program. Beyond mere calculation, Lovelace envisioned that the engine could manipulate any symbols represented numerically, such as musical notes, thereby anticipating the potential of general-purpose computing.",
+      "seconds": 42.383,
+      "timed_out": false,
+      "stored_seconds": 50.395,
+      "answer_streamed": true,
+      "error": null,
+      "rounds": 3,
+      "tokens": {
+        "input": 190744,
+        "cached": 23552,
+        "output": 999
+      },
+      "chat_tokens": {
+        "input": 190744,
+        "cached": 23552,
+        "output": 999
+      },
+      "recipe_tokens": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "calls": 0
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+          "status": "ok"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+          "status": "ok"
+        }
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "model_call_failures": [],
+        "turn_statuses": [
+          "completed"
+        ],
+        "pending_asks": [],
+        "tool_errors": [
+          "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f: {\"ok\":true,\"result\":{\"status\":\"ok\",\"result\":{\"content\":[{\"type\":\"text\",\"text\":\"### Page\\n- Page URL: https://en.wikipedia.org/wiki/Ada_Lovelace\\n- Page Title: Ada Lovelace - Wikipedia\\n### Snapshot\\n```yaml\\n- generic [active] [ref=e1]:\\n  - link \\\"Jump to content\\\" [ref=e2] [cursor=pointer]:\\n    - /url: \\\"#bodyContent\\\"\\n  - banner [ref=e4]:\\n    - generic [ref=e5]:\\n      - navigation \\\"Site\\\" [ref=e6]:\\n        - generic \\\"Main menu\\\" [ref=e7]:\\n          - button \\\"Main menu\\\" [ref=e8] [cursor=pointer]\\n          - generic [ref=e11]: Main menu\\n      - link [ref=e12] [cursor=pointer]:\\n        - /url: /wiki/Main_Page\\n        - generic [ref=e13]:\\n          - img \\\"Wikipedia\\\" [ref=e14]\\n          - img \\\"The Free Encyclopedia\\\" [ref=e15]\\n    - generic [ref=e16]:\\n      - search [ref=e17]:\\n        - generic [ref=e20]:\\n          - searchbox \\\"Search Wikipedia\\\" [ref=e23]\\n          - button \\\""
+        ],
+        "mcp_tools": [
+          "browser_click",
+          "browser_close",
+          "browser_console_messages",
+          "browser_drag",
+          "browser_drop",
+          "browser_emulate_media",
+          "browser_evaluate",
+          "browser_file_upload",
+          "browser_fill_form",
+          "browser_find",
+          "browser_handle_dialog",
+          "browser_hover",
+          "browser_navigate",
+          "browser_navigate_back",
+          "browser_network_request",
+          "browser_network_requests",
+          "browser_press_key",
+          "browser_resize",
+          "browser_run_code_unsafe",
+          "browser_select_option",
+          "browser_snapshot",
+          "browser_tabs",
+          "browser_take_screenshot",
+          "browser_type",
+          "browser_wait_for"
+        ],
+        "mcp_pack": "mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff"
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:16:02.934Z",
+          "seconds": 10.974,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 305,
+            "prompt_tokens": 23991,
+            "prompt_tokens_details": {
+              "text_tokens": 23991,
+              "cached_tokens": 0
+            },
+            "total_tokens": 24296
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:16:19.544Z",
+          "seconds": 9.855,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 249,
+            "prompt_tokens": 24213,
+            "prompt_tokens_details": {
+              "text_tokens": 24213,
+              "cached_tokens": 23552
+            },
+            "total_tokens": 24462
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:16:30.459Z",
+          "seconds": 14.74,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 445,
+            "prompt_tokens": 142540,
+            "prompt_tokens_details": {
+              "text_tokens": 142540,
+              "cached_tokens": 0
+            },
+            "total_tokens": 142985
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:16:45.694Z",
+          "seconds": 7.493,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 85,
+            "prompt_tokens": 119622,
+            "prompt_tokens_details": {
+              "text_tokens": 119622,
+              "cached_tokens": 0
+            },
+            "total_tokens": 119707
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 4,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {},
+      "live_events": []
+    },
+    {
+      "task": "On the Ada Lovelace Wikipedia article (https://en.wikipedia.org/wiki/Ada_Lovelace) in my browser, read the section about her work and sum it up in three sentences, from what the page says.",
+      "arm": "browser-use",
+      "run": 1,
+      "task_id": "E",
+      "started_at": "2026-11-09T22:16:55.570Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "Ada Lovelace's work centered on her translation and extensive notes on Luigi Menabrea's article about Charles Babbage's Analytical Engine, including Note G which described an algorithm for calculating Bernoulli numbers and is often considered the first published computer program. She demonstrated remarkable insight by recognizing that the Analytical Engine could manipulate symbols beyond mere numbers, such as musical notes or letters, anticipating modern general-purpose computing a century before it was realized. Lovelace also distinguished between the mechanical aspects of computing devices and their logical structure, and articulated what became known as \"Lady Lovelace's Objection\"—the idea that computers can only execute instructions but cannot originate ideas or anticipate analytical truths.",
+      "timed_out": false,
+      "error": null,
+      "seconds": 49.67025017738342,
+      "launch_seconds": 0.21576857566833496,
+      "steps": 4,
+      "rounds": 3,
+      "tokens": {
+        "input": 31332,
+        "cached": 10240,
+        "output": 1621
+      },
+      "approvals": 0,
+      "actions": [
+        "navigate",
+        "click",
+        "scroll",
+        "done"
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "files": [],
+        "agent_errors": []
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:17:05.229Z",
+          "seconds": 13.493,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 438,
+            "prompt_tokens": 10468,
+            "prompt_tokens_details": {
+              "text_tokens": 10468,
+              "cached_tokens": 0
+            },
+            "total_tokens": 10906
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:17:19.919Z",
+          "seconds": 10.587,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 457,
+            "prompt_tokens": 10556,
+            "prompt_tokens_details": {
+              "text_tokens": 10556,
+              "cached_tokens": 5120
+            },
+            "total_tokens": 11013
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:17:31.801Z",
+          "seconds": 14.228,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 726,
+            "prompt_tokens": 10308,
+            "prompt_tokens_details": {
+              "text_tokens": 10308,
+              "cached_tokens": 5120
+            },
+            "total_tokens": 11034
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 3,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {},
+      "live_events": []
+    },
+    {
+      "task": "On the Ada Lovelace Wikipedia article (https://en.wikipedia.org/wiki/Ada_Lovelace) in my browser, read the section about her work and sum it up in three sentences, from what the page says.",
+      "arm": "stagehand",
+      "run": 1,
+      "task_id": "E",
+      "started_at": "2026-11-09T22:17:46.615Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "Ada Lovelace translated Luigi Menabrea's French article about Charles Babbage's Analytical Engine into English in 1842-43 and supplemented it with seven extensive notes that were three times longer than the original translation. Her Note G described a method for calculating Bernoulli numbers using the Analytical Engine, which is often called the first published computer program, and she emphasized that the machine could be programmed to solve problems of any complexity beyond mere number crunching. Lovelace was the first to recognize that computing devices could manipulate symbols representing entities other than quantities, such as musical notes, and she noted that the Analytical Engine had no ability to originate anything but could only perform what it was ordered to do.",
+      "seconds": 43.134,
+      "rounds": 5,
+      "timed_out": false,
+      "error": null,
+      "tokens": {
+        "input": 268303,
+        "cached": 89856,
+        "output": 1023
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "type": "goto"
+        },
+        {
+          "type": "ariaTree"
+        },
+        {
+          "type": "think"
+        },
+        {
+          "type": "done"
+        }
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "files": [],
+        "native_agent_steps": [
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "goto"
+            ],
+            "usage": {
+              "inputTokens": 3130,
+              "outputTokens": 57,
+              "totalTokens": 3187,
+              "cachedInputTokens": 0
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "ariaTree"
+            ],
+            "usage": {
+              "inputTokens": 3224,
+              "outputTokens": 38,
+              "totalTokens": 3262,
+              "cachedInputTokens": 2816
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "think"
+            ],
+            "usage": {
+              "inputTokens": 87509,
+              "outputTokens": 445,
+              "totalTokens": 87954,
+              "cachedInputTokens": 0
+            }
+          },
+          {
+            "finish_reason": "stop",
+            "tools": [],
+            "usage": {
+              "inputTokens": 88374,
+              "outputTokens": 170,
+              "totalTokens": 88544,
+              "cachedInputTokens": 87040
+            }
+          }
+        ],
+        "native_model_calls": [
+          {
+            "usage": {
+              "inputTokens": 3130,
+              "outputTokens": 57,
+              "totalTokens": 3187,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 3224,
+              "outputTokens": 38,
+              "totalTokens": 3262,
+              "cachedInputTokens": 2816
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 87509,
+              "outputTokens": 445,
+              "totalTokens": 87954,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 88374,
+              "outputTokens": 170,
+              "totalTokens": 88544,
+              "cachedInputTokens": 87040
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 86066,
+              "outputTokens": 313,
+              "totalTokens": 86379,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          }
+        ],
+        "native_metrics": {
+          "actPromptTokens": 0,
+          "actCompletionTokens": 0,
+          "actReasoningTokens": 0,
+          "actCachedInputTokens": 0,
+          "actInferenceTimeMs": 0,
+          "extractPromptTokens": 0,
+          "extractCompletionTokens": 0,
+          "extractReasoningTokens": 0,
+          "extractCachedInputTokens": 0,
+          "extractInferenceTimeMs": 0,
+          "observePromptTokens": 0,
+          "observeCompletionTokens": 0,
+          "observeReasoningTokens": 0,
+          "observeCachedInputTokens": 0,
+          "observeInferenceTimeMs": 0,
+          "agentPromptTokens": 182237,
+          "agentCompletionTokens": 710,
+          "agentReasoningTokens": 0,
+          "agentCachedInputTokens": 89856,
+          "agentInferenceTimeMs": 43131,
+          "totalPromptTokens": 182237,
+          "totalCompletionTokens": 710,
+          "totalReasoningTokens": 0,
+          "totalCachedInputTokens": 89856,
+          "totalInferenceTimeMs": 43131
+        },
+        "native_agent_usage": {
+          "input_tokens": 182237,
+          "output_tokens": 710,
+          "reasoning_tokens": 0,
+          "cached_input_tokens": 89856,
+          "inference_time_ms": 43131
+        },
+        "native_completion_assessment": "I navigated to the Ada Lovelace Wikipedia article and read the \"Work\" section using the ariaTree function. The Work section details her collaboration with Charles Babbage, her translation of Menabrea's article about the Analytical Engine with seven extensive notes (A-G), Note G containing what is often called the first published computer program for calculating Bernoulli numbers, her insight that computers could manipulate symbols beyond just numbers (such as music), and her observation that the Analytical Engine could only do what it was ordered to perform. I have summarized this information in three sentences as requested.",
+        "native_completed": true,
+        "native_success": true
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:17:47.141Z",
+          "seconds": 3.687,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 57,
+            "prompt_tokens": 3130,
+            "prompt_tokens_details": {
+              "text_tokens": 3130,
+              "cached_tokens": 0
+            },
+            "total_tokens": 3187
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "goto"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:17:56.618Z",
+          "seconds": 5.3,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 38,
+            "prompt_tokens": 3224,
+            "prompt_tokens_details": {
+              "text_tokens": 3224,
+              "cached_tokens": 2816
+            },
+            "total_tokens": 3262
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "ariaTree"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:18:02.201Z",
+          "seconds": 12.336,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 445,
+            "prompt_tokens": 87509,
+            "prompt_tokens_details": {
+              "text_tokens": 87509,
+              "cached_tokens": 0
+            },
+            "total_tokens": 87954
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "think"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:18:14.555Z",
+          "seconds": 5.525,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 170,
+            "prompt_tokens": 88374,
+            "prompt_tokens_details": {
+              "text_tokens": 88374,
+              "cached_tokens": 87040
+            },
+            "total_tokens": 88544
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:18:20.103Z",
+          "seconds": 10.14,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 313,
+            "prompt_tokens": 86066,
+            "prompt_tokens_details": {
+              "text_tokens": 86066,
+              "cached_tokens": 0
+            },
+            "total_tokens": 86379
+          },
+          "tools": [
+            "done"
+          ],
+          "tool_calls": [
+            "done"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 5,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {},
+      "live_events": []
+    }
+  ]
+}

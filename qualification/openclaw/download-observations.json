@@ -1,0 +1,31 @@
+[
+  {
+    "at": "2026-11-10T10:03:33.764Z",
+    "task": "L",
+    "run": 1,
+    "expected_bytes": 12499601,
+    "files": [
+      {
+        "name": "42de795b-ea99-401d-98d3-e67d1aed4c64.crdownload",
+        "size_bytes": 3308532
+      },
+      {
+        "name": "dd9fb383-4a80-4087-8b40-76eefff8a316.crdownload",
+        "size_bytes": 3308532
+      }
+    ]
+  },
+  {
+    "at": "2026-11-10T10:10:34.199Z",
+    "task": "L",
+    "run": 2,
+    "expected_bytes": 12499601,
+    "files": [
+      {
+        "name": "495890a4-e966-4cd6-b88e-c66a1931419d.crdownload",
+        "size_bytes": 3553132
+      }
+    ],
+    "calls_started": 30
+  }
+]

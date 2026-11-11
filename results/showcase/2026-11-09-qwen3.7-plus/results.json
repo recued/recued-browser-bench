@@ -1,0 +1,4247 @@
+{
+  "schema": 1,
+  "current": [
+    {
+      "task": "A",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 40789,
+        "cached": 0,
+        "output": 386
+      },
+      "seconds": 24.378,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 280539,
+        "cached": 243712,
+        "output": 2940
+      },
+      "seconds": 114.994,
+      "rounds": 11,
+      "failed_reason": "answer: 1991",
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 46037,
+        "cached": 10240,
+        "output": 1562
+      },
+      "seconds": 125.05076885223389,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 545828,
+        "cached": 179072,
+        "output": 773
+      },
+      "seconds": 93.286,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 1538431,
+        "cached": 575872,
+        "output": 2775
+      },
+      "seconds": 164.21,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 46065,
+        "cached": 15360,
+        "output": 1620
+      },
+      "seconds": 76.84073495864868,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 545562,
+        "cached": 179072,
+        "output": 813
+      },
+      "seconds": 78.597,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 40790,
+        "cached": 0,
+        "output": 1140
+      },
+      "seconds": 34.652,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 87804,
+        "cached": 23552,
+        "output": 495
+      },
+      "seconds": 31.479,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 41375,
+        "cached": 18304,
+        "output": 778
+      },
+      "seconds": 36.264768838882446,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 32349,
+        "cached": 5632,
+        "output": 428
+      },
+      "seconds": 36.384,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 28866,
+        "cached": 0,
+        "output": 173
+      },
+      "seconds": 16.694,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 13778,
+        "cached": 0,
+        "output": 380
+      },
+      "seconds": 24.502854824066162,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 32338,
+        "cached": 5632,
+        "output": 411
+      },
+      "seconds": 40.317,
+      "rounds": 4,
+      "failed_reason": "current top story points",
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 28886,
+        "cached": 0,
+        "output": 117
+      },
+      "seconds": 14.491,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 87827,
+        "cached": 23552,
+        "output": 548
+      },
+      "seconds": 34.374,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 68397,
+        "cached": 15360,
+        "output": 1589
+      },
+      "seconds": 61.90426707267761,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 266557,
+        "cached": 40192,
+        "output": 754
+      },
+      "seconds": 63.804,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 61087,
+        "cached": 24704,
+        "output": 1173
+      },
+      "seconds": 43.422,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 560782,
+        "cached": 419584,
+        "output": 2767
+      },
+      "seconds": 107.945,
+      "rounds": 11,
+      "failed_reason": "caption: Daguerreotype",
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 259750,
+        "cached": 37248,
+        "output": 703
+      },
+      "seconds": 61.811,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 124153,
+        "cached": 58624,
+        "output": 1384
+      },
+      "seconds": 44.771,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 677894,
+        "cached": 513152,
+        "output": 2444
+      },
+      "seconds": 108.65,
+      "rounds": 11,
+      "failed_reason": "caption: Daguerreotype",
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 67807,
+        "cached": 15360,
+        "output": 1677
+      },
+      "seconds": 60.424570083618164,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 179222,
+        "cached": 2816,
+        "output": 537
+      },
+      "seconds": 35.43,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 61013,
+        "cached": 29952,
+        "output": 358
+      },
+      "seconds": 19.158,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 215147,
+        "cached": 47104,
+        "output": 847
+      },
+      "seconds": 56.723,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 33681,
+        "cached": 16640,
+        "output": 1106
+      },
+      "seconds": 43.88154101371765,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 60980,
+        "cached": 29952,
+        "output": 321
+      },
+      "seconds": 21.741,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 190733,
+        "cached": 38784,
+        "output": 633
+      },
+      "seconds": 38.791,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 73586,
+        "cached": 26880,
+        "output": 2284
+      },
+      "seconds": 80.3449079990387,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 179220,
+        "cached": 2816,
+        "output": 541
+      },
+      "seconds": 33.591,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 30272,
+        "cached": 0,
+        "output": 637
+      },
+      "seconds": 21.843,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 191929,
+        "cached": 23552,
+        "output": 937
+      },
+      "seconds": 42.145,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 131927,
+        "cached": 38400,
+        "output": 6385
+      },
+      "seconds": 154.25976705551147,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 268850,
+        "cached": 89856,
+        "output": 1080
+      },
+      "seconds": 51.651,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 190748,
+        "cached": 23552,
+        "output": 928
+      },
+      "seconds": 39.523,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 32109,
+        "cached": 10240,
+        "output": 1353
+      },
+      "seconds": 44.85658597946167,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 268952,
+        "cached": 89856,
+        "output": 840
+      },
+      "seconds": 36.55,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 63756,
+        "cached": 0,
+        "output": 668
+      },
+      "seconds": 28.126,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 318068,
+        "cached": 241408,
+        "output": 7141
+      },
+      "seconds": 189.583,
+      "rounds": 11,
+      "failed_reason": "answer: custname\\W+Ada Test",
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 19667,
+        "cached": 10240,
+        "output": 1766
+      },
+      "seconds": 50.83997201919556,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 65090,
+        "cached": 33664,
+        "output": 1792
+      },
+      "seconds": 84.554,
+      "rounds": 18,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 107647,
+        "cached": 76544,
+        "output": 1580
+      },
+      "seconds": 49.148,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 19653,
+        "cached": 5120,
+        "output": 1697
+      },
+      "seconds": 49.06407880783081,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 73776,
+        "cached": 39552,
+        "output": 2196
+      },
+      "seconds": 146.506,
+      "rounds": 23,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 107480,
+        "cached": 76544,
+        "output": 1625
+      },
+      "seconds": 45.662,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 323890,
+        "cached": 246784,
+        "output": 10184
+      },
+      "seconds": 280.926,
+      "rounds": 11,
+      "failed_reason": "answer: custname\\W+Ada Test",
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 77196,
+        "cached": 52608,
+        "output": 6261
+      },
+      "seconds": 149.42287302017212,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 132357,
+        "cached": 74240,
+        "output": 2491
+      },
+      "seconds": 108.458,
+      "rounds": 22,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 82946,
+        "cached": 50560,
+        "output": 2273
+      },
+      "seconds": 55.966,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 319824,
+        "cached": 240896,
+        "output": 6455
+      },
+      "seconds": 162.769,
+      "rounds": 11,
+      "failed_reason": "answer: \\b(6|six)\\b",
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 54351,
+        "cached": 28928,
+        "output": 1496
+      },
+      "seconds": 65.985,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 55092,
+        "cached": 24704,
+        "output": 1905
+      },
+      "seconds": 48.5,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 328550,
+        "cached": 247424,
+        "output": 5509
+      },
+      "seconds": 153.547,
+      "rounds": 11,
+      "failed_reason": "answer: \\b(6|six)\\b",
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52647,
+        "cached": 32640,
+        "output": 3978
+      },
+      "seconds": 99.56344079971313,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 17309,
+        "cached": 8448,
+        "output": 457
+      },
+      "seconds": 43.115,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52561,
+        "cached": 25344,
+        "output": 565
+      },
+      "seconds": 29.637,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 73701,
+        "cached": 47104,
+        "output": 615
+      },
+      "seconds": 42.329,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 12449,
+        "cached": 5120,
+        "output": 790
+      },
+      "seconds": 40.06064581871033,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52444,
+        "cached": 25344,
+        "output": 659
+      },
+      "seconds": 31.797,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 73704,
+        "cached": 47104,
+        "output": 706
+      },
+      "seconds": 39.5,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 32979,
+        "cached": 21632,
+        "output": 1828
+      },
+      "seconds": 70.89841294288635,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 23021,
+        "cached": 13056,
+        "output": 668
+      },
+      "seconds": 45.901,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 56567,
+        "cached": 27008,
+        "output": 939
+      },
+      "seconds": 32.968,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 217357,
+        "cached": 145024,
+        "output": 1959
+      },
+      "seconds": 69.164,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 102969,
+        "cached": 65920,
+        "output": 7000
+      },
+      "seconds": 176.64783096313477,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 56978,
+        "cached": 25728,
+        "output": 1312
+      },
+      "seconds": 96.762,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 191969,
+        "cached": 121472,
+        "output": 1734
+      },
+      "seconds": 61.671,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 102987,
+        "cached": 71040,
+        "output": 6628
+      },
+      "seconds": 156.08840107917786,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 57152,
+        "cached": 25728,
+        "output": 1246
+      },
+      "seconds": 49.244,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 56563,
+        "cached": 27008,
+        "output": 975
+      },
+      "seconds": 30.587,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 308954,
+        "cached": 232960,
+        "output": 5974
+      },
+      "seconds": 164.1,
+      "rounds": 11,
+      "failed_reason": "answer: File Uploaded",
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 12744,
+        "cached": 5120,
+        "output": 853
+      },
+      "seconds": 37.022804975509644,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 357335,
+        "cached": 244864,
+        "output": 8068
+      },
+      "seconds": 374.749,
+      "rounds": 79,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 53544,
+        "cached": 25856,
+        "output": 1085
+      },
+      "seconds": 52.36,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 12812,
+        "cached": 5120,
+        "output": 907
+      },
+      "seconds": 35.73389720916748,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 300443,
+        "cached": 193920,
+        "output": 6363
+      },
+      "seconds": 273.354,
+      "rounds": 62,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 81827,
+        "cached": 51200,
+        "output": 1800
+      },
+      "seconds": 61.011,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 291078,
+        "cached": 256000,
+        "output": 8740
+      },
+      "seconds": 192.364,
+      "rounds": 11,
+      "failed_reason": "answer: File Uploaded",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 22151,
+        "cached": 10240,
+        "output": 1229
+      },
+      "seconds": 50.81705188751221,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": null,
+        "cached": null,
+        "output": null
+      },
+      "seconds": 480.007,
+      "rounds": 33,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 84804,
+        "cached": 54016,
+        "output": 721
+      },
+      "seconds": 42.49,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 330955,
+        "cached": 240256,
+        "output": 5235
+      },
+      "seconds": 139.491,
+      "rounds": 11,
+      "failed_reason": "answer: The\\s+following\\s+image\\s+shows\\s+a\\s+happy\\s+looking\\s+dog\\s+lying\\s+in\\s+some\\s+grass",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 218067,
+        "cached": 161792,
+        "output": 2492
+      },
+      "seconds": 151.566,
+      "rounds": 38,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 114325,
+        "cached": 44288,
+        "output": 911
+      },
+      "seconds": 40.257,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 324017,
+        "cached": 269824,
+        "output": 5332
+      },
+      "seconds": 150.341,
+      "rounds": 11,
+      "failed_reason": "answer: The\\s+following\\s+image\\s+shows\\s+a\\s+happy\\s+looking\\s+dog\\s+lying\\s+in\\s+some\\s+grass",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 20938,
+        "cached": 10240,
+        "output": 1252
+      },
+      "seconds": 40.688215017318726,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 331600,
+        "cached": 209792,
+        "output": 6009
+      },
+      "seconds": 214.621,
+      "rounds": 40,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 87982,
+        "cached": 18944,
+        "output": 1313
+      },
+      "seconds": 54.797,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 517402,
+        "cached": 390912,
+        "output": 5871
+      },
+      "seconds": 157.411,
+      "rounds": 11,
+      "failed_reason": "answer: python-3\\.13\\.0-embed-amd64\\.zip",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 323668,
+        "cached": 192256,
+        "output": 17383
+      },
+      "seconds": 434.6618478298187,
+      "rounds": 27,
+      "failed_reason": "answer: 12[,.\\s\\u00a0\\u202f]?499[,.\\s\\u00a0\\u202f]?601",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 88018,
+        "cached": 24704,
+        "output": 1071
+      },
+      "seconds": 48.493,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 485800,
+        "cached": 380416,
+        "output": 8864
+      },
+      "seconds": 199.138,
+      "rounds": 11,
+      "failed_reason": "answer: python-3\\.13\\.0-embed-amd64\\.zip",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 361318,
+        "cached": 194944,
+        "output": 21195
+      },
+      "seconds": 471.5543210506439,
+      "rounds": 27,
+      "failed_reason": "answer: 12[,.\\s\\u00a0\\u202f]?499[,.\\s\\u00a0\\u202f]?601",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 299109,
+        "cached": 189696,
+        "output": 3448
+      },
+      "seconds": 171.766,
+      "rounds": 35,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52248,
+        "cached": 24704,
+        "output": 351
+      },
+      "seconds": 16.144,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 283675,
+        "cached": 223360,
+        "output": 2622
+      },
+      "seconds": 84.303,
+      "rounds": 11,
+      "failed_reason": "answer: Bob",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 18044,
+        "cached": 10880,
+        "output": 1145
+      },
+      "seconds": 32.428794145584106,
+      "rounds": 2,
+      "failed_reason": "the site's record: deleted Ivy — Newsletter: autumn picks, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 17286,
+        "cached": 9088,
+        "output": 527
+      },
+      "seconds": 23.553,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 283797,
+        "cached": 246528,
+        "output": 2691
+      },
+      "seconds": 84.722,
+      "rounds": 11,
+      "failed_reason": "answer: Bob",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 207885,
+        "cached": 164736,
+        "output": 12308
+      },
+      "seconds": 475.16818165779114,
+      "rounds": 27,
+      "failed_reason": "the site's record: deleted Jay — Your receipt from the cafe; deleted Ivy — Newsletter: autumn picks; deleted Ada — Lunch on Friday?; deleted Kim — Meeting moved to Thursday; deleted Lou — Password changed; deleted Ned — Library books due; deleted Quin — Parking permit; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 75699,
+        "cached": 45696,
+        "output": 1603
+      },
+      "seconds": 146.024,
+      "rounds": 19,
+      "failed_reason": "the site's record: deleted Ada — Lunch on Friday?; deleted Jay — Your receipt from the cafe; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 79357,
+        "cached": 50560,
+        "output": 545
+      },
+      "seconds": 31.453,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 280140,
+        "cached": 244736,
+        "output": 2867
+      },
+      "seconds": 114.367,
+      "rounds": 11,
+      "failed_reason": "answer: WT-4417",
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 17941,
+        "cached": 10240,
+        "output": 919
+      },
+      "seconds": 33.7603862285614,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 18991,
+        "cached": 11264,
+        "output": 416
+      },
+      "seconds": 26.631,
+      "rounds": 7,
+      "failed_reason": "the site's record: opened summer-sale, where it expects opened winter-tyres",
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52228,
+        "cached": 25344,
+        "output": 368
+      },
+      "seconds": 18.294,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 107118,
+        "cached": 89984,
+        "output": 5194
+      },
+      "seconds": 181.94563627243042,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 35795,
+        "cached": 25088,
+        "output": 710
+      },
+      "seconds": 42.894,
+      "rounds": 12,
+      "failed_reason": "the site's record: opened summer-sale; opened winter-tyres, where it expects opened winter-tyres",
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": null,
+      "seconds": null,
+      "rounds": null,
+      "failed_reason": "provider transport or response error",
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": null,
+      "seconds": null,
+      "rounds": null,
+      "failed_reason": "provider transport or response error",
+      "wall_seconds": null
+    }
+  ],
+  "attempts": [
+    {
+      "task": "A",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 40789,
+        "cached": 0,
+        "output": 386
+      },
+      "seconds": 24.378,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 280539,
+        "cached": 243712,
+        "output": 2940
+      },
+      "seconds": 114.994,
+      "rounds": 11,
+      "failed_reason": "answer: 1991",
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 46037,
+        "cached": 10240,
+        "output": 1562
+      },
+      "seconds": 125.05076885223389,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 545828,
+        "cached": 179072,
+        "output": 773
+      },
+      "seconds": 93.286,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 1538431,
+        "cached": 575872,
+        "output": 2775
+      },
+      "seconds": 164.21,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 46065,
+        "cached": 15360,
+        "output": 1620
+      },
+      "seconds": 76.84073495864868,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 545562,
+        "cached": 179072,
+        "output": 813
+      },
+      "seconds": 78.597,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "A",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 40790,
+        "cached": 0,
+        "output": 1140
+      },
+      "seconds": 34.652,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 87804,
+        "cached": 23552,
+        "output": 495
+      },
+      "seconds": 31.479,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 41375,
+        "cached": 18304,
+        "output": 778
+      },
+      "seconds": 36.264768838882446,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 32349,
+        "cached": 5632,
+        "output": 428
+      },
+      "seconds": 36.384,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 28866,
+        "cached": 0,
+        "output": 173
+      },
+      "seconds": 16.694,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 13778,
+        "cached": 0,
+        "output": 380
+      },
+      "seconds": 24.502854824066162,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 32338,
+        "cached": 5632,
+        "output": 411
+      },
+      "seconds": 40.317,
+      "rounds": 4,
+      "failed_reason": "current top story points",
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 28886,
+        "cached": 0,
+        "output": 117
+      },
+      "seconds": 14.491,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "B",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 87827,
+        "cached": 23552,
+        "output": 548
+      },
+      "seconds": 34.374,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 68397,
+        "cached": 15360,
+        "output": 1589
+      },
+      "seconds": 61.90426707267761,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 266557,
+        "cached": 40192,
+        "output": 754
+      },
+      "seconds": 63.804,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 61087,
+        "cached": 24704,
+        "output": 1173
+      },
+      "seconds": 43.422,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 560782,
+        "cached": 419584,
+        "output": 2767
+      },
+      "seconds": 107.945,
+      "rounds": 11,
+      "failed_reason": "caption: Daguerreotype",
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 259750,
+        "cached": 37248,
+        "output": 703
+      },
+      "seconds": 61.811,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 124153,
+        "cached": 58624,
+        "output": 1384
+      },
+      "seconds": 44.771,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 677894,
+        "cached": 513152,
+        "output": 2444
+      },
+      "seconds": 108.65,
+      "rounds": 11,
+      "failed_reason": "caption: Daguerreotype",
+      "wall_seconds": null
+    },
+    {
+      "task": "C",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 67807,
+        "cached": 15360,
+        "output": 1677
+      },
+      "seconds": 60.424570083618164,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 179222,
+        "cached": 2816,
+        "output": 537
+      },
+      "seconds": 35.43,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 61013,
+        "cached": 29952,
+        "output": 358
+      },
+      "seconds": 19.158,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 215147,
+        "cached": 47104,
+        "output": 847
+      },
+      "seconds": 56.723,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 33681,
+        "cached": 16640,
+        "output": 1106
+      },
+      "seconds": 43.88154101371765,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 60980,
+        "cached": 29952,
+        "output": 321
+      },
+      "seconds": 21.741,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 190733,
+        "cached": 38784,
+        "output": 633
+      },
+      "seconds": 38.791,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 73586,
+        "cached": 26880,
+        "output": 2284
+      },
+      "seconds": 80.3449079990387,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "D",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 179220,
+        "cached": 2816,
+        "output": 541
+      },
+      "seconds": 33.591,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 30272,
+        "cached": 0,
+        "output": 637
+      },
+      "seconds": 21.843,
+      "rounds": 1,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 191929,
+        "cached": 23552,
+        "output": 937
+      },
+      "seconds": 42.145,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 131927,
+        "cached": 38400,
+        "output": 6385
+      },
+      "seconds": 154.25976705551147,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 268850,
+        "cached": 89856,
+        "output": 1080
+      },
+      "seconds": 51.651,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 190748,
+        "cached": 23552,
+        "output": 928
+      },
+      "seconds": 39.523,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 32109,
+        "cached": 10240,
+        "output": 1353
+      },
+      "seconds": 44.85658597946167,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 268952,
+        "cached": 89856,
+        "output": 840
+      },
+      "seconds": 36.55,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "E",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 63756,
+        "cached": 0,
+        "output": 668
+      },
+      "seconds": 28.126,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 318068,
+        "cached": 241408,
+        "output": 7141
+      },
+      "seconds": 189.583,
+      "rounds": 11,
+      "failed_reason": "answer: custname\\W+Ada Test",
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 19667,
+        "cached": 10240,
+        "output": 1766
+      },
+      "seconds": 50.83997201919556,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 65090,
+        "cached": 33664,
+        "output": 1792
+      },
+      "seconds": 84.554,
+      "rounds": 18,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 107647,
+        "cached": 76544,
+        "output": 1580
+      },
+      "seconds": 49.148,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 19653,
+        "cached": 5120,
+        "output": 1697
+      },
+      "seconds": 49.06407880783081,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 73776,
+        "cached": 39552,
+        "output": 2196
+      },
+      "seconds": 146.506,
+      "rounds": 23,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 107480,
+        "cached": 76544,
+        "output": 1625
+      },
+      "seconds": 45.662,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "F",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 323890,
+        "cached": 246784,
+        "output": 10184
+      },
+      "seconds": 280.926,
+      "rounds": 11,
+      "failed_reason": "answer: custname\\W+Ada Test",
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 77196,
+        "cached": 52608,
+        "output": 6261
+      },
+      "seconds": 149.42287302017212,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 132357,
+        "cached": 74240,
+        "output": 2491
+      },
+      "seconds": 108.458,
+      "rounds": 22,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 82946,
+        "cached": 50560,
+        "output": 2273
+      },
+      "seconds": 55.966,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 319824,
+        "cached": 240896,
+        "output": 6455
+      },
+      "seconds": 162.769,
+      "rounds": 11,
+      "failed_reason": "answer: \\b(6|six)\\b",
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 54351,
+        "cached": 28928,
+        "output": 1496
+      },
+      "seconds": 65.985,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 55092,
+        "cached": 24704,
+        "output": 1905
+      },
+      "seconds": 48.5,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 328550,
+        "cached": 247424,
+        "output": 5509
+      },
+      "seconds": 153.547,
+      "rounds": 11,
+      "failed_reason": "answer: \\b(6|six)\\b",
+      "wall_seconds": null
+    },
+    {
+      "task": "G",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52647,
+        "cached": 32640,
+        "output": 3978
+      },
+      "seconds": 99.56344079971313,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 17309,
+        "cached": 8448,
+        "output": 457
+      },
+      "seconds": 43.115,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52561,
+        "cached": 25344,
+        "output": 565
+      },
+      "seconds": 29.637,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 73701,
+        "cached": 47104,
+        "output": 615
+      },
+      "seconds": 42.329,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 12449,
+        "cached": 5120,
+        "output": 790
+      },
+      "seconds": 40.06064581871033,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52444,
+        "cached": 25344,
+        "output": 659
+      },
+      "seconds": 31.797,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 73704,
+        "cached": 47104,
+        "output": 706
+      },
+      "seconds": 39.5,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 32979,
+        "cached": 21632,
+        "output": 1828
+      },
+      "seconds": 70.89841294288635,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "H",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 23021,
+        "cached": 13056,
+        "output": 668
+      },
+      "seconds": 45.901,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 56567,
+        "cached": 27008,
+        "output": 939
+      },
+      "seconds": 32.968,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 217357,
+        "cached": 145024,
+        "output": 1959
+      },
+      "seconds": 69.164,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 102969,
+        "cached": 65920,
+        "output": 7000
+      },
+      "seconds": 176.64783096313477,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 56978,
+        "cached": 25728,
+        "output": 1312
+      },
+      "seconds": 96.762,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 191969,
+        "cached": 121472,
+        "output": 1734
+      },
+      "seconds": 61.671,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 102987,
+        "cached": 71040,
+        "output": 6628
+      },
+      "seconds": 156.08840107917786,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 57152,
+        "cached": 25728,
+        "output": 1246
+      },
+      "seconds": 49.244,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "I",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 56563,
+        "cached": 27008,
+        "output": 975
+      },
+      "seconds": 30.587,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 308954,
+        "cached": 232960,
+        "output": 5974
+      },
+      "seconds": 164.1,
+      "rounds": 11,
+      "failed_reason": "answer: File Uploaded",
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 12744,
+        "cached": 5120,
+        "output": 853
+      },
+      "seconds": 37.022804975509644,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 357335,
+        "cached": 244864,
+        "output": 8068
+      },
+      "seconds": 374.749,
+      "rounds": 79,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 53544,
+        "cached": 25856,
+        "output": 1085
+      },
+      "seconds": 52.36,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 12812,
+        "cached": 5120,
+        "output": 907
+      },
+      "seconds": 35.73389720916748,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 300443,
+        "cached": 193920,
+        "output": 6363
+      },
+      "seconds": 273.354,
+      "rounds": 62,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 81827,
+        "cached": 51200,
+        "output": 1800
+      },
+      "seconds": 61.011,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "J",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 291078,
+        "cached": 256000,
+        "output": 8740
+      },
+      "seconds": 192.364,
+      "rounds": 11,
+      "failed_reason": "answer: File Uploaded",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 22151,
+        "cached": 10240,
+        "output": 1229
+      },
+      "seconds": 50.81705188751221,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": null,
+        "cached": null,
+        "output": null
+      },
+      "seconds": 480.007,
+      "rounds": 33,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 84804,
+        "cached": 54016,
+        "output": 721
+      },
+      "seconds": 42.49,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 330955,
+        "cached": 240256,
+        "output": 5235
+      },
+      "seconds": 139.491,
+      "rounds": 11,
+      "failed_reason": "answer: The\\s+following\\s+image\\s+shows\\s+a\\s+happy\\s+looking\\s+dog\\s+lying\\s+in\\s+some\\s+grass",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 218067,
+        "cached": 161792,
+        "output": 2492
+      },
+      "seconds": 151.566,
+      "rounds": 38,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 114325,
+        "cached": 44288,
+        "output": 911
+      },
+      "seconds": 40.257,
+      "rounds": 4,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 324017,
+        "cached": 269824,
+        "output": 5332
+      },
+      "seconds": 150.341,
+      "rounds": 11,
+      "failed_reason": "answer: The\\s+following\\s+image\\s+shows\\s+a\\s+happy\\s+looking\\s+dog\\s+lying\\s+in\\s+some\\s+grass",
+      "wall_seconds": null
+    },
+    {
+      "task": "K",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 20938,
+        "cached": 10240,
+        "output": 1252
+      },
+      "seconds": 40.688215017318726,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 331600,
+        "cached": 209792,
+        "output": 6009
+      },
+      "seconds": 214.621,
+      "rounds": 40,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 87982,
+        "cached": 18944,
+        "output": 1313
+      },
+      "seconds": 54.797,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 517402,
+        "cached": 390912,
+        "output": 5871
+      },
+      "seconds": 157.411,
+      "rounds": 11,
+      "failed_reason": "answer: python-3\\.13\\.0-embed-amd64\\.zip",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 323668,
+        "cached": 192256,
+        "output": 17383
+      },
+      "seconds": 434.6618478298187,
+      "rounds": 27,
+      "failed_reason": "answer: 12[,.\\s\\u00a0\\u202f]?499[,.\\s\\u00a0\\u202f]?601",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 88018,
+        "cached": 24704,
+        "output": 1071
+      },
+      "seconds": 48.493,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 485800,
+        "cached": 380416,
+        "output": 8864
+      },
+      "seconds": 199.138,
+      "rounds": 11,
+      "failed_reason": "answer: python-3\\.13\\.0-embed-amd64\\.zip",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 361318,
+        "cached": 194944,
+        "output": 21195
+      },
+      "seconds": 471.5543210506439,
+      "rounds": 27,
+      "failed_reason": "answer: 12[,.\\s\\u00a0\\u202f]?499[,.\\s\\u00a0\\u202f]?601",
+      "wall_seconds": null
+    },
+    {
+      "task": "L",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 299109,
+        "cached": 189696,
+        "output": 3448
+      },
+      "seconds": 171.766,
+      "rounds": 35,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52248,
+        "cached": 24704,
+        "output": 351
+      },
+      "seconds": 16.144,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 283675,
+        "cached": 223360,
+        "output": 2622
+      },
+      "seconds": 84.303,
+      "rounds": 11,
+      "failed_reason": "answer: Bob",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 18044,
+        "cached": 10880,
+        "output": 1145
+      },
+      "seconds": 32.428794145584106,
+      "rounds": 2,
+      "failed_reason": "the site's record: deleted Ivy — Newsletter: autumn picks, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 17286,
+        "cached": 9088,
+        "output": 527
+      },
+      "seconds": 23.553,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 283797,
+        "cached": 246528,
+        "output": 2691
+      },
+      "seconds": 84.722,
+      "rounds": 11,
+      "failed_reason": "answer: Bob",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 207885,
+        "cached": 164736,
+        "output": 12308
+      },
+      "seconds": 475.16818165779114,
+      "rounds": 27,
+      "failed_reason": "the site's record: deleted Jay — Your receipt from the cafe; deleted Ivy — Newsletter: autumn picks; deleted Ada — Lunch on Friday?; deleted Kim — Meeting moved to Thursday; deleted Lou — Password changed; deleted Ned — Library books due; deleted Quin — Parking permit; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 75699,
+        "cached": 45696,
+        "output": 1603
+      },
+      "seconds": 146.024,
+      "rounds": 19,
+      "failed_reason": "the site's record: deleted Ada — Lunch on Friday?; deleted Jay — Your receipt from the cafe; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": null
+    },
+    {
+      "task": "X",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 79357,
+        "cached": 50560,
+        "output": 545
+      },
+      "seconds": 31.453,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "recued-playwright",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 280140,
+        "cached": 244736,
+        "output": 2867
+      },
+      "seconds": 114.367,
+      "rounds": 11,
+      "failed_reason": "answer: WT-4417",
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 17941,
+        "cached": 10240,
+        "output": 919
+      },
+      "seconds": 33.7603862285614,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "stagehand",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 18991,
+        "cached": 11264,
+        "output": 416
+      },
+      "seconds": 26.631,
+      "rounds": 7,
+      "failed_reason": "the site's record: opened summer-sale, where it expects opened winter-tyres",
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "recued-bridge",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52228,
+        "cached": 25344,
+        "output": 368
+      },
+      "seconds": 18.294,
+      "rounds": 2,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 107118,
+        "cached": 89984,
+        "output": 5194
+      },
+      "seconds": 181.94563627243042,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "stagehand",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 35795,
+        "cached": 25088,
+        "output": 710
+      },
+      "seconds": 42.894,
+      "rounds": 12,
+      "failed_reason": "the site's record: opened summer-sale; opened winter-tyres, where it expects opened winter-tyres",
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": null,
+      "seconds": null,
+      "rounds": null,
+      "failed_reason": "provider transport or response error",
+      "wall_seconds": null
+    },
+    {
+      "task": "Y",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": null,
+      "seconds": null,
+      "rounds": null,
+      "failed_reason": "provider transport or response error",
+      "wall_seconds": null
+    }
+  ]
+}

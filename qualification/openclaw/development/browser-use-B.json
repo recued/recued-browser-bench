@@ -1,0 +1,1400 @@
+{
+  "schema": 2,
+  "date": "2026-11-10",
+  "model": "qwen3.7-plus",
+  "settings": {
+    "model": "qwen3.7-plus",
+    "baseUrlEnvironment": "BENCH_BASE_URL",
+    "apiKeyEnvironment": "BENCH_API_KEY",
+    "thinking": "off",
+    "temperature": 0.2,
+    "maxOutputTokens": 4000,
+    "recuedCatalogMode": "full",
+    "arms": [
+      "openclaw-browser-use"
+    ],
+    "tasks": [
+      "B"
+    ],
+    "runs": 1,
+    "maxSeconds": 480,
+    "maxSteps": 30,
+    "minFreeMemoryMiB": 1800,
+    "memoryWaitSeconds": 180
+  },
+  "versions": {
+    "recued": "26.11.9",
+    "bridge": "0.0.8",
+    "browserUse": "0.13.14",
+    "playwrightMcp": "0.0.85",
+    "stagehand": "3.7.3",
+    "playwright": "1.61.1",
+    "openclaw": "2026.11.2",
+    "triple": "macos-arm64",
+    "browserHarness": "0.1.13",
+    "node": "v24.19.0",
+    "platform": "darwin-arm64",
+    "benchmark_commit": "3702c66f1c0f7457f3d19e12261027498465c420",
+    "benchmark_source_dirty": true
+  },
+  "reasoning_policy": "requested-off-and-no-reasoning-content-v1",
+  "records": [
+    {
+      "task": "In my browser, what is the top story on Hacker News (https://news.ycombinator.com/) right now, and how many points does it have?",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "task_id": "B",
+      "started_at": "2026-11-10T08:13:37.062Z",
+      "versions": {
+        "recued": "26.11.9",
+        "bridge": "0.0.8",
+        "browserUse": "0.13.14",
+        "playwrightMcp": "0.0.85",
+        "stagehand": "3.7.3",
+        "playwright": "1.61.1",
+        "openclaw": "2026.11.2",
+        "triple": "macos-arm64",
+        "browserHarness": "0.1.13",
+        "node": "v24.19.0",
+        "platform": "darwin-arm64",
+        "benchmark_commit": "3702c66f1c0f7457f3d19e12261027498465c420",
+        "benchmark_source_dirty": true
+      },
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "Perfect! I found the information. The top story on Hacker News is:\n\n**Title:** \"Amazon saves millions by replacing Sonnet 4.6 with Strands Decider\"\n\n**Points:** 163 points\n\nThe story was posted by user aloukissas about 2 hours ago and has 48 comments.",
+      "seconds": 59.094,
+      "rounds": 7,
+      "tokens": {
+        "input": 87908,
+        "output": 914,
+        "cached": 56320
+      },
+      "timed_out": false,
+      "error": null,
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "tool_search",
+          "phase": "start",
+          "args": {
+            "query": "browser-use navigate website CDP",
+            "limit": 3
+          }
+        },
+        {
+          "tool": "tool_search",
+          "phase": "result",
+          "result": "{\"content\":[{\"type\":\"text\",\"text\":\"[\\n  {\\n    \\\"id\\\": \\\"openclaw:core:dashboard\\\",\\n    \\\"source\\\": \\\"openclaw\\\",\\n    \\\"sourceName\\\": \\\"core\\\",\\n    \\\"name\\\": \\\"dashboard\\\",\\n    \\\"label\\\": \\\"Dashboard\\\",\\n    \\\"description\\\": \\\"Read and arrange this session dashboard; widget_put updates plugin widgets only. Follow the widget authoring tool's current placement guidance. Actions: read snapshot; tab_create/tab_update/tab_delete/tabs_reorder; widget_put/widget_move/widget_resize/widget_remove; focus_tab opens the dashboard side panel; set_presentation shows the dashboard alongside chat (split) or across the task area (expanded). focus_tab and set_presentation require a connected Control UI and do not save a default. set_default_presentation saves split or expanded for subsequent opens without requiring a connected UI; read returns the effective defaultPresentation (split when unset). Personal viewer overrides still take precedence. Widgets use stable names. widget_put creates or updates trusted plugin widgets only; update other content through its owning authoring capability discovered in the tool catalog. Prefer session:report for data reports with text, metrics, tables, charts, an"
+        },
+        {
+          "tool": "skills_read",
+          "phase": "start",
+          "args": {
+            "name": "browser-use"
+          }
+        },
+        {
+          "tool": "skills_read",
+          "phase": "result",
+          "error": true,
+          "result": "{\"content\":[{\"type\":\"text\",\"text\":\"Tool skills_read not found\"}],\"details\":{}}"
+        },
+        {
+          "tool": "dispatch_action",
+          "phase": "start",
+          "args": {
+            "id": "skills_read",
+            "args": {
+              "name": "browser-use"
+            }
+          }
+        },
+        {
+          "tool": "skills_read",
+          "phase": "start",
+          "args": {
+            "name": "browser-use"
+          }
+        },
+        {
+          "tool": "skills_read",
+          "phase": "result",
+          "result": "{\"content\":[{\"type\":\"text\",\"text\":\"Skill location: [local]/workspace/skills/browser-use/SKILL.md\\nResolve relative resource paths from the directory containing this SKILL.md.\\n\\n---\\nname: browser-use\\ndescription: \\\"Direct browser control via CDP for web interaction: automation, scraping, testing, screenshots, and site/app work. Also covers hosted cloud browsers for AI agents: the browser-use Python library (Browser(use_cloud=True)), Playwright, Puppeteer or any CDP client.\\\"\\nhomepage: https://browser-use.com\\nmetadata:\\n  {\\n    \\\"openclaw\\\":\\n      {\\n        \\\"requires\\\": { \\\"bins\\\": [\\\"browser-use\\\"] },\\n        \\\"install\\\":\\n          [\\n            {\\n              \\\"id\\\": \\\"uv\\\",\\n              \\\"kind\\\": \\\"uv\\\",\\n              \\\"package\\\": \\\"browser-use\\\",\\n              \\\"bins\\\": [\\\"browser-use\\\"],\\n              \\\"label\\\": \\\"Install Browser Use CLI (uv)\\\",\\n            },\\n          ],\\n      },\\n  }\\n---\\n\\n# Browser Use\\n\\nDirect browser control via CDP. For task-specific edits, use `agent-workspace/agent_helpers.py`. For setup, install, or connection problems, read https://github.com/"
+        },
+        {
+          "tool": "dispatch_action",
+          "phase": "result",
+          "result": "{\"content\":[{\"type\":\"text\",\"text\":\"{\\n  \\\"tool\\\": {\\n    \\\"id\\\": \\\"openclaw:core:skills_read\\\",\\n    \\\"name\\\": \\\"skills_read\\\",\\n    \\\"source\\\": \\\"openclaw\\\"\\n  },\\n  \\\"result\\\": {\\n    \\\"content\\\": [\\n      {\\n        \\\"type\\\": \\\"text\\\",\\n        \\\"text\\\": \\\"Skill location: [local]/workspace/skills/browser-use/SKILL.md\\\\nResolve relative resource paths from the directory containing this SKILL.md.\\\\n\\\\n---\\\\nname: browser-use\\\\ndescription: \\\\\\\"Direct browser control via CDP for web interaction: automation, scraping, testing, screenshots, and site/app work. Also covers hosted cloud browsers for AI agents: the browser-use Python library (Browser(use_cloud=True)), Playwright, Puppeteer or any CDP client.\\\\\\\"\\\\nhomepage: https://browser-use.com\\\\nmetadata:\\\\n  {\\\\n    \\\\\\\"openclaw\\\\\\\":\\\\n      {\\\\n        \\\\\\\"requires\\\\\\\": { \\\\\\\"bins\\\\\\\": [\\\\\\\"browser-use\\\\\\\"] },\\\\n        \\\\\\\"install\\\\\\\":\\\\n          [\\\\n            {\\\\n              \\\\\\\"id\\\\\\\": \\\\\\\"uv\\\\\\\",\\\\n              \\\\\\\"kind\\\\\\\": \\\\\\\"uv\\\\\\\",\\\\n              \\\\\\\"package\\\\\\\": \\\\\\\"browser-use\\\\\\\",\\\\n              \\\\\\\"bins\\\\\\\": [\\\\\\\"browser-use\\\\\\"
+        },
+        {
+          "tool": "exec",
+          "phase": "start",
+          "args": {
+            "command": "browser-use <<'PY'\nnew_tab(\"https://news.ycombinator.com/\")\nwait_for_load()\nprint(page_info())\nPY",
+            "title": "Navigate to Hacker News",
+            "yieldMs": 10000
+          }
+        },
+        {
+          "tool": "exec",
+          "phase": "update"
+        },
+        {
+          "tool": "exec",
+          "phase": "result",
+          "result": "{\"content\":[{\"type\":\"text\",\"text\":\"{'url': 'https://news.ycombinator.com/', 'title': 'Hacker News', 'w': 1280, 'h': 900, 'sx': 0, 'sy': 0, 'pw': 1280, 'ph': 1217}\"}],\"details\":{\"status\":\"completed\",\"exitCode\":0,\"exitSignal\":null,\"exitReason\":\"exit\",\"durationMs\":6440,\"aggregated\":\"{'url': 'https://news.ycombinator.com/', 'title': 'Hacker News', 'w': 1280, 'h': 900, 'sx': 0, 'sy': 0, 'pw': 1280, 'ph': 1217}\",\"noOutputTimedOut\":false,\"cwd\":\"[local]/workspace\"}}"
+        },
+        {
+          "tool": "exec",
+          "phase": "start",
+          "args": {
+            "command": "browser-use <<'PY'\n# Get the first story item\nresult = js(\"\"\"\nconst items = document.querySelectorAll('.athing');\nif (items.length > 0) {\n    const firstItem = items[0];\n    const titleElement = firstItem.querySelector('.titleline a');\n    const title = titleElement ? titleElement.textContent : 'N/A';\n    \n    // Get the score from the next row\n    const nextRow = firstItem.parentElement.nextElementSibling;\n    const scoreElement = nextRow ? nextRow.querySelector('.score') : null;\n    const points = scoreElement ? scoreElement.textContent : 'N/A';\n    \n    return { title: title, points: points };\n}\nreturn { title: 'Not found', points: 'N/A' };\n\"\"\")\nprint(result)\nPY",
+            "title": "Extract top story from Hacker News",
+            "yieldMs": 5000
+          }
+        },
+        {
+          "tool": "exec",
+          "phase": "update"
+        },
+        {
+          "tool": "exec",
+          "phase": "result",
+          "result": "{\"content\":[{\"type\":\"text\",\"text\":\"{'title': 'Amazon saves millions by replacing Sonnet 4.6 with Strands Decider', 'points': 'N/A'}\"}],\"details\":{\"status\":\"completed\",\"exitCode\":0,\"exitSignal\":null,\"exitReason\":\"exit\",\"durationMs\":315,\"aggregated\":\"{'title': 'Amazon saves millions by replacing Sonnet 4.6 with Strands Decider', 'points': 'N/A'}\",\"noOutputTimedOut\":false,\"cwd\":\"[local]/workspace\"}}"
+        },
+        {
+          "tool": "exec",
+          "phase": "start",
+          "args": {
+            "command": "browser-use <<'PY'\n# Get more detailed info about the first story and its score\nresult = js(\"\"\"\nconst items = document.querySelectorAll('.athing');\nif (items.length > 0) {\n    const firstItem = items[0];\n    const titleElement = firstItem.querySelector('.titleline a');\n    const title = titleElement ? titleElement.textContent : 'N/A';\n    \n    // The score is typically in the subtext row\n    const nextRow = firstItem.nextElementSibling;\n    if (nextRow) {\n        const subtext = nextRow.querySelector('.subtext');\n        if (subtext) {\n            // Look for span with class 'score' or text containing 'points'\n            const spans = subtext.querySelectorAll('span');\n            let points = 'N/A';\n            for (const span of spans) {\n                if (span.className === 'score' || span.textContent.includes('point')) {\n                    points = span.textContent.trim();\n                    break;\n                }\n            }\n            return { title: title, points: points, subtextHTML: subtext.innerHTML };\n        }\n    }\n}\nreturn { title: 'Not found', points: 'N/A' };\n\"\"\")\nprint(result)\nPY",
+            "title": "Extract top story points from Hacker News",
+            "yieldMs": 5000
+          }
+        },
+        {
+          "tool": "exec",
+          "phase": "update"
+        },
+        {
+          "tool": "exec",
+          "phase": "result",
+          "result": "{\"content\":[{\"type\":\"text\",\"text\":\"{'title': 'Amazon saves millions by replacing Sonnet 4.6 with Strands Decider', 'points': '163 points by aloukissas 2 hours ago  | hide | 48\\\\xa0comments', 'subtextHTML': '<span class=\\\"subline\\\"><span class=\\\"score\\\" id=\\\"score_50436640\\\">163 points</span> by <a href=\\\"user?id=aloukissas\\\">aloukissas</a> <span class=\\\"age\\\" title=\\\"2026-11-10T06:01:08\\\"><a href=\\\"item?id=50436640\\\">2 hours ago</a></span> <span id=\\\"unv_50436640\\\"></span> | <a href=\\\"hide?id=50436640&amp;goto=news\\\">hide</a> | <a href=\\\"item?id=50436640\\\">48&nbsp;comments</a></span>'}\"}],\"details\":{\"status\":\"completed\",\"exitCode\":0,\"exitSignal\":null,\"exitReason\":\"exit\",\"durationMs\":309,\"aggregated\":\"{'title': 'Amazon saves millions by replacing Sonnet 4.6 with Strands Decider', 'points': '163 points by aloukissas 2 hours ago  | hide | 48\\\\xa0comments', 'subtextHTML': '<span class=\\\"subline\\\"><span class=\\\"score\\\" id=\\\"score_50436640\\\">163 points</span> by <a href=\\\"user?id=aloukissas\\\">aloukissas</a> <span class=\\\"age\\\" title=\\\"2026-11-10T06:01:08\\\"><a href=\\\"item?id=50436640\\\">2 hours ago</a></span> <span id=\\\"unv_50436640\\\"></span> | <a href=\\\"hide?id=50436640&amp;goto=news\\\">hi"
+        }
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "files": [],
+        "native_completed": true,
+        "native_clock": {
+          "source": "native-assistant-event",
+          "started_at": 1794298423149,
+          "ended_at": 1794298482243
+        },
+        "native_model_calls": [
+          {
+            "call_id": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:1",
+            "started": {
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:1",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 2,
+                "inputMessagesChars": 898,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 38165
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "932d266d8514d910",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "type": "model.call.started",
+              "seq": 225,
+              "ts": 1794298423663
+            },
+            "terminal": {
+              "type": "model.call.completed",
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:1",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 2,
+                "inputMessagesChars": 898,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 38165
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "932d266d8514d910",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "durationMs": 8545,
+              "requestPayloadBytes": 38441,
+              "responseStreamBytes": 1205,
+              "timeToFirstByteMs": 6602,
+              "usage": {
+                "input": 9377,
+                "output": 57,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "cacheTelemetry": {
+                  "state": "available"
+                },
+                "cost": {
+                  "total": 0
+                },
+                "contextUsage": {
+                  "state": "available",
+                  "promptTokens": 9377,
+                  "totalTokens": 9434
+                },
+                "usageReport": {
+                  "state": "available"
+                },
+                "total": 9434,
+                "promptTokens": 9377
+              },
+              "seq": 232,
+              "ts": 1794298432208
+            }
+          },
+          {
+            "call_id": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:2",
+            "started": {
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:2",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 4,
+                "inputMessagesChars": 5074,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 42341
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "b924d4d0cbd4a7ca",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "type": "model.call.started",
+              "seq": 246,
+              "ts": 1794298432264
+            },
+            "terminal": {
+              "type": "model.call.completed",
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:2",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 4,
+                "inputMessagesChars": 5074,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 42341
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "b924d4d0cbd4a7ca",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "durationMs": 3837,
+              "requestPayloadBytes": 41986,
+              "responseStreamBytes": 1097,
+              "timeToFirstByteMs": 2623,
+              "usage": {
+                "input": 10223,
+                "output": 37,
+                "cacheRead": 0,
+                "cacheWrite": 0,
+                "cacheTelemetry": {
+                  "state": "available"
+                },
+                "cost": {
+                  "total": 0
+                },
+                "contextUsage": {
+                  "state": "available",
+                  "promptTokens": 10223,
+                  "totalTokens": 10260
+                },
+                "usageReport": {
+                  "state": "available"
+                },
+                "total": 10260,
+                "promptTokens": 10223
+              },
+              "seq": 253,
+              "ts": 1794298436101
+            }
+          },
+          {
+            "call_id": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:3",
+            "started": {
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:3",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 6,
+                "inputMessagesChars": 6048,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 43315
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "bcb792b81f6a23ca",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "type": "model.call.started",
+              "seq": 264,
+              "ts": 1794298436128
+            },
+            "terminal": {
+              "type": "model.call.completed",
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:3",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 6,
+                "inputMessagesChars": 6048,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 43315
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "bcb792b81f6a23ca",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "durationMs": 8935,
+              "requestPayloadBytes": 42324,
+              "responseStreamBytes": 1017,
+              "timeToFirstByteMs": 7361,
+              "usage": {
+                "input": 555,
+                "output": 43,
+                "cacheRead": 9728,
+                "cacheWrite": 0,
+                "cacheTelemetry": {
+                  "state": "available"
+                },
+                "cost": {
+                  "total": 0
+                },
+                "contextUsage": {
+                  "state": "available",
+                  "promptTokens": 10283,
+                  "totalTokens": 10326
+                },
+                "usageReport": {
+                  "state": "available"
+                },
+                "total": 10326,
+                "promptTokens": 10283
+              },
+              "seq": 271,
+              "ts": 1794298445063
+            }
+          },
+          {
+            "call_id": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:4",
+            "started": {
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:4",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 8,
+                "inputMessagesChars": 22916,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 60183
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "4a542dfcaf891932",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "type": "model.call.started",
+              "seq": 293,
+              "ts": 1794298445092
+            },
+            "terminal": {
+              "type": "model.call.completed",
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:4",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 8,
+                "inputMessagesChars": 22916,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 60183
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "4a542dfcaf891932",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "durationMs": 4133,
+              "requestPayloadBytes": 58608,
+              "responseStreamBytes": 1567,
+              "timeToFirstByteMs": 2458,
+              "usage": {
+                "input": 4848,
+                "output": 104,
+                "cacheRead": 9216,
+                "cacheWrite": 0,
+                "cacheTelemetry": {
+                  "state": "available"
+                },
+                "cost": {
+                  "total": 0
+                },
+                "contextUsage": {
+                  "state": "available",
+                  "promptTokens": 14064,
+                  "totalTokens": 14168
+                },
+                "usageReport": {
+                  "state": "available"
+                },
+                "total": 14168,
+                "promptTokens": 14064
+              },
+              "seq": 300,
+              "ts": 1794298449225
+            }
+          },
+          {
+            "call_id": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:5",
+            "started": {
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:5",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 10,
+                "inputMessagesChars": 24147,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 61414
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "27cb1b542cf2ff57",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "type": "model.call.started",
+              "seq": 321,
+              "ts": 1794298455794
+            },
+            "terminal": {
+              "type": "model.call.completed",
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:5",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 10,
+                "inputMessagesChars": 24147,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 61414
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "27cb1b542cf2ff57",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "durationMs": 11553,
+              "requestPayloadBytes": 59220,
+              "responseStreamBytes": 3460,
+              "timeToFirstByteMs": 6730,
+              "usage": {
+                "input": 430,
+                "output": 254,
+                "cacheRead": 13824,
+                "cacheWrite": 0,
+                "cacheTelemetry": {
+                  "state": "available"
+                },
+                "cost": {
+                  "total": 0
+                },
+                "contextUsage": {
+                  "state": "available",
+                  "promptTokens": 14254,
+                  "totalTokens": 14508
+                },
+                "usageReport": {
+                  "state": "available"
+                },
+                "total": 14508,
+                "promptTokens": 14254
+              },
+              "seq": 328,
+              "ts": 1794298467347
+            }
+          },
+          {
+            "call_id": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:6",
+            "started": {
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:6",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 12,
+                "inputMessagesChars": 25991,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 63258
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "30d8804ad96db263",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "type": "model.call.started",
+              "seq": 346,
+              "ts": 1794298467696
+            },
+            "terminal": {
+              "type": "model.call.completed",
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:6",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 12,
+                "inputMessagesChars": 25991,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 63258
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "30d8804ad96db263",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "durationMs": 9523,
+              "requestPayloadBytes": 60468,
+              "responseStreamBytes": 4814,
+              "timeToFirstByteMs": 3026,
+              "usage": {
+                "input": 730,
+                "output": 349,
+                "cacheRead": 13824,
+                "cacheWrite": 0,
+                "cacheTelemetry": {
+                  "state": "available"
+                },
+                "cost": {
+                  "total": 0
+                },
+                "contextUsage": {
+                  "state": "available",
+                  "promptTokens": 14554,
+                  "totalTokens": 14903
+                },
+                "usageReport": {
+                  "state": "available"
+                },
+                "total": 14903,
+                "promptTokens": 14554
+              },
+              "seq": 353,
+              "ts": 1794298477219
+            }
+          },
+          {
+            "call_id": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:7",
+            "started": {
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:7",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 14,
+                "inputMessagesChars": 28740,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 66007
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "3457a1d4865ef947",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "type": "model.call.started",
+              "seq": 371,
+              "ts": 1794298477564
+            },
+            "terminal": {
+              "type": "model.call.completed",
+              "runId": "77ae4ed9-e00d-4d06-a24a-bc7781258566",
+              "callId": "77ae4ed9-e00d-4d06-a24a-bc7781258566:model:7",
+              "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+              "provider": "bench",
+              "model": "qwen3.7-plus",
+              "api": "openai-completions",
+              "transport": "auto",
+              "contextTokenBudget": 262144,
+              "contextWindowSource": "modelsConfig",
+              "agentId": "bench",
+              "observationUnit": "request",
+              "promptStats": {
+                "inputMessagesCount": 14,
+                "inputMessagesChars": 28740,
+                "systemPromptChars": 27372,
+                "toolDefinitionsCount": 12,
+                "toolDefinitionsChars": 9895,
+                "totalChars": 66007
+              },
+              "trace": {
+                "traceId": "3ff64ed14a487afef92602fd7f7d504b",
+                "spanId": "3457a1d4865ef947",
+                "parentSpanId": "0784bdae88d4bd0e",
+                "traceFlags": "01"
+              },
+              "durationMs": 4680,
+              "requestPayloadBytes": 62632,
+              "responseStreamBytes": 1149,
+              "timeToFirstByteMs": 2673,
+              "usage": {
+                "input": 5425,
+                "output": 70,
+                "cacheRead": 9728,
+                "cacheWrite": 0,
+                "cacheTelemetry": {
+                  "state": "available"
+                },
+                "cost": {
+                  "total": 0
+                },
+                "contextUsage": {
+                  "state": "available",
+                  "promptTokens": 15153,
+                  "totalTokens": 15223
+                },
+                "usageReport": {
+                  "state": "available"
+                },
+                "total": 15223,
+                "promptTokens": 15153
+              },
+              "seq": 378,
+              "ts": 1794298482244
+            }
+          }
+        ],
+        "native_accounting_complete": true,
+        "native_summary": {
+          "assistant_turns": 7,
+          "usage": {
+            "usageReport": {
+              "state": "available"
+            },
+            "input": 31588,
+            "output": 914,
+            "cacheRead": 56320,
+            "cacheWrite": 0,
+            "total": 88822,
+            "cost": {
+              "total": 0
+            }
+          },
+          "duration_ms": 59099,
+          "harness": "openclaw",
+          "request_shaping": {
+            "thinking": "off"
+          },
+          "aborted": false
+        },
+        "native_system_prompt_report": {
+          "source": "run",
+          "generatedAt": 1794298423348,
+          "sessionId": "d88dd136-5cf2-4218-a953-3bd9b163637b",
+          "sessionKey": "agent:bench:explicit:d88dd136-5cf2-4218-a953-3bd9b163637b",
+          "provider": "bench",
+          "model": "qwen3.7-plus",
+          "workspaceDir": "[local]/workspace",
+          "bootstrapMaxChars": 20000,
+          "bootstrapTotalMaxChars": 60000,
+          "bootstrapTruncation": {
+            "warningMode": "always",
+            "warningShown": false,
+            "truncatedFiles": 0,
+            "nearLimitFiles": 0,
+            "totalNearLimit": false
+          },
+          "sandbox": {
+            "mode": "off",
+            "sandboxed": false
+          },
+          "systemPrompt": {
+            "chars": 27372,
+            "hash": "899969a5dd9c6c0586a3f685922b4d77611c530c90d0f672eef2003c14a62931",
+            "projectContextChars": 1341,
+            "nonProjectContextChars": 26031
+          },
+          "injectedWorkspaceFiles": [
+            {
+              "name": "AGENTS.md",
+              "path": "[local]/workspace/AGENTS.md",
+              "missing": false,
+              "rawChars": 565,
+              "injectedChars": 565,
+              "truncated": false
+            },
+            {
+              "name": "SOUL.md",
+              "path": "[local]/workspace/SOUL.md",
+              "missing": true,
+              "rawChars": 0,
+              "injectedChars": 133,
+              "truncated": false
+            },
+            {
+              "name": "IDENTITY.md",
+              "path": "[local]/workspace/IDENTITY.md",
+              "missing": true,
+              "rawChars": 0,
+              "injectedChars": 137,
+              "truncated": false
+            },
+            {
+              "name": "BOOTSTRAP.md",
+              "path": "[local]/workspace/BOOTSTRAP.md",
+              "missing": true,
+              "rawChars": 0,
+              "injectedChars": 0,
+              "truncated": false
+            }
+          ],
+          "skills": {
+            "promptChars": 7847,
+            "hash": "72738885ae2d3a14613b470ea76fd9e2e4247f628d677677d691f40d06ae82c1",
+            "entries": [
+              {
+                "name": "add-model-provider",
+                "blockChars": 365
+              },
+              {
+                "name": "browser-use",
+                "blockChars": 485
+              },
+              {
+                "name": "canvas",
+                "blockChars": 318
+              },
+              {
+                "name": "clawhub",
+                "blockChars": 364
+              },
+              {
+                "name": "cloud-image-bake",
+                "blockChars": 351
+              },
+              {
+                "name": "configure-channel",
+                "blockChars": 353
+              },
+              {
+                "name": "control-ui",
+                "blockChars": 404
+              },
+              {
+                "name": "diagnose-gateway",
+                "blockChars": 345
+              },
+              {
+                "name": "diagram-maker",
+                "blockChars": 330
+              },
+              {
+                "name": "gh-issues",
+                "blockChars": 353
+              },
+              {
+                "name": "github",
+                "blockChars": 324
+              },
+              {
+                "name": "healthcheck",
+                "blockChars": 342
+              },
+              {
+                "name": "meme-maker",
+                "blockChars": 315
+              },
+              {
+                "name": "node-connect",
+                "blockChars": 399
+              },
+              {
+                "name": "node-inspect-debugger",
+                "blockChars": 341
+              },
+              {
+                "name": "notion",
+                "blockChars": 336
+              },
+              {
+                "name": "python-debugpy",
+                "blockChars": 329
+              },
+              {
+                "name": "skill-creator",
+                "blockChars": 348
+              },
+              {
+                "name": "spike",
+                "blockChars": 315
+              },
+              {
+                "name": "visualize",
+                "blockChars": 346
+              },
+              {
+                "name": "weather",
+                "blockChars": 353
+              }
+            ]
+          },
+          "tools": {
+            "listChars": 0,
+            "schemaChars": 6491,
+            "entries": [
+              {
+                "name": "ls",
+                "summaryChars": 192,
+                "summaryHash": "90bdd7a772f66ad236d45f18e28ee873b8c795fe219804f2c19074a867423e20",
+                "schemaChars": 254,
+                "schemaHash": "ebe8d6a85b7011ec7e0d43a759b3b53b1ce96e682f54a64312b10e89260e9af9",
+                "propertiesCount": 3
+              },
+              {
+                "name": "read",
+                "summaryChars": 164,
+                "summaryHash": "d136f5b09e28d671addad4ca800b75b8aa6a36002bc739ead964f618d3e34829",
+                "schemaChars": 481,
+                "schemaHash": "b1b9b637dfe1dfade40f50c37cf840a298f1992b534cb9425b7470233a6b0cbb",
+                "propertiesCount": 5
+              },
+              {
+                "name": "edit",
+                "summaryChars": 130,
+                "summaryHash": "4149500b1f6501ec6450e4c048bdb6844764dd4a888a10846726cbbc7256152e",
+                "schemaChars": 501,
+                "schemaHash": "adf3140833ca927b84c66c989d6833fdcbd9de011dd2ffc59f9a2c4d3c25f127",
+                "propertiesCount": 2
+              },
+              {
+                "name": "write",
+                "summaryChars": 49,
+                "summaryHash": "f9ce3d8ac929a51498c03331b97c59bfaa2bb4d25580a5ddf0102e6a8e173aec",
+                "schemaChars": 191,
+                "schemaHash": "b61d2da23febf5fbda55e391526f36d283e9e9fb7f1a1dbadcf5c618a0632287",
+                "propertiesCount": 2
+              },
+              {
+                "name": "apply_patch",
+                "summaryChars": 71,
+                "summaryHash": "5c1173efe93d080a386a23216bc3e58db2e0033eb3ddea697eb2439938b7cae4",
+                "schemaChars": 153,
+                "schemaHash": "05521268363ff4f191472c90d69ef08a503ba9acf1d2febc50b3ee68db32ab65",
+                "propertiesCount": 1
+              },
+              {
+                "name": "exec",
+                "summaryChars": 498,
+                "summaryHash": "3dbf995d4f5b1a330cfcedf8d7c8600149e4802aef05055e5afce1dc1edca96a",
+                "schemaChars": 1549,
+                "schemaHash": "ae4801d14056df2d10528add8259c3174c0460fdc57787dfeaf900bec93f5e22",
+                "propertiesCount": 13
+              },
+              {
+                "name": "process",
+                "summaryChars": 190,
+                "summaryHash": "75fd9c7b8d560599081ab2621e4f897babc118254cf439bd8329a60a905a9ef1",
+                "schemaChars": 1164,
+                "schemaHash": "6cf3281369349e15ea532e644c8ec7f94c96fa6a4e3287272c8cfe90b0960516",
+                "propertiesCount": 12
+              },
+              {
+                "name": "heartbeat_respond",
+                "summaryChars": 156,
+                "summaryHash": "75ebcf57f2d67ae16e33a6c4659d7f8c429db4cb6e83c3bb65ccfa02a8115513",
+                "schemaChars": 528,
+                "schemaHash": "e46be5f99ab0fd8a3165f697fac6892a70ff76b6f9733d0a3ca33cd3ab8578be",
+                "propertiesCount": 8
+              },
+              {
+                "name": "openclaw",
+                "summaryChars": 456,
+                "summaryHash": "45212b5ccc76e78f8dc05e9a9d90d721c53f16f18ee08a23a5868020bbe24f6d",
+                "schemaChars": 196,
+                "schemaHash": "9956b2b6fde1ca6ca3d035b66217a09c717a6503aa4e59a2ce184dbf67849bd3",
+                "propertiesCount": 2
+              },
+              {
+                "name": "tool_search",
+                "summaryChars": 508,
+                "summaryHash": "aaacb4524e6a76d0f25d667edd982bc6a29629df1e2e38ffbc90facb135193e6",
+                "schemaChars": 1139,
+                "schemaHash": "0a78304973631f66103ff3f0c767433fdc00fb89d629bd5b12d1ada29940d382",
+                "propertiesCount": 3
+              },
+              {
+                "name": "tool_describe",
+                "summaryChars": 92,
+                "summaryHash": "fc74d14dc28e4026dba1a8904339a6bef1ce8118588e0bff809c37be73ce7a02",
+                "schemaChars": 125,
+                "schemaHash": "8b60055097c87990f29b27c1f82ecea48435ffb1163c486121a2189f118aa0a4",
+                "propertiesCount": 1
+              },
+              {
+                "name": "dispatch_action",
+                "summaryChars": 61,
+                "summaryHash": "0dc569a573cbc94928d868c94a178930879ac898b541cd9009338699a3e7d1fd",
+                "schemaChars": 210,
+                "schemaHash": "f48bfb0705c11b32ccbdfd456b791ce458604b1f51b1e31f61bc2d7b25ae07b9",
+                "propertiesCount": 2
+              }
+            ]
+          },
+          "currentTurn": {
+            "promptChars": 128,
+            "runtimeContextChars": 215,
+            "modelOnlyPromptChars": 0
+          }
+        },
+        "browser_profile": "fresh runner-owned Chromium attached through published browser-use CLI and skill",
+        "cleanup_after_native_reply": false,
+        "non_browser_http_tools": "disabled; shell HTTP clients forbidden by workspace instructions"
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-10T08:13:43.822Z",
+          "seconds": 8.378,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 57,
+            "prompt_tokens": 9377,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 9377
+            },
+            "total_tokens": 9434
+          },
+          "tools": [
+            "apply_patch",
+            "dispatch_action",
+            "edit",
+            "exec",
+            "heartbeat_respond",
+            "ls",
+            "openclaw",
+            "process",
+            "read",
+            "tool_describe",
+            "tool_search",
+            "write"
+          ],
+          "tool_calls": [
+            "tool_search"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-10T08:13:52.269Z",
+          "seconds": 3.827,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 37,
+            "prompt_tokens": 10223,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "text_tokens": 10223
+            },
+            "total_tokens": 10260
+          },
+          "tools": [
+            "apply_patch",
+            "dispatch_action",
+            "edit",
+            "exec",
+            "heartbeat_respond",
+            "ls",
+            "openclaw",
+            "process",
+            "read",
+            "tool_describe",
+            "tool_search",
+            "write"
+          ],
+          "tool_calls": [
+            "skills_read"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-10T08:13:56.133Z",
+          "seconds": 8.927,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 43,
+            "prompt_tokens": 10283,
+            "prompt_tokens_details": {
+              "cached_tokens": 9728,
+              "text_tokens": 10283
+            },
+            "total_tokens": 10326
+          },
+          "tools": [
+            "apply_patch",
+            "dispatch_action",
+            "edit",
+            "exec",
+            "heartbeat_respond",
+            "ls",
+            "openclaw",
+            "process",
+            "read",
+            "tool_describe",
+            "tool_search",
+            "write"
+          ],
+          "tool_calls": [
+            "dispatch_action"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-10T08:14:05.096Z",
+          "seconds": 4.838,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 104,
+            "prompt_tokens": 14064,
+            "prompt_tokens_details": {
+              "cached_tokens": 9216,
+              "text_tokens": 14064
+            },
+            "total_tokens": 14168
+          },
+          "tools": [
+            "apply_patch",
+            "dispatch_action",
+            "edit",
+            "exec",
+            "heartbeat_respond",
+            "ls",
+            "openclaw",
+            "process",
+            "read",
+            "tool_describe",
+            "tool_search",
+            "write"
+          ],
+          "tool_calls": [
+            "exec"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-10T08:14:15.799Z",
+          "seconds": 11.543,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 254,
+            "prompt_tokens": 14254,
+            "prompt_tokens_details": {
+              "cached_tokens": 13824,
+              "text_tokens": 14254
+            },
+            "total_tokens": 14508
+          },
+          "tools": [
+            "apply_patch",
+            "dispatch_action",
+            "edit",
+            "exec",
+            "heartbeat_respond",
+            "ls",
+            "openclaw",
+            "process",
+            "read",
+            "tool_describe",
+            "tool_search",
+            "write"
+          ],
+          "tool_calls": [
+            "exec"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-10T08:14:27.699Z",
+          "seconds": 9.517,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 349,
+            "prompt_tokens": 14554,
+            "prompt_tokens_details": {
+              "cached_tokens": 13824,
+              "text_tokens": 14554
+            },
+            "total_tokens": 14903
+          },
+          "tools": [
+            "apply_patch",
+            "dispatch_action",
+            "edit",
+            "exec",
+            "heartbeat_respond",
+            "ls",
+            "openclaw",
+            "process",
+            "read",
+            "tool_describe",
+            "tool_search",
+            "write"
+          ],
+          "tool_calls": [
+            "exec"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-10T08:14:37.566Z",
+          "seconds": 4.674,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 70,
+            "prompt_tokens": 15153,
+            "prompt_tokens_details": {
+              "cached_tokens": 9728,
+              "text_tokens": 15153
+            },
+            "total_tokens": 15223
+          },
+          "tools": [
+            "apply_patch",
+            "dispatch_action",
+            "edit",
+            "exec",
+            "heartbeat_respond",
+            "ls",
+            "openclaw",
+            "process",
+            "read",
+            "tool_describe",
+            "tool_search",
+            "write"
+          ],
+          "tool_calls": [],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "wall_seconds": 65.799,
+      "reasoning": {
+        "checked": 0,
+        "calls": 7,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported",
+        "counter_verified": false,
+        "accepted": true,
+        "acceptance_basis": "requested-off-and-no-reasoning-content"
+      },
+      "qualified": true,
+      "right": true,
+      "missing": [],
+      "oracle": {
+        "title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+        "points": 163
+      },
+      "live_events": [],
+      "outcome": {
+        "status": "right",
+        "kind": null,
+        "retryable": false,
+        "reason": ""
+      }
+    }
+  ],
+  "processing_receipt": "qualification/openclaw/privacy-receipt.json"
+}

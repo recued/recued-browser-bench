@@ -1,0 +1,25 @@
+{
+  "name": "recued-bridge-vs-browser-use",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=24.16.0 <25 || >=26.1.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "bench": "node scripts/run.mjs",
+    "report": "node scripts/report.mjs",
+    "report:merge": "node scripts/merge-reports.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "3.7.3",
+    "@playwright/mcp": "0.0.85",
+    "@scure/bip39": "1.6.0",
+    "playwright": "1.61.1",
+    "ws": "8.18.3",
+    "zod": "4.6.6"
+  }
+}

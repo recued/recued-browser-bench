@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "current": [
+    {
+      "task": "J",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 892007,
+        "output": 6558,
+        "cached": null
+      },
+      "seconds": 377.80558800697327,
+      "rounds": 46,
+      "failed_reason": "actual upload action",
+      "wall_seconds": 383.16
+    }
+  ],
+  "attempts": [
+    {
+      "task": "J",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 892007,
+        "output": 6558,
+        "cached": null
+      },
+      "seconds": 377.80558800697327,
+      "rounds": 46,
+      "failed_reason": "actual upload action",
+      "wall_seconds": 383.16
+    }
+  ]
+}

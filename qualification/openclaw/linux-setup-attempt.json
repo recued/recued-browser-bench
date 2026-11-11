@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-10T09:12:50.636Z",
+  "source": "900e284",
+  "status": "setup qualification pending",
+  "reason": "Dependency downloads did not complete within the preliminary qualification window. Installation stopped before the Mac measured cohort to avoid resource contention.",
+  "logs": [
+    "openclaw-linux-build.log",
+    "openclaw-linux-prepared-build.log",
+    "openclaw-linux-cached-build.log"
+  ],
+  "model_calls": 0
+}

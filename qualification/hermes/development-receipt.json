@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-10T13:47:45.693Z",
+  "unit_tests_passed": 40,
+  "native_browser_fixture_checks_passed": 5,
+  "native_usage_independently_matches_gateway_for_all_four_development_attempts": true,
+  "all_development_attempts_excluded_from_showcase": true,
+  "batches": [
+    {
+      "records": "qualification/hermes/development/hermes-smoke-b/records.json",
+      "sha256": "2abbc40363e461d450d655a1f2a7ad2203fe5b3387856fd822829d4284652aad",
+      "attempts": 1,
+      "excluded_from_showcase": true,
+      "note": "Native Qwen browser call and counters passed."
+    },
+    {
+      "records": "qualification/hermes/development/hermes-files-smoke/records.json",
+      "sha256": "d795b8fc174d6f4767556c1163b524a7fef1dc916cab80cecaf442bd361a0a1b",
+      "attempts": 2,
+      "excluded_from_showcase": true,
+      "note": "Browser download passed; upload verdict invalid because observer did not follow the native browser session."
+    },
+    {
+      "records": "qualification/hermes/development/hermes-upload-qualified/records.json",
+      "sha256": "0edcec009a16a72cccc67f4017de2ecfc054787a21d2c3464b7fd8e561acad49",
+      "attempts": 1,
+      "excluded_from_showcase": true,
+      "note": "Upload verdict invalid because its page loaded before the passive file-selection listener attached. Corrected and covered by a native browser fixture."
+    }
+  ]
+}

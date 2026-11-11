@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-10T08:44:44.347Z",
+  "scope": "Development qualification before the frozen showcase batch; not included in headline accuracy.",
+  "versions": {
+    "openclaw": "2026.11.2",
+    "browser_use": "0.13.14",
+    "browser_harness": "0.1.13",
+    "playwright": "1.61.1"
+  },
+  "development_attempts": 5,
+  "development": [
+    {
+      "name": "builtin-E",
+      "sha256": "ee702f8ee4c987fbf7729f1eb9185cc68a679ca21bc80baaece49b35dbd737ff",
+      "attempts": 1,
+      "source_commit": "3702c66f1c0f7457f3d19e12261027498465c420",
+      "source_dirty": true,
+      "published_sha256": "cfc52568f18151a1946f25c6a1811f3714e7ff1edde7237c29d3609a00a4da27"
+    },
+    {
+      "name": "browser-use-B",
+      "sha256": "73f3dafd3cdd828eb2f8115d8d75f6a7a04bc866051231139dfdc03004c329e1",
+      "attempts": 1,
+      "source_commit": "3702c66f1c0f7457f3d19e12261027498465c420",
+      "source_dirty": true,
+      "published_sha256": "9848fe9f015ad92dcbbc64fab69cc8c404a2665daef535bc7c53f3f7c50565fd"
+    },
+    {
+      "name": "browser-use-JKL",
+      "sha256": "483543a32b5891557d95908bebfc74a1cb9d1f49c2f485430bea8c2932216388",
+      "attempts": 3,
+      "source_commit": "3702c66f1c0f7457f3d19e12261027498465c420",
+      "source_dirty": true,
+      "published_sha256": "00bf941f488886ffb716b8d101618bc0f0ceea9480bb5b045d2b7985a5134e4c"
+    }
+  ],
+  "corrections_before_freeze": [
+    "Completed OpenClaw JSON output must not be failed because CLI browser resources stay alive.",
+    "Observe SSE packets before forwarding; drain terminal usage after SDK finish_reason closes, while preserving real cancellation.",
+    "Count native model-call IDs and native prompt totals including cached input once; retain unknown counters.",
+    "Observe selected browser attachment contents plus multipart submission because Chromium may omit file bytes from request-event bodies.",
+    "Bound passive download waits and native cleanup, retain native tool timeout failures instead of earlier progress text, and reap task-owned daemon state.",
+    "Register the default Qwen model with its documented 1000000-token context window; the development probes used 262144.",
+    "Clarify the common browser-only policy: discovered-document download and local text extraction are allowed, as in document tools; requested browser downloads require browser evidence."
+  ],
+  "limitations": [
+    "Development probes ran against a changing dirty adapter and are retained without rescoring.",
+    "The J probe was rejected by the earlier file-bytes checker; the selected-file observer was not yet installed, so no retrospective verdict is asserted.",
+    "L exhausted its native tool execution budget; a cleanup hang lost its primary counters in the development record. It is not retried to obtain a correct answer.",
+    "The built-in browser arm is selectable for a later batch; its early E probe is not a qualified showcase."
+  ],
+  "file_evidence": {
+    "cases": 5,
+    "passed": 5,
+    "model_calls": 0,
+    "record": "file-evidence.json"
+  },
+  "unit_tests": {
+    "passed": 30,
+    "failed": 0
+  },
+  "original_four_arm_records_sha256": "69dd6f5be1b7a2c34ca7458a759f8635927bd52fdde27be41377027083f51022",
+  "publication": "local only; no remote or push",
+  "privacy_processing_receipt": "privacy-receipt.json"
+}

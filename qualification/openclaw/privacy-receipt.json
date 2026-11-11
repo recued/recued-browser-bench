@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-10T10:32:45.988Z",
+  "measured_source_commit": "900e284bae5009314d3ac4462436827230b0a458",
+  "scope": "Additional privacy normalization after measurement and technical retries. Framework output sometimes masked HOME before the parent could remove the full owned checkout/task path. Normalize those remaining directory prefixes; add this processing-receipt link to dataset metadata.",
+  "invariants": [
+    "Every attempt, verdict, task, model setting, clock, round count, token counter, raw model-call field and retry link is preserved except owned local path prefixes inside strings.",
+    "For each file, the entire published record array equals the input record array after only the stated path replacements. Canonical record fingerprints match.",
+    "The existing four-arm datasets were not rewritten.",
+    "Historical source_run.sha256 values identify the runtime retry input; this map relates those hashes to the privacy-normalized published files."
+  ],
+  "original_four_arm_records_sha256": "69dd6f5be1b7a2c34ca7458a759f8635927bd52fdde27be41377027083f51022",
+  "files": [
+    {
+      "path": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/records.json",
+      "input_sha256": "531f73b1589fcc5588e2989e6a0f32878732d75dfba613ea360ea9f9e2c075e9",
+      "published_sha256": "5d6911b3a2df8a675213ffd9f7ff9da678f57311096cb70caf52f8de73bd52ce",
+      "records": 28,
+      "canonical_records_sha256": "d648e4fa986bc97616a346bf3f93462fe550f4d17e84e927f5c03d8b620ab6d0",
+      "only_owned_path_strings_changed": true
+    },
+    {
+      "path": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/records.json",
+      "input_sha256": "e8d7ba8b35905659936f0dd98e5810dd877df73c36783a4b320112007a2327d3",
+      "published_sha256": "abf578f9f98fb91ee9e12555d688e063aeff28e8dff025077a4bbc12e2246d86",
+      "records": 30,
+      "canonical_records_sha256": "18796bfa1d80e3b541a7062f02467d3e4a425382105b74940d8f3328c5802392",
+      "only_owned_path_strings_changed": true
+    },
+    {
+      "path": "qualification/openclaw/development/builtin-E.json",
+      "input_sha256": "ee702f8ee4c987fbf7729f1eb9185cc68a679ca21bc80baaece49b35dbd737ff",
+      "published_sha256": "cfc52568f18151a1946f25c6a1811f3714e7ff1edde7237c29d3609a00a4da27",
+      "records": 1,
+      "canonical_records_sha256": "17ab635837a930ccacc5f87dbb85b92232471088ac863e317fb471090607fcf2",
+      "only_owned_path_strings_changed": true
+    },
+    {
+      "path": "qualification/openclaw/development/browser-use-B.json",
+      "input_sha256": "73f3dafd3cdd828eb2f8115d8d75f6a7a04bc866051231139dfdc03004c329e1",
+      "published_sha256": "9848fe9f015ad92dcbbc64fab69cc8c404a2665daef535bc7c53f3f7c50565fd",
+      "records": 1,
+      "canonical_records_sha256": "3bdd7a9a0cec6e1470b28db6c265c03a7cbfb7090fa797a3c1eab58170563443",
+      "only_owned_path_strings_changed": true
+    },
+    {
+      "path": "qualification/openclaw/development/browser-use-JKL.json",
+      "input_sha256": "483543a32b5891557d95908bebfc74a1cb9d1f49c2f485430bea8c2932216388",
+      "published_sha256": "00bf941f488886ffb716b8d101618bc0f0ceea9480bb5b045d2b7985a5134e4c",
+      "records": 3,
+      "canonical_records_sha256": "ddb8022fd54d6da576defa5a0ac03fb7e120f6def2ecbaf6278e68dd5c496582",
+      "only_owned_path_strings_changed": true
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-10T14:40:11.773Z",
+  "kind": "live-page-oracle-evidence-correction",
+  "scoring_commit": "f7bfe026ee106ea9a3e1da51ce773984402d1204",
+  "raw_records": "qualification/hermes/raw-showcase/records.json",
+  "input_sha256": "9887a4c0d35e7fa0cc28a52c20dc8093db25dadc26ef83bdbbbc565c59ef004a",
+  "public_records": "results/showcase/2026-11-10-qwen3.7-plus-hermes/records.json",
+  "public_sha256": "54d8ad21b85436b1bba1881c9950ba83bad4dfba1b02bbcf383e6d0ce59e48cb",
+  "model_rerun": false,
+  "additional_model_calls": 0,
+  "allowed_changed_record_fields": [
+    "oracle",
+    "right",
+    "missing",
+    "outcome"
+  ],
+  "all_other_records_and_measurements_unchanged": true,
+  "correction": {
+    "task": "D",
+    "run": 1,
+    "record_index": 6,
+    "before": {
+      "oracle": {
+        "title": null
+      },
+      "right": false,
+      "missing": [
+        "last See also title"
+      ],
+      "outcome": {
+        "status": "wrong",
+        "kind": "answer-or-capability",
+        "retryable": false,
+        "reason": "last See also title"
+      }
+    },
+    "after": {
+      "oracle": {
+        "title": "Women in STEM fields",
+        "evidence_correction": "qualification/hermes/oracle-repair.json"
+      },
+      "right": true,
+      "missing": [],
+      "outcome": {
+        "status": "right",
+        "kind": null,
+        "retryable": false,
+        "reason": ""
+      }
+    }
+  },
+  "in_turn_native_dom": {
+    "action_index": 33,
+    "observed": {
+      "count": 5,
+      "lastItem": "Women in STEM fields",
+      "allItems": [
+        "Code: Debugging the Gender Gap",
+        "List of pioneers in computer science",
+        "Timeline of women in science",
+        "Women in computing",
+        "Women in STEM fields"
+      ]
+    },
+    "source": "Native browser_exec result from the original measured attempt; DOM query reads the See_also list."
+  },
+  "independent_same_batch_cross_check": {
+    "record_index": 7,
+    "started_at": "2026-11-10T13:57:50.203Z",
+    "oracle": {
+      "title": "Women in STEM fields"
+    },
+    "source": "The independent page checker for D/R2, shortly after D/R1, agrees with its preserved in-turn rendered list."
+  },
+  "checker_only_recheck": {
+    "date": "2026-11-10T14:39:35.546Z",
+    "model_calls": 0,
+    "task": "D",
+    "oracle": {
+      "error": "live page check unavailable: HTTP 429",
+      "http_status": 429
+    }
+  },
+  "limits": "The current recheck is reported as observed. This repair uses preserved in-turn DOM evidence plus the independent same-batch D/R2 checker, not a claim that the current recheck succeeded."
+}

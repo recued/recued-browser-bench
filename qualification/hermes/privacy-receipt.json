@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-10T14:44:21.288Z",
+  "local_checks": {
+    "partial_owned_path_prefixes": 0,
+    "hostname_matches": 0,
+    "owned_named_processes": 0,
+    "task_directories": 0,
+    "missing_local_readme_links": [],
+    "git_remotes": 0
+  },
+  "scanner": {
+    "files": 173,
+    "environment_values_checked": 77,
+    "leaks": []
+  }
+}

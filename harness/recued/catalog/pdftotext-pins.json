@@ -1,0 +1,28 @@
+{
+  "release": "26.11.9",
+  "catalogTag": "catalog/26.11.9.1",
+  "captured": "2026-11-09",
+  "files": [
+    {
+      "kind": "packs",
+      "slug": "pdftotext",
+      "url": "https://recued.com/packs/pdftotext.json",
+      "version": 5,
+      "sha256": "f8d76dc2b0eca0017456ce5ceb0d21de49ac4f9482d74311827c14624da8803d"
+    },
+    {
+      "kind": "recipes",
+      "slug": "extract-pdf-text-pdftotext",
+      "url": "https://recued.com/recipes/extract-pdf-text-pdftotext.json",
+      "version": 1,
+      "sha256": "5b12d1dfe0a571fd148f2725dbdb15d6e4ac5dfa56b461cfc7faae70a311b85c"
+    },
+    {
+      "kind": "recipes",
+      "slug": "summarize-pdf-pdftotext",
+      "url": "https://recued.com/recipes/summarize-pdf-pdftotext.json",
+      "version": 2,
+      "sha256": "adfb901bf69ffd0715c5830d464798b846ccd0c5720cdf83ce0981cf6d610cf4"
+    }
+  ]
+}

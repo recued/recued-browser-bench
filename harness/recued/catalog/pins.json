@@ -1,0 +1,119 @@
+{
+  "release": "26.11.9",
+  "catalogTag": "catalog/26.11.9.1",
+  "captured": "2026-11-09",
+  "files": [
+    {
+      "slug": "browser-toolkit",
+      "kind": "packs",
+      "url": "https://recued.com/packs/browser-toolkit.json",
+      "version": 4,
+      "sha256": "d1ccfdea8ebfe4d9131c1681fbd36a6b64cdc7ac74e44c49c71645c7e0251885"
+    },
+    {
+      "slug": "list-browser-tabs",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/list-browser-tabs.json",
+      "version": 2,
+      "sha256": "0b8144b9161f80a1e64a5a2c3993dde909dbc9ef2548f040af56445223170a64"
+    },
+    {
+      "slug": "open-web-page",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/open-web-page.json",
+      "version": 3,
+      "sha256": "f2772b27bca2e644f04781092c27f478081c85e832b42b4dc08ea73e74042318"
+    },
+    {
+      "slug": "inspect-web-page",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/inspect-web-page.json",
+      "version": 4,
+      "sha256": "f2147eec47937a212f031ece6b7b9763a9d877f6a989ac37dfec24f31e6fd0d8"
+    },
+    {
+      "slug": "read-web-text",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/read-web-text.json",
+      "version": 1,
+      "sha256": "8f02b76833db63eee67f7e86b3b4ec85b1cd868baf70b7cb09d7361412286685"
+    },
+    {
+      "slug": "read-web-element",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/read-web-element.json",
+      "version": 4,
+      "sha256": "ca64bda8622a0c9f340647c1c09722748800fc1554910c46513f2bbab1addc53"
+    },
+    {
+      "slug": "wait-for-web-element",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/wait-for-web-element.json",
+      "version": 3,
+      "sha256": "47ebc0814f7413bb340a614c5068a49a4398a1f3580ebcfe9b2b9baa584998b3"
+    },
+    {
+      "slug": "read-web-table",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/read-web-table.json",
+      "version": 3,
+      "sha256": "d5c3aaf31d18db54e7bc9f7923c04bc1ddf9b6b7d9ff8e2ff9b1a89864906416"
+    },
+    {
+      "slug": "save-web-file",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/save-web-file.json",
+      "version": 1,
+      "sha256": "bc68f72f11ffd74ddfcf4a49a50efd6b2f2a889273b5d3f0990478d55b06956c"
+    },
+    {
+      "slug": "screenshot-web-page",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/screenshot-web-page.json",
+      "version": 3,
+      "sha256": "b87836d3c98e756b8b236d25d3e9ab6ca6a9bcec90290636a7bfc708c61b0c17"
+    },
+    {
+      "slug": "ask-web-page",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/ask-web-page.json",
+      "version": 1,
+      "sha256": "dddd327ed0653f711589af58aa22bf1b5b3e0454e10e39f87156850772cf62c0"
+    },
+    {
+      "slug": "scroll-web-page",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/scroll-web-page.json",
+      "version": 1,
+      "sha256": "224a4331fd99836f04dfd5ebce3e03210ba42e10ab963dd5d62b22e7a36b3b98"
+    },
+    {
+      "slug": "type-into-web-page",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/type-into-web-page.json",
+      "version": 3,
+      "sha256": "a2a154fe82ff32f0fddf9ba942ba2fb4b5283b6fd7a4248dfb778919db3930ba"
+    },
+    {
+      "slug": "click-web-element",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/click-web-element.json",
+      "version": 3,
+      "sha256": "283da9c88cad64ebf562179fe6cf6b9df340b351be9be17fdcfc3e60a2674f65"
+    },
+    {
+      "slug": "press-on-web-page",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/press-on-web-page.json",
+      "version": 1,
+      "sha256": "eaf2a657950dca61aa9d3a752cda5e494ec88cec0a87b7369274384d4e244048"
+    },
+    {
+      "slug": "act-on-web-page",
+      "kind": "recipes",
+      "url": "https://recued.com/recipes/act-on-web-page.json",
+      "version": 2,
+      "sha256": "a4ee5e7f5211b255d4312be8493a4a0c83fca4ab038ad4533dd6b5471e11be83"
+    }
+  ]
+}

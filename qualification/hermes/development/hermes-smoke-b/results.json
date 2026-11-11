@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "current": [
+    {
+      "task": "B",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 31997,
+        "output": 269,
+        "cached": null
+      },
+      "seconds": 19.694072008132935,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 24.745
+    }
+  ],
+  "attempts": [
+    {
+      "task": "B",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 31997,
+        "output": 269,
+        "cached": null
+      },
+      "seconds": 19.694072008132935,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 24.745
+    }
+  ]
+}

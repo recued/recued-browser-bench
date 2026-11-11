@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-10T12:43:49.753Z",
+  "kind": "truncated-owned-path-redaction",
+  "sanitizer_commit": "0195673516db673f66d86942c56d0541d36eaf82",
+  "reason": "Native tool results had been bounded before sanitization, leaving terminal fragments that no longer matched a complete owned path. Complete tool results are now sanitized before bounding. Only known owned path prefixes at the end of retained action-result strings were redacted; omitted text was not reconstructed.",
+  "files": [
+    {
+      "records": "qualification/openclaw/development/browser-use-JKL.json",
+      "input_sha256": "00bf941f488886ffb716b8d101618bc0f0ceea9480bb5b045d2b7985a5134e4c",
+      "public_sha256": "a319090f288f8356494ac477802109b6290cdd32f6336b924e149ec532b0e807",
+      "redacted_action_fields": [
+        "/records/0/actions/14/result",
+        "/records/0/actions/23/result",
+        "/records/0/actions/26/result",
+        "/records/0/actions/32/result",
+        "/records/0/actions/47/result",
+        "/records/0/actions/50/result",
+        "/records/0/actions/75/result"
+      ],
+      "canonical_record_fingerprints_sha256": "244ea28c4cda9160bb3ff08c4a7dcee0fc4d5e006eb9b6aa1cd5d0d7711744e7",
+      "all_other_record_fields_unchanged": true,
+      "measurement_verdicts_and_source_provenance_unchanged": true
+    },
+    {
+      "records": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/records.json",
+      "input_sha256": "5d6911b3a2df8a675213ffd9f7ff9da678f57311096cb70caf52f8de73bd52ce",
+      "public_sha256": "b6a2eb9b0b042de5f9b730b3a6c276044ab0e161aa23e07ddf941b0f72be499f",
+      "redacted_action_fields": [
+        "/records/4/actions/11/result",
+        "/records/5/actions/10/result",
+        "/records/6/actions/8/result",
+        "/records/6/actions/11/result",
+        "/records/6/actions/14/result",
+        "/records/6/actions/29/result",
+        "/records/6/actions/38/result",
+        "/records/6/actions/52/result",
+        "/records/10/actions/19/result",
+        "/records/20/actions/18/result",
+        "/records/20/actions/24/result",
+        "/records/23/actions/10/result",
+        "/records/26/actions/13/result",
+        "/records/27/actions/13/result"
+      ],
+      "canonical_record_fingerprints_sha256": "61f6a9b7e4cf59891e3c77ec9272bab6da6857f371080d526407949486b73ac2",
+      "all_other_record_fields_unchanged": true,
+      "measurement_verdicts_and_source_provenance_unchanged": true
+    },
+    {
+      "records": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/records.json",
+      "input_sha256": "abf578f9f98fb91ee9e12555d688e063aeff28e8dff025077a4bbc12e2246d86",
+      "public_sha256": "1a10e4b73922ae46c5187d9b7c55bb477838edcdabd5d369c2e860120954a6df",
+      "redacted_action_fields": [
+        "/records/4/actions/11/result",
+        "/records/5/actions/10/result",
+        "/records/6/actions/8/result",
+        "/records/6/actions/11/result",
+        "/records/6/actions/14/result",
+        "/records/6/actions/29/result",
+        "/records/6/actions/38/result",
+        "/records/6/actions/52/result",
+        "/records/10/actions/19/result",
+        "/records/20/actions/18/result",
+        "/records/20/actions/24/result",
+        "/records/23/actions/10/result",
+        "/records/26/actions/13/result",
+        "/records/27/actions/13/result",
+        "/records/28/actions/16/result"
+      ],
+      "canonical_record_fingerprints_sha256": "1c9235aa60552f190c25d75514051db88c289030be3ae6aeef3b6aaabbb11699",
+      "all_other_record_fields_unchanged": true,
+      "measurement_verdicts_and_source_provenance_unchanged": true
+    },
+    {
+      "records": "results/showcase/2026-11-10-qwen3.7-plus-five-arms/records.json",
+      "input_sha256": "6b8a43d54e695206a52afa903b08c5df086f1ce4623d41138990e4198483413b",
+      "public_sha256": "057096838440ca087614f3bd3faf4e1560fc36a33d9a356b40c4749110717942",
+      "redacted_action_fields": [
+        "/records/118/actions/11/result",
+        "/records/119/actions/10/result",
+        "/records/120/actions/8/result",
+        "/records/120/actions/11/result",
+        "/records/120/actions/14/result",
+        "/records/120/actions/29/result",
+        "/records/120/actions/38/result",
+        "/records/120/actions/52/result",
+        "/records/124/actions/19/result",
+        "/records/134/actions/18/result",
+        "/records/134/actions/24/result",
+        "/records/137/actions/10/result",
+        "/records/140/actions/13/result",
+        "/records/141/actions/13/result",
+        "/records/142/actions/16/result"
+      ],
+      "canonical_record_fingerprints_sha256": "34f2026e9802abe12b8a17d94b8dd4d446bce3fb15d0c5ba674101c683100e47",
+      "all_other_record_fields_unchanged": true,
+      "measurement_verdicts_and_source_provenance_unchanged": true
+    }
+  ],
+  "reassembled_six_arm": {
+    "records": "results/showcase/2026-11-10-qwen3.7-plus-six-arms/records.json",
+    "input_sha256": "4444bb7f57c53a7ca302d98feafd0682df34d38954c6153f110dd4081544690e",
+    "public_sha256": "29d6455fcf8a60a87cba79640515b3765ceee0a2d1cbc5f4e6ac4c0091bbd50c",
+    "all_records_equal_after_declared_path_redaction": true,
+    "source_hashes_updated_to_current_inputs": true
+  },
+  "preservation": {
+    "earlier_showcase_files": 15,
+    "byte_identical": 12,
+    "records_with_path_only_redaction": 3,
+    "original_four_arm_files_byte_identical": 6,
+    "all_answers_tokens_seconds_rounds_model_calls_settings_versions_reasoning_outcomes_unchanged": true
+  },
+  "model_calls": 0
+}

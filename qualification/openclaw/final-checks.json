@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-10T10:48:59.086Z",
+  "unit_tests": {
+    "passed": 32,
+    "failed": 0
+  },
+  "browser_file_checks": {
+    "passed": 5,
+    "failed": 0,
+    "model_calls": 0
+  },
+  "readme": {
+    "tables": 2,
+    "task_rows": 28,
+    "arms": 5,
+    "metric_values_checked": 417,
+    "best_values_checked": 90,
+    "failure_groups": 21,
+    "current_wrong_repetitions_covered": 36
+  },
+  "reports_and_vectors": "Reproduced for both new-arm datasets and the combined report.",
+  "sources": {
+    "original_four_arm_files_byte_identical": 6,
+    "combined_scheduled": 140,
+    "combined_attempts": 144,
+    "all_source_records_equal_after_retry_index_rebasing": true
+  },
+  "privacy": {
+    "candidate_files_scanned": 119,
+    "actual_environment_values_checked": 77,
+    "leaks": 0,
+    "partial_owned_path_prefixes": 0,
+    "host_name_matches": 0,
+    "processing_receipt": "privacy-receipt.json"
+  },
+  "cleanup": {
+    "task_directories": 0,
+    "owned_named_processes": 0,
+    "owned_browser_use_daemons": 0
+  },
+  "git_remotes": 0,
+  "scope": "macOS arm64 new-arm measurement; Linux setup qualification pending; built-in browser arm reserved for later.",
+  "later_privacy_audit": {
+    "receipt": "qualification/openclaw/truncated-path-redaction.json",
+    "earlier_partial_prefix_check_was_incomplete": true,
+    "note": "The earlier check did not catch terminal fragments produced by truncating before sanitization. The later audit redacts them and verifies unchanged measurements and verdicts."
+  }
+}

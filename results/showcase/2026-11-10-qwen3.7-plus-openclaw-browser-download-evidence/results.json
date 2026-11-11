@@ -1,0 +1,1071 @@
+{
+  "schema": 1,
+  "current": [
+    {
+      "task": "A",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 505983,
+        "output": 1458,
+        "cached": null
+      },
+      "seconds": 162.924,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 170.068
+    },
+    {
+      "task": "A",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 463232,
+        "output": 1546,
+        "cached": null
+      },
+      "seconds": 250.936,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 258.699
+    },
+    {
+      "task": "B",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 34479,
+        "output": 246,
+        "cached": 9728
+      },
+      "seconds": 16.688,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 24.583
+    },
+    {
+      "task": "B",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 34511,
+        "output": 257,
+        "cached": 21760
+      },
+      "seconds": 18.828,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 26.016
+    },
+    {
+      "task": "C",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 115833,
+        "output": 641,
+        "cached": null
+      },
+      "seconds": 76.893,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 83.922
+    },
+    {
+      "task": "C",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 100306,
+        "output": 666,
+        "cached": null
+      },
+      "seconds": 104.923,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 111.961
+    },
+    {
+      "task": "D",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 529531,
+        "output": 2207,
+        "cached": null
+      },
+      "seconds": 184.716,
+      "rounds": 20,
+      "failed_reason": null,
+      "wall_seconds": 191.748
+    },
+    {
+      "task": "D",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 321183,
+        "output": 1761,
+        "cached": null
+      },
+      "seconds": 111.707,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 118.74
+    },
+    {
+      "task": "E",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 688256,
+        "output": 2331,
+        "cached": null
+      },
+      "seconds": 207.319,
+      "rounds": 23,
+      "failed_reason": null,
+      "wall_seconds": 214.349
+    },
+    {
+      "task": "E",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 740836,
+        "output": 2772,
+        "cached": null
+      },
+      "seconds": 215.208,
+      "rounds": 22,
+      "failed_reason": null,
+      "wall_seconds": 222.341
+    },
+    {
+      "task": "F",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 110817,
+        "output": 1270,
+        "cached": null
+      },
+      "seconds": 60.725,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 68.728
+    },
+    {
+      "task": "F",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 312912,
+        "output": 2313,
+        "cached": null
+      },
+      "seconds": 112.759,
+      "rounds": 19,
+      "failed_reason": null,
+      "wall_seconds": 119.91
+    },
+    {
+      "task": "G",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 101818,
+        "output": 1104,
+        "cached": null
+      },
+      "seconds": 57.231,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 64.328
+    },
+    {
+      "task": "G",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 102028,
+        "output": 1187,
+        "cached": null
+      },
+      "seconds": 57.038,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 64.399
+    },
+    {
+      "task": "H",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52602,
+        "output": 422,
+        "cached": null
+      },
+      "seconds": 56.294,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": 63.85
+    },
+    {
+      "task": "H",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 30575,
+        "output": 294,
+        "cached": null
+      },
+      "seconds": 28.27,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 35.451
+    },
+    {
+      "task": "I",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 246292,
+        "output": 1608,
+        "cached": null
+      },
+      "seconds": 91.69,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 98.882
+    },
+    {
+      "task": "I",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 306810,
+        "output": 2022,
+        "cached": null
+      },
+      "seconds": 115.938,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 122.99
+    },
+    {
+      "task": "J",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 290281,
+        "output": 1849,
+        "cached": null
+      },
+      "seconds": 128.173,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 135.316
+    },
+    {
+      "task": "J",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 1529860,
+        "output": 3214,
+        "cached": null
+      },
+      "seconds": 480.035,
+      "rounds": 28,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": 487.602
+    },
+    {
+      "task": "K",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 289780,
+        "output": 1633,
+        "cached": null
+      },
+      "seconds": 117.496,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 125.153
+    },
+    {
+      "task": "K",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 260425,
+        "output": 1619,
+        "cached": null
+      },
+      "seconds": 119.827,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 127.472
+    },
+    {
+      "task": "L",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 201623,
+        "output": 1192,
+        "cached": null
+      },
+      "seconds": 101.028,
+      "rounds": 10,
+      "failed_reason": null,
+      "wall_seconds": 108.814
+    },
+    {
+      "task": "L",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 534.436,
+      "rounds": 43,
+      "failed_reason": "Provider network error: UND_ERR_CONNECT_TIMEOUT",
+      "wall_seconds": 543.789
+    },
+    {
+      "task": "X",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 140998,
+        "output": 933,
+        "cached": null
+      },
+      "seconds": 185.518,
+      "rounds": 10,
+      "failed_reason": "the site's record: deleted Tia — School trip form; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": 193.596
+    },
+    {
+      "task": "X",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 459835,
+        "output": 2266,
+        "cached": null
+      },
+      "seconds": 144.926,
+      "rounds": 22,
+      "failed_reason": "the site's record: deleted Kim — Meeting moved to Thursday; deleted Ivy — Newsletter: autumn picks; deleted Ada — Lunch on Friday?; deleted Jay — Your receipt from the cafe; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": 152.055
+    },
+    {
+      "task": "Y",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 100713,
+        "output": 591,
+        "cached": 66176
+      },
+      "seconds": 57.654,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 64.834
+    },
+    {
+      "task": "Y",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 100531,
+        "output": 527,
+        "cached": null
+      },
+      "seconds": 39.167,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 46.303
+    }
+  ],
+  "attempts": [
+    {
+      "task": "A",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 505983,
+        "output": 1458,
+        "cached": null
+      },
+      "seconds": 162.924,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 170.068
+    },
+    {
+      "task": "A",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 463232,
+        "output": 1546,
+        "cached": null
+      },
+      "seconds": 250.936,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 258.699
+    },
+    {
+      "task": "B",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 34479,
+        "output": 246,
+        "cached": 9728
+      },
+      "seconds": 16.688,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 24.583
+    },
+    {
+      "task": "B",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 34511,
+        "output": 257,
+        "cached": 21760
+      },
+      "seconds": 18.828,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 26.016
+    },
+    {
+      "task": "C",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 115833,
+        "output": 641,
+        "cached": null
+      },
+      "seconds": 76.893,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 83.922
+    },
+    {
+      "task": "C",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 100306,
+        "output": 666,
+        "cached": null
+      },
+      "seconds": 104.923,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 111.961
+    },
+    {
+      "task": "D",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 529531,
+        "output": 2207,
+        "cached": null
+      },
+      "seconds": 184.716,
+      "rounds": 20,
+      "failed_reason": null,
+      "wall_seconds": 191.748
+    },
+    {
+      "task": "D",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 321183,
+        "output": 1761,
+        "cached": null
+      },
+      "seconds": 111.707,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 118.74
+    },
+    {
+      "task": "E",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 688256,
+        "output": 2331,
+        "cached": null
+      },
+      "seconds": 207.319,
+      "rounds": 23,
+      "failed_reason": null,
+      "wall_seconds": 214.349
+    },
+    {
+      "task": "E",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 740836,
+        "output": 2772,
+        "cached": null
+      },
+      "seconds": 215.208,
+      "rounds": 22,
+      "failed_reason": null,
+      "wall_seconds": 222.341
+    },
+    {
+      "task": "F",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 110817,
+        "output": 1270,
+        "cached": null
+      },
+      "seconds": 60.725,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 68.728
+    },
+    {
+      "task": "F",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 312912,
+        "output": 2313,
+        "cached": null
+      },
+      "seconds": 112.759,
+      "rounds": 19,
+      "failed_reason": null,
+      "wall_seconds": 119.91
+    },
+    {
+      "task": "G",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 101818,
+        "output": 1104,
+        "cached": null
+      },
+      "seconds": 57.231,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 64.328
+    },
+    {
+      "task": "G",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 102028,
+        "output": 1187,
+        "cached": null
+      },
+      "seconds": 57.038,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 64.399
+    },
+    {
+      "task": "H",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 52602,
+        "output": 422,
+        "cached": null
+      },
+      "seconds": 56.294,
+      "rounds": 5,
+      "failed_reason": null,
+      "wall_seconds": 63.85
+    },
+    {
+      "task": "H",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 30575,
+        "output": 294,
+        "cached": null
+      },
+      "seconds": 28.27,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 35.451
+    },
+    {
+      "task": "I",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 246292,
+        "output": 1608,
+        "cached": null
+      },
+      "seconds": 91.69,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 98.882
+    },
+    {
+      "task": "I",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 306810,
+        "output": 2022,
+        "cached": null
+      },
+      "seconds": 115.938,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 122.99
+    },
+    {
+      "task": "J",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 290281,
+        "output": 1849,
+        "cached": null
+      },
+      "seconds": 128.173,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 135.316
+    },
+    {
+      "task": "J",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 1529860,
+        "output": 3214,
+        "cached": null
+      },
+      "seconds": 480.035,
+      "rounds": 28,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": 487.602
+    },
+    {
+      "task": "K",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 289780,
+        "output": 1633,
+        "cached": null
+      },
+      "seconds": 117.496,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 125.153
+    },
+    {
+      "task": "K",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 260425,
+        "output": 1619,
+        "cached": null
+      },
+      "seconds": 119.827,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 127.472
+    },
+    {
+      "task": "L",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 201623,
+        "output": 1192,
+        "cached": null
+      },
+      "seconds": 101.028,
+      "rounds": 10,
+      "failed_reason": null,
+      "wall_seconds": 108.814
+    },
+    {
+      "task": "L",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 534.436,
+      "rounds": 43,
+      "failed_reason": "Provider network error: UND_ERR_CONNECT_TIMEOUT",
+      "wall_seconds": 543.789
+    },
+    {
+      "task": "X",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 140998,
+        "output": 933,
+        "cached": null
+      },
+      "seconds": 185.518,
+      "rounds": 10,
+      "failed_reason": "the site's record: deleted Tia — School trip form; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": 193.596
+    },
+    {
+      "task": "X",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 459835,
+        "output": 2266,
+        "cached": null
+      },
+      "seconds": 144.926,
+      "rounds": 22,
+      "failed_reason": "the site's record: deleted Kim — Meeting moved to Thursday; deleted Ivy — Newsletter: autumn picks; deleted Ada — Lunch on Friday?; deleted Jay — Your receipt from the cafe; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": 152.055
+    },
+    {
+      "task": "Y",
+      "arm": "openclaw-browser",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 100713,
+        "output": 591,
+        "cached": 66176
+      },
+      "seconds": 57.654,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 64.834
+    },
+    {
+      "task": "Y",
+      "arm": "openclaw-browser",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 100531,
+        "output": 527,
+        "cached": null
+      },
+      "seconds": 39.167,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 46.303
+    }
+  ]
+}

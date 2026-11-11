@@ -1,0 +1,1071 @@
+{
+  "schema": 1,
+  "current": [
+    {
+      "task": "A",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 377238,
+        "output": 1831,
+        "cached": 319872
+      },
+      "seconds": 142.08,
+      "rounds": 19,
+      "failed_reason": null,
+      "wall_seconds": 149.573
+    },
+    {
+      "task": "A",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 259377,
+        "output": 2766,
+        "cached": null
+      },
+      "seconds": 186.01,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 192.802
+    },
+    {
+      "task": "B",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 82435,
+        "output": 549,
+        "cached": 49408
+      },
+      "seconds": 46.067,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": 53.075
+    },
+    {
+      "task": "B",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 82505,
+        "output": 581,
+        "cached": 48128
+      },
+      "seconds": 41.739,
+      "rounds": 6,
+      "failed_reason": "current top story points",
+      "wall_seconds": 48.521
+    },
+    {
+      "task": "C",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 121.885,
+      "rounds": 11,
+      "failed_reason": "Provider network error: ECONNRESET",
+      "wall_seconds": 128.989
+    },
+    {
+      "task": "C",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 202165,
+        "output": 1880,
+        "cached": 139648
+      },
+      "seconds": 107.339,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 114.326
+    },
+    {
+      "task": "D",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 468510,
+        "output": 5113,
+        "cached": null
+      },
+      "seconds": 188.147,
+      "rounds": 24,
+      "failed_reason": null,
+      "wall_seconds": 194.842
+    },
+    {
+      "task": "D",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 439158,
+        "output": 6331,
+        "cached": 366848
+      },
+      "seconds": 223.606,
+      "rounds": 23,
+      "failed_reason": null,
+      "wall_seconds": 230.332
+    },
+    {
+      "task": "E",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 196946,
+        "output": 2602,
+        "cached": 154496
+      },
+      "seconds": 113.702,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 120.395
+    },
+    {
+      "task": "E",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 362611,
+        "output": 3980,
+        "cached": 311552
+      },
+      "seconds": 147.083,
+      "rounds": 19,
+      "failed_reason": null,
+      "wall_seconds": 153.915
+    },
+    {
+      "task": "F",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 238626,
+        "output": 1258,
+        "cached": 187392
+      },
+      "seconds": 72.667,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 79.454
+    },
+    {
+      "task": "F",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 103952,
+        "output": 1070,
+        "cached": 75776
+      },
+      "seconds": 60.403,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 67.279
+    },
+    {
+      "task": "G",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 118.319,
+      "rounds": 16,
+      "failed_reason": "Provider network error: ECONNRESET",
+      "wall_seconds": 125.197
+    },
+    {
+      "task": "G",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 246225,
+        "output": 2400,
+        "cached": 199680
+      },
+      "seconds": 104.979,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 111.987
+    },
+    {
+      "task": "H",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 118422,
+        "output": 696,
+        "cached": 97152
+      },
+      "seconds": 55.196,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 62.072
+    },
+    {
+      "task": "H",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 118322,
+        "output": 734,
+        "cached": 82176
+      },
+      "seconds": 61.198,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 68.055
+    },
+    {
+      "task": "I",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 183484,
+        "output": 1493,
+        "cached": 128256
+      },
+      "seconds": 84.765,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": 91.614
+    },
+    {
+      "task": "I",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 175793,
+        "output": 1354,
+        "cached": 134144
+      },
+      "seconds": 70.871,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": 77.38
+    },
+    {
+      "task": "J",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 302651,
+        "output": 2867,
+        "cached": 257152
+      },
+      "seconds": 135.266,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 141.9
+    },
+    {
+      "task": "J",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 170659,
+        "output": 2462,
+        "cached": 131456
+      },
+      "seconds": 111.425,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 118.268
+    },
+    {
+      "task": "K",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 314618,
+        "output": 1822,
+        "cached": 257024
+      },
+      "seconds": 110.415,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 117.401
+    },
+    {
+      "task": "K",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 281081,
+        "output": 1932,
+        "cached": null
+      },
+      "seconds": 115.962,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 122.776
+    },
+    {
+      "task": "L",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 480.03,
+      "rounds": 24,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": 488.752
+    },
+    {
+      "task": "L",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 480.039,
+      "rounds": 38,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": 488.922
+    },
+    {
+      "task": "X",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 317682,
+        "output": 4474,
+        "cached": null
+      },
+      "seconds": 127.076,
+      "rounds": 17,
+      "failed_reason": "the site's record: nothing, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": 133.95
+    },
+    {
+      "task": "X",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 300715,
+        "output": 2945,
+        "cached": 247936
+      },
+      "seconds": 106.014,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 112.912
+    },
+    {
+      "task": "Y",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 230209,
+        "output": 1905,
+        "cached": null
+      },
+      "seconds": 91.708,
+      "rounds": 14,
+      "failed_reason": "the site's record: opened summer-sale; opened winter-tyres, where it expects opened winter-tyres",
+      "wall_seconds": 98.535
+    },
+    {
+      "task": "Y",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 172802,
+        "output": 1056,
+        "cached": 135040
+      },
+      "seconds": 52.07,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": 58.96
+    }
+  ],
+  "attempts": [
+    {
+      "task": "A",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 377238,
+        "output": 1831,
+        "cached": 319872
+      },
+      "seconds": 142.08,
+      "rounds": 19,
+      "failed_reason": null,
+      "wall_seconds": 149.573
+    },
+    {
+      "task": "A",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 259377,
+        "output": 2766,
+        "cached": null
+      },
+      "seconds": 186.01,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 192.802
+    },
+    {
+      "task": "B",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 82435,
+        "output": 549,
+        "cached": 49408
+      },
+      "seconds": 46.067,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": 53.075
+    },
+    {
+      "task": "B",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 82505,
+        "output": 581,
+        "cached": 48128
+      },
+      "seconds": 41.739,
+      "rounds": 6,
+      "failed_reason": "current top story points",
+      "wall_seconds": 48.521
+    },
+    {
+      "task": "C",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 121.885,
+      "rounds": 11,
+      "failed_reason": "Provider network error: ECONNRESET",
+      "wall_seconds": 128.989
+    },
+    {
+      "task": "C",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 202165,
+        "output": 1880,
+        "cached": 139648
+      },
+      "seconds": 107.339,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 114.326
+    },
+    {
+      "task": "D",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 468510,
+        "output": 5113,
+        "cached": null
+      },
+      "seconds": 188.147,
+      "rounds": 24,
+      "failed_reason": null,
+      "wall_seconds": 194.842
+    },
+    {
+      "task": "D",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 439158,
+        "output": 6331,
+        "cached": 366848
+      },
+      "seconds": 223.606,
+      "rounds": 23,
+      "failed_reason": null,
+      "wall_seconds": 230.332
+    },
+    {
+      "task": "E",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 196946,
+        "output": 2602,
+        "cached": 154496
+      },
+      "seconds": 113.702,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 120.395
+    },
+    {
+      "task": "E",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 362611,
+        "output": 3980,
+        "cached": 311552
+      },
+      "seconds": 147.083,
+      "rounds": 19,
+      "failed_reason": null,
+      "wall_seconds": 153.915
+    },
+    {
+      "task": "F",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 238626,
+        "output": 1258,
+        "cached": 187392
+      },
+      "seconds": 72.667,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 79.454
+    },
+    {
+      "task": "F",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 103952,
+        "output": 1070,
+        "cached": 75776
+      },
+      "seconds": 60.403,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 67.279
+    },
+    {
+      "task": "G",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "failed",
+      "failure_kind": "technical",
+      "retryable": true,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 118.319,
+      "rounds": 16,
+      "failed_reason": "Provider network error: ECONNRESET",
+      "wall_seconds": 125.197
+    },
+    {
+      "task": "G",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 246225,
+        "output": 2400,
+        "cached": 199680
+      },
+      "seconds": 104.979,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 111.987
+    },
+    {
+      "task": "H",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 118422,
+        "output": 696,
+        "cached": 97152
+      },
+      "seconds": 55.196,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 62.072
+    },
+    {
+      "task": "H",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 118322,
+        "output": 734,
+        "cached": 82176
+      },
+      "seconds": 61.198,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 68.055
+    },
+    {
+      "task": "I",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 183484,
+        "output": 1493,
+        "cached": 128256
+      },
+      "seconds": 84.765,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": 91.614
+    },
+    {
+      "task": "I",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 175793,
+        "output": 1354,
+        "cached": 134144
+      },
+      "seconds": 70.871,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": 77.38
+    },
+    {
+      "task": "J",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 302651,
+        "output": 2867,
+        "cached": 257152
+      },
+      "seconds": 135.266,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 141.9
+    },
+    {
+      "task": "J",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 170659,
+        "output": 2462,
+        "cached": 131456
+      },
+      "seconds": 111.425,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 118.268
+    },
+    {
+      "task": "K",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 314618,
+        "output": 1822,
+        "cached": 257024
+      },
+      "seconds": 110.415,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 117.401
+    },
+    {
+      "task": "K",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 281081,
+        "output": 1932,
+        "cached": null
+      },
+      "seconds": 115.962,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 122.776
+    },
+    {
+      "task": "L",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 480.03,
+      "rounds": 24,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": 488.752
+    },
+    {
+      "task": "L",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "seconds": 480.039,
+      "rounds": 38,
+      "failed_reason": "Agent did not complete the task within its native time or step budget.",
+      "wall_seconds": 488.922
+    },
+    {
+      "task": "X",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 317682,
+        "output": 4474,
+        "cached": null
+      },
+      "seconds": 127.076,
+      "rounds": 17,
+      "failed_reason": "the site's record: nothing, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": 133.95
+    },
+    {
+      "task": "X",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 300715,
+        "output": 2945,
+        "cached": 247936
+      },
+      "seconds": 106.014,
+      "rounds": 16,
+      "failed_reason": null,
+      "wall_seconds": 112.912
+    },
+    {
+      "task": "Y",
+      "arm": "openclaw-browser-use",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 230209,
+        "output": 1905,
+        "cached": null
+      },
+      "seconds": 91.708,
+      "rounds": 14,
+      "failed_reason": "the site's record: opened summer-sale; opened winter-tyres, where it expects opened winter-tyres",
+      "wall_seconds": 98.535
+    },
+    {
+      "task": "Y",
+      "arm": "openclaw-browser-use",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 172802,
+        "output": 1056,
+        "cached": 135040
+      },
+      "seconds": 52.07,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": 58.96
+    }
+  ]
+}

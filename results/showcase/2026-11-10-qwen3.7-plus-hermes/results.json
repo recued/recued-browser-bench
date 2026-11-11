@@ -1,0 +1,1071 @@
+{
+  "schema": 1,
+  "current": [
+    {
+      "task": "A",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 90372,
+        "output": 2371,
+        "cached": null
+      },
+      "seconds": 88.80921602249146,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 92.903
+    },
+    {
+      "task": "A",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 168011,
+        "output": 2841,
+        "cached": null
+      },
+      "seconds": 104.32478880882263,
+      "rounds": 13,
+      "failed_reason": null,
+      "wall_seconds": 109.001
+    },
+    {
+      "task": "B",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 31794,
+        "output": 240,
+        "cached": null
+      },
+      "seconds": 18.268826961517334,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 22.654
+    },
+    {
+      "task": "B",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 32091,
+        "output": 384,
+        "cached": null
+      },
+      "seconds": 20.50870108604431,
+      "rounds": 3,
+      "failed_reason": "current top story points",
+      "wall_seconds": 24.68
+    },
+    {
+      "task": "C",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 75220,
+        "output": 1286,
+        "cached": null
+      },
+      "seconds": 69.13324999809265,
+      "rounds": 6,
+      "failed_reason": "caption: Daguerreotype",
+      "wall_seconds": 73.145
+    },
+    {
+      "task": "C",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 100648,
+        "output": 1037,
+        "cached": null
+      },
+      "seconds": 76.904061794281,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 80.962
+    },
+    {
+      "task": "D",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 249323,
+        "output": 4717,
+        "cached": null
+      },
+      "seconds": 139.78676676750183,
+      "rounds": 18,
+      "failed_reason": null,
+      "wall_seconds": 144.126
+    },
+    {
+      "task": "D",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 142067,
+        "output": 2160,
+        "cached": null
+      },
+      "seconds": 77.26109576225281,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": 80.882
+    },
+    {
+      "task": "E",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 156859,
+        "output": 2673,
+        "cached": null
+      },
+      "seconds": 108.00372672080994,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 112.471
+    },
+    {
+      "task": "E",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 182773,
+        "output": 1756,
+        "cached": null
+      },
+      "seconds": 106.83595991134644,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 111.36
+    },
+    {
+      "task": "F",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 382224,
+        "output": 2645,
+        "cached": null
+      },
+      "seconds": 205.93376111984253,
+      "rounds": 24,
+      "failed_reason": null,
+      "wall_seconds": 216.637
+    },
+    {
+      "task": "F",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 126768,
+        "output": 1587,
+        "cached": null
+      },
+      "seconds": 125.59760284423828,
+      "rounds": 10,
+      "failed_reason": null,
+      "wall_seconds": 133.464
+    },
+    {
+      "task": "G",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 33689,
+        "output": 891,
+        "cached": null
+      },
+      "seconds": 35.15525698661804,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 39.819
+    },
+    {
+      "task": "G",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 69965,
+        "output": 1391,
+        "cached": null
+      },
+      "seconds": 53.38727617263794,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": 57.914
+    },
+    {
+      "task": "H",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 32086,
+        "output": 420,
+        "cached": null
+      },
+      "seconds": 34.733705043792725,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 38.895
+    },
+    {
+      "task": "H",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 34185,
+        "output": 641,
+        "cached": null
+      },
+      "seconds": 39.62441968917847,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 44.9
+    },
+    {
+      "task": "I",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 78597,
+        "output": 1023,
+        "cached": null
+      },
+      "seconds": 47.63132381439209,
+      "rounds": 7,
+      "failed_reason": "answer: Little Dribbling",
+      "wall_seconds": 52.024
+    },
+    {
+      "task": "I",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 104078,
+        "output": 1644,
+        "cached": null
+      },
+      "seconds": 64.42870998382568,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": 68.082
+    },
+    {
+      "task": "J",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 121828,
+        "output": 1042,
+        "cached": null
+      },
+      "seconds": 91.85924625396729,
+      "rounds": 10,
+      "failed_reason": null,
+      "wall_seconds": 96.216
+    },
+    {
+      "task": "J",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 839947,
+        "output": 3245,
+        "cached": null
+      },
+      "seconds": 298.20173382759094,
+      "rounds": 48,
+      "failed_reason": null,
+      "wall_seconds": 302.566
+    },
+    {
+      "task": "K",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 316209,
+        "output": 2342,
+        "cached": null
+      },
+      "seconds": 135.84670114517212,
+      "rounds": 22,
+      "failed_reason": null,
+      "wall_seconds": 140.494
+    },
+    {
+      "task": "K",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 232733,
+        "output": 1599,
+        "cached": null
+      },
+      "seconds": 91.56479477882385,
+      "rounds": 18,
+      "failed_reason": null,
+      "wall_seconds": 96.943
+    },
+    {
+      "task": "L",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 207896,
+        "output": 1407,
+        "cached": null
+      },
+      "seconds": 105.42574429512024,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 109.838
+    },
+    {
+      "task": "L",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 141285,
+        "output": 1388,
+        "cached": null
+      },
+      "seconds": 73.02777814865112,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 77.87
+    },
+    {
+      "task": "X",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 80950,
+        "output": 885,
+        "cached": null
+      },
+      "seconds": 34.70992398262024,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 39.727
+    },
+    {
+      "task": "X",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 241079,
+        "output": 1721,
+        "cached": null
+      },
+      "seconds": 89.44127798080444,
+      "rounds": 19,
+      "failed_reason": "the site's record: deleted Jay — Your receipt from the cafe; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": 93.918
+    },
+    {
+      "task": "Y",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 154396,
+        "output": 936,
+        "cached": null
+      },
+      "seconds": 90.73058485984802,
+      "rounds": 13,
+      "failed_reason": null,
+      "wall_seconds": 95.158
+    },
+    {
+      "task": "Y",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 531521,
+        "output": 2792,
+        "cached": null
+      },
+      "seconds": 184.2169680595398,
+      "rounds": 35,
+      "failed_reason": null,
+      "wall_seconds": 188.442
+    }
+  ],
+  "attempts": [
+    {
+      "task": "A",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 90372,
+        "output": 2371,
+        "cached": null
+      },
+      "seconds": 88.80921602249146,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 92.903
+    },
+    {
+      "task": "A",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 168011,
+        "output": 2841,
+        "cached": null
+      },
+      "seconds": 104.32478880882263,
+      "rounds": 13,
+      "failed_reason": null,
+      "wall_seconds": 109.001
+    },
+    {
+      "task": "B",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 31794,
+        "output": 240,
+        "cached": null
+      },
+      "seconds": 18.268826961517334,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 22.654
+    },
+    {
+      "task": "B",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 32091,
+        "output": 384,
+        "cached": null
+      },
+      "seconds": 20.50870108604431,
+      "rounds": 3,
+      "failed_reason": "current top story points",
+      "wall_seconds": 24.68
+    },
+    {
+      "task": "C",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 75220,
+        "output": 1286,
+        "cached": null
+      },
+      "seconds": 69.13324999809265,
+      "rounds": 6,
+      "failed_reason": "caption: Daguerreotype",
+      "wall_seconds": 73.145
+    },
+    {
+      "task": "C",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 100648,
+        "output": 1037,
+        "cached": null
+      },
+      "seconds": 76.904061794281,
+      "rounds": 8,
+      "failed_reason": null,
+      "wall_seconds": 80.962
+    },
+    {
+      "task": "D",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 249323,
+        "output": 4717,
+        "cached": null
+      },
+      "seconds": 139.78676676750183,
+      "rounds": 18,
+      "failed_reason": null,
+      "wall_seconds": 144.126
+    },
+    {
+      "task": "D",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 142067,
+        "output": 2160,
+        "cached": null
+      },
+      "seconds": 77.26109576225281,
+      "rounds": 11,
+      "failed_reason": null,
+      "wall_seconds": 80.882
+    },
+    {
+      "task": "E",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 156859,
+        "output": 2673,
+        "cached": null
+      },
+      "seconds": 108.00372672080994,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 112.471
+    },
+    {
+      "task": "E",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 182773,
+        "output": 1756,
+        "cached": null
+      },
+      "seconds": 106.83595991134644,
+      "rounds": 14,
+      "failed_reason": null,
+      "wall_seconds": 111.36
+    },
+    {
+      "task": "F",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 382224,
+        "output": 2645,
+        "cached": null
+      },
+      "seconds": 205.93376111984253,
+      "rounds": 24,
+      "failed_reason": null,
+      "wall_seconds": 216.637
+    },
+    {
+      "task": "F",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 126768,
+        "output": 1587,
+        "cached": null
+      },
+      "seconds": 125.59760284423828,
+      "rounds": 10,
+      "failed_reason": null,
+      "wall_seconds": 133.464
+    },
+    {
+      "task": "G",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 33689,
+        "output": 891,
+        "cached": null
+      },
+      "seconds": 35.15525698661804,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 39.819
+    },
+    {
+      "task": "G",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 69965,
+        "output": 1391,
+        "cached": null
+      },
+      "seconds": 53.38727617263794,
+      "rounds": 6,
+      "failed_reason": null,
+      "wall_seconds": 57.914
+    },
+    {
+      "task": "H",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 32086,
+        "output": 420,
+        "cached": null
+      },
+      "seconds": 34.733705043792725,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 38.895
+    },
+    {
+      "task": "H",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 34185,
+        "output": 641,
+        "cached": null
+      },
+      "seconds": 39.62441968917847,
+      "rounds": 3,
+      "failed_reason": null,
+      "wall_seconds": 44.9
+    },
+    {
+      "task": "I",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 78597,
+        "output": 1023,
+        "cached": null
+      },
+      "seconds": 47.63132381439209,
+      "rounds": 7,
+      "failed_reason": "answer: Little Dribbling",
+      "wall_seconds": 52.024
+    },
+    {
+      "task": "I",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 104078,
+        "output": 1644,
+        "cached": null
+      },
+      "seconds": 64.42870998382568,
+      "rounds": 9,
+      "failed_reason": null,
+      "wall_seconds": 68.082
+    },
+    {
+      "task": "J",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 121828,
+        "output": 1042,
+        "cached": null
+      },
+      "seconds": 91.85924625396729,
+      "rounds": 10,
+      "failed_reason": null,
+      "wall_seconds": 96.216
+    },
+    {
+      "task": "J",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 839947,
+        "output": 3245,
+        "cached": null
+      },
+      "seconds": 298.20173382759094,
+      "rounds": 48,
+      "failed_reason": null,
+      "wall_seconds": 302.566
+    },
+    {
+      "task": "K",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 316209,
+        "output": 2342,
+        "cached": null
+      },
+      "seconds": 135.84670114517212,
+      "rounds": 22,
+      "failed_reason": null,
+      "wall_seconds": 140.494
+    },
+    {
+      "task": "K",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 232733,
+        "output": 1599,
+        "cached": null
+      },
+      "seconds": 91.56479477882385,
+      "rounds": 18,
+      "failed_reason": null,
+      "wall_seconds": 96.943
+    },
+    {
+      "task": "L",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 207896,
+        "output": 1407,
+        "cached": null
+      },
+      "seconds": 105.42574429512024,
+      "rounds": 17,
+      "failed_reason": null,
+      "wall_seconds": 109.838
+    },
+    {
+      "task": "L",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 141285,
+        "output": 1388,
+        "cached": null
+      },
+      "seconds": 73.02777814865112,
+      "rounds": 12,
+      "failed_reason": null,
+      "wall_seconds": 77.87
+    },
+    {
+      "task": "X",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 80950,
+        "output": 885,
+        "cached": null
+      },
+      "seconds": 34.70992398262024,
+      "rounds": 7,
+      "failed_reason": null,
+      "wall_seconds": 39.727
+    },
+    {
+      "task": "X",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "wrong-action",
+      "retryable": false,
+      "tokens": {
+        "input": 241079,
+        "output": 1721,
+        "cached": null
+      },
+      "seconds": 89.44127798080444,
+      "rounds": 19,
+      "failed_reason": "the site's record: deleted Jay — Your receipt from the cafe; deleted Bob — Invoice 1043 for October, where it expects deleted Bob — Invoice 1043 for October",
+      "wall_seconds": 93.918
+    },
+    {
+      "task": "Y",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 154396,
+        "output": 936,
+        "cached": null
+      },
+      "seconds": 90.73058485984802,
+      "rounds": 13,
+      "failed_reason": null,
+      "wall_seconds": 95.158
+    },
+    {
+      "task": "Y",
+      "arm": "hermes",
+      "run": 2,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 531521,
+        "output": 2792,
+        "cached": null
+      },
+      "seconds": 184.2169680595398,
+      "rounds": 35,
+      "failed_reason": null,
+      "wall_seconds": 188.442
+    }
+  ]
+}

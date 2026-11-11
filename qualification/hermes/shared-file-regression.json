@@ -1,0 +1,156 @@
+{
+  "date": "2026-11-10T13:47:50.804Z",
+  "browser_use": "0.13.14",
+  "browser_harness": "0.1.13",
+  "browser": "Chromium from Playwright 1.61.1",
+  "model_calls": 0,
+  "cases": [
+    {
+      "name": "correct attachment with immediate submission",
+      "pass": true,
+      "expected_upload": true,
+      "observed": {
+        "uploaded": true,
+        "selections": [
+          {
+            "name": "qualification-upload.txt",
+            "size_bytes": 40,
+            "matches_attachment": true,
+            "selected_at": 1794318465609
+          }
+        ],
+        "submissions": [
+          {
+            "started_at": 1794318465614,
+            "file_names": [],
+            "filename_compatible": true
+          }
+        ]
+      },
+      "server_posts": [
+        {
+          "expected_content": true,
+          "expected_name": true
+        }
+      ]
+    },
+    {
+      "name": "local file without a browser download",
+      "pass": true,
+      "observed": {
+        "files": [
+          {
+            "name": "manually-written.bin",
+            "size_bytes": 1024
+          }
+        ],
+        "browser_downloads": [],
+        "saved_file": false
+      }
+    },
+    {
+      "name": "browser download with matching saved artifact",
+      "pass": true,
+      "observed": {
+        "files": [
+          {
+            "name": "manually-written.bin",
+            "size_bytes": 1024
+          },
+          {
+            "name": "qualification-download.bin",
+            "size_bytes": 1024
+          }
+        ],
+        "browser_downloads": [
+          {
+            "name": "qualification-download.bin",
+            "pending": false,
+            "saved": true
+          }
+        ],
+        "saved_file": true
+      }
+    },
+    {
+      "name": "native browser UUID artifact with failed secondary save",
+      "pass": true,
+      "native_implementation": "OpenClaw 2026.11.2 createDownloadCaptureForPage",
+      "secondary_save_failure_injected": true,
+      "observed": {
+        "files": [
+          {
+            "name": "manually-written.bin",
+            "size_bytes": 1024
+          },
+          {
+            "name": "qualification-download.bin",
+            "size_bytes": 1024
+          },
+          {
+            "name": "qualification-download.bin",
+            "size_bytes": 1024,
+            "sha256": "b2256110f2c4226de0008dd4382a388e033f211b617bd3237135ab1d59a722b6",
+            "source": "native-browser-tool"
+          }
+        ],
+        "browser_downloads": [
+          {
+            "name": "qualification-download.bin",
+            "pending": false,
+            "saved": false,
+            "native_saved": true
+          }
+        ],
+        "saved_file": true
+      }
+    },
+    {
+      "name": "same filename with wrong content",
+      "pass": true,
+      "expected_upload": false,
+      "observed": {
+        "uploaded": false,
+        "selections": [
+          {
+            "name": "qualification-upload.txt",
+            "size_bytes": 18,
+            "matches_attachment": false,
+            "selected_at": 1794318468535
+          }
+        ],
+        "submissions": [
+          {
+            "started_at": 1794318468538,
+            "file_names": [],
+            "filename_compatible": true
+          }
+        ]
+      },
+      "server_posts": [
+        {
+          "expected_content": false,
+          "expected_name": true
+        }
+      ]
+    },
+    {
+      "name": "selected attachment without submission",
+      "pass": true,
+      "expected_upload": false,
+      "observed": {
+        "uploaded": false,
+        "selections": [
+          {
+            "name": "qualification-upload.txt",
+            "size_bytes": 40,
+            "matches_attachment": true,
+            "selected_at": 1794318470074
+          }
+        ],
+        "submissions": []
+      },
+      "server_posts": []
+    }
+  ]
+}

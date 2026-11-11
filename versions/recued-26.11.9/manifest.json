@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "sequence": 56,
+  "expires_at": "2036-11-06T00:00:00Z",
+  "min_launcher_version": 2,
+  "channels": {
+    "stable": {
+      "version": "26.11.9",
+      "released_at": "2026-11-09T00:00:00Z",
+      "min_supported": "26.10.12",
+      "migration": true,
+      "rollout_pct": 0,
+      "notes_url": "",
+      "artifacts": {
+        "linux-x64": {
+          "url": "https://releases.recued.com/artifacts/56/recued-linux-x64",
+          "sha256": "3866179871684c0bb527d98fe1e8a5d6d27a2fb9e1a586809fd3b12e792d796f",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcBQgbqoxqOBMis6CUZtaSnK8TBlJKjXFVYbOD1dp1DHwY3eOCTOx4sLeaXfxC0q8tLHKvPP49iVA8rZoRmUI8Ak=\ntrusted comment: recued binary recued-linux-x64 v26.11.9\nwyiVdO+psf8dJhrENgLuv8kVPjhwCeUjN4gWvsnK/m7SK91yhtbkSczizBlq796M9F4DG9yWctObdxYq0izABg==\n"
+        },
+        "linux-arm64": {
+          "url": "https://releases.recued.com/artifacts/56/recued-linux-arm64",
+          "sha256": "46dfb5e8f4c1d5d5b9c0caa155323ef5f0f785cf33af92a9353a5f42d0785a46",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcC2EDcIdiIshl5cgrSU3K7fqKkFFfTgROJmrxWugih4Eswsp/mvMb9W+hZBMblgNQ2Zr+LKfcvMd43CwuDEEGwY=\ntrusted comment: recued binary recued-linux-arm64 v26.11.9\nQg5qhAM8+DeB6VpZPLT8ezKIKeXeTq/kdT+roXNiF38xWEM6zNItQ0V2RXC904eGRqf5q19bdIjZ1cgPEShVCw==\n"
+        },
+        "macos-x64": {
+          "url": "https://releases.recued.com/artifacts/56/recued-macos-x64",
+          "sha256": "56134bf6f35f36eaa69a4d9d9ba991ec8dd4a9a6a514edce7fdfe8bb2c5d4a76",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcFcSwEdRPM04dG65wGrO9jSl90TzeBhZAEl5xQZdypvttazbr7RQOlkPMpiO8HU2WAR8cwqIASQp+fV0BaPwiAk=\ntrusted comment: recued binary recued-macos-x64 v26.11.9\nh08xpbEx2xYLrWOC4VMoDbrBulUu5Neoo3ssxCZJFjv61wajvkM16JsLsnYg/FVLyFFm1sOUPg7aAv1qTXhSDA==\n"
+        },
+        "macos-arm64": {
+          "url": "https://releases.recued.com/artifacts/56/recued-macos-arm64",
+          "sha256": "83bb342b117e479d07195461450ad69651ecaebe2c71a4eae0ba80c512337f82",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcBMvxbo6CRu1UUurw8FXN5kgbimNrza14K++uJ4kcAH1L6rHjul+RS7BkM9QH/Ekt1Pd/jU5JBQxKhnb9TbV+Qs=\ntrusted comment: recued binary recued-macos-arm64 v26.11.9\nBXoJZ6KX1kE8+N6KtP9ehAyczO6DgJylqfNw1bvGJVNYzFBOz+4bUD9IQuKQ45/ZYtlHN/6egZbQRTR4pOGRCw==\n"
+        },
+        "windows-x64": {
+          "url": "https://releases.recued.com/artifacts/56/recued-windows-x64.exe",
+          "sha256": "64856d005c062d203eec564fb759d06f387bbe5c98e2b9ff06a5b9d5e5bf7f8f",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcF2xqlmeqfu63Q98ebmLWnjisuVKaBHOfiAUc4bgYFV6XVvfOC9AI+vaz/9gHmWP+5GZm7Rw8XKvvtR64QZKLQI=\ntrusted comment: recued binary recued-windows-x64.exe v26.11.9\n3NM7tvVueH64xJJY4tElP+xfd4xsbRxmU0tvlf7WVDni17rCE30cSwL/GIIpAOg++nYXHchDQD5ETHXAVsUQAw==\n"
+        },
+        "windows-arm64": {
+          "url": "https://releases.recued.com/artifacts/56/recued-windows-arm64.exe",
+          "sha256": "f5c0ac6d3f2951f2c990a7a1cb8d9293425abeb52adbbc7d7207f5d280b19ed4",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcDoEbd1+bCnGZm/9xLBVM2QJXxgXrc/ph6QBDmOjBxXkgq04IuFr//LI0eg4/bzez/WFWb+tdJvXme4d54JCSgY=\ntrusted comment: recued binary recued-windows-arm64.exe v26.11.9\n38koIdSS7KddSC3D8MtqaCmaIx7intc6GApxK7Drp+kv9HFzFmC4ZOMDx+ysN5sSJsEXamk4s6C4jf13JYe6AQ==\n"
+        },
+        "webclient": {
+          "url": "https://releases.recued.com/artifacts/56/webclient-26.11.9.bundle.json",
+          "sha256": "c5ba246f5481b79bf7946d793f8bfe7576ca428d2fdcf664fbf7b16166cc04cd",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcGx/T0/PtQsY6mrkc/nXuB0Zy90J3FCN/HAoAPIc+eABxjbn7Rf/oaVV4jg04vBzED9HFYdWP0CetpXnPiyiZgM=\ntrusted comment: recued webclient webclient-26.11.9.bundle.json v26.11.9\nsb5jRvMYc+mGFfe4F7Hol/GKrlijdBB1ujbN8tLfEXID1khMXMEGlHxjINuO1I9dricGoYVao2eNPiFWYUmKCg==\n"
+        },
+        "lib-linux-x64": {
+          "url": "https://releases.recued.com/artifacts/56/better_sqlite3-linux-x64.node",
+          "sha256": "5a42fa1ccc09339c99023e02769da6cd3dcc1e21a9fbba5e5563d4bc240659e3",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcJcVH6j761pSd9AujEw8Gw6u3/DDrdrLbbI0fWNZRdTVzeaNetnagUa3Z7w+96DrpYFESqNGW2z1Tw1FJgTYDws=\ntrusted comment: recued binary better_sqlite3-linux-x64.node v26.11.9\nXkG8V8gh0C/PtO7l3bkB5IId7iU/CfwO025LoyjW9Tq3wXviEP22H32U3IyPmSM25xrmTWnreod1Xv0+gxqhBA==\n"
+        },
+        "lib-linux-arm64": {
+          "url": "https://releases.recued.com/artifacts/56/better_sqlite3-linux-arm64.node",
+          "sha256": "28e0ff0f5586d4a7773486901026f01032c753b5f1c568a9a1ee980a01ed0a77",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcJa/zhBIn23lkUHuHwruED4sw4nTR90D5+qojzDTR2LXum5rlqIkZ9J3PY26cU5rw9S9l9/mq275rdrMGhyT4Qs=\ntrusted comment: recued binary better_sqlite3-linux-arm64.node v26.11.9\nqctv1ryOvSzLJ9ys3aq1544HaIlMtJ5b2HPfLAlYFntkU/fMzYEfueaqdcMKBOrCPYUZ2e5OpmOyuAH6RraFBA==\n"
+        },
+        "lib-macos-x64": {
+          "url": "https://releases.recued.com/artifacts/56/better_sqlite3-macos-x64.node",
+          "sha256": "3f361cd707a4d5b1f2f9e5c7355e2d2a11f8dbc34cfb273072b1e8167c3c1323",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcBlqRLZYBnEaL3+dLb2NlOyl0ecWCzi/WccX/Hk0xZh99lmawSpsvPmMGyxtCu1zrMlvnQ6nPkAHFbMwi4akwws=\ntrusted comment: recued binary better_sqlite3-macos-x64.node v26.11.9\nFDdppQjKwxSPTAdI8rSHet2aJWzib1bWSZrROmm9+5ULIHtjrr4YjTP2qDXYBfCMT9MqI8GjxDmr19cL3aA0CA==\n"
+        },
+        "lib-macos-arm64": {
+          "url": "https://releases.recued.com/artifacts/56/better_sqlite3-macos-arm64.node",
+          "sha256": "0bfb2b53a969f70e44866736ddcc004bff57841b492b7e31692e8f73e106d7d5",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcOsGo7AGZO6qZ+22UZfBmchaRFdCoK1aubOwZALHfG3loyeim97PU59Bc8R9akHjkE6rVSR7Hl1an9fvkVoQHQM=\ntrusted comment: recued binary better_sqlite3-macos-arm64.node v26.11.9\nrRd4gDdZP4wg2qXFouIrIiiLhXiVQdA+6JbdVvJzf2KTP91Zy9yp/BoW8bGtU81rK/9WCor68ApYkRbAzeu/Ag==\n"
+        },
+        "lib-windows-x64": {
+          "url": "https://releases.recued.com/artifacts/56/better_sqlite3-windows-x64.node",
+          "sha256": "8e0cc725ade3d9bb0e02d10dd082baac1107014a1bea8e0af2106c48828847a8",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcDOV6Dk7ohKT7QW+IcVoIuN0swxMwubTP/9oWBAHsgEVwkkaCMwKuZbCRxrhX7C0y3gnLX9dtn1LGffiZCx6NQI=\ntrusted comment: recued binary better_sqlite3-windows-x64.node v26.11.9\nGZmw0iK1IqDJ1RQItcziGMvRdtS1Vk25byaQRn8COL6c54Rd8mN2Y6AWo6ijXOnvth70WQvauflWuPZA8NgKDw==\n"
+        },
+        "lib-windows-arm64": {
+          "url": "https://releases.recued.com/artifacts/56/better_sqlite3-windows-arm64.node",
+          "sha256": "fa3df2ae2c479218c6be12017bcc8279623c42d03c1051f4690ee7979ecdd576",
+          "sig": "untrusted comment: signature from recued release signer\nRUTil936tuWhcMjyQE4wqhSIBh3VnHbq246YdhzBHDo47JHGUE662IBvD9lFanzMfHap/1CO5as6I1WllNBCsGu3XvuhLHAdxQg=\ntrusted comment: recued binary better_sqlite3-windows-arm64.node v26.11.9\n65B0or8l91Awqw7qGyYnR/rysm3S9NmeRBgpcfPrXKVjDRLnmdMPx4KLSdOAGq3zzcEUQS79d+Atv7WU9Te9Dg==\n"
+        }
+      }
+    }
+  }
+}

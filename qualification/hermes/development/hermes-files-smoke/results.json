@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "current": [
+    {
+      "task": "J",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 144081,
+        "output": 1640,
+        "cached": null
+      },
+      "seconds": 120.33609294891357,
+      "rounds": 11,
+      "failed_reason": "actual upload action",
+      "wall_seconds": 125.368
+    },
+    {
+      "task": "L",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 184058,
+        "output": 1912,
+        "cached": null
+      },
+      "seconds": 113.41913604736328,
+      "rounds": 15,
+      "failed_reason": null,
+      "wall_seconds": 117.367
+    }
+  ],
+  "attempts": [
+    {
+      "task": "J",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": false,
+      "status": "wrong",
+      "failure_kind": "answer-or-capability",
+      "retryable": false,
+      "tokens": {
+        "input": 144081,
+        "output": 1640,
+        "cached": null
+      },
+      "seconds": 120.33609294891357,
+      "rounds": 11,
+      "failed_reason": "actual upload action",
+      "wall_seconds": 125.368
+    },
+    {
+      "task": "L",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "right": true,
+      "status": "right",
+      "failure_kind": null,
+      "retryable": false,
+      "tokens": {
+        "input": 184058,
+        "output": 1912,
+        "cached": null
+      },
+      "seconds": 113.41913604736328,
+      "rounds": 15,
+      "failed_reason": null,
+      "wall_seconds": 117.367
+    }
+  ]
+}

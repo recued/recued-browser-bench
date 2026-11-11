@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "measured_source_commit": "08d2f9ebd314fa578733b6d57bab33f788071963",
+  "measured_source_dirty": false,
+  "original_source_sha256": "12d2f07b2944cd1a16cace617cdc761e2e6591531b76f3638c52b9e4ca7a1101",
+  "retry_records_sha256": "69dd6f5be1b7a2c34ca7458a759f8635927bd52fdde27be41377027083f51022",
+  "original_records_preserved": 112,
+  "scheduled_runs": 112,
+  "physical_attempts": 114,
+  "retried_only_technical_failures": true,
+  "no_retryable_attempts_remain": true,
+  "metrics": [
+    "tokens",
+    "seconds",
+    "rounds",
+    "failed_reason"
+  ],
+  "focused_tests_passed": 20,
+  "outcomes": [
+    {
+      "task": "Y",
+      "arm": "recued-bridge",
+      "run": 2,
+      "attempt": 2,
+      "status": "right",
+      "kind": null,
+      "retryable": false,
+      "reason": "",
+      "tokens": {
+        "input": 52106,
+        "cached": 25344,
+        "output": 347
+      },
+      "seconds": 18.194,
+      "rounds": 2,
+      "wall_seconds": 67.936
+    },
+    {
+      "task": "Y",
+      "arm": "recued-playwright",
+      "run": 2,
+      "attempt": 2,
+      "status": "wrong",
+      "kind": "answer-or-capability",
+      "retryable": false,
+      "reason": "answer: WT-4417",
+      "tokens": {
+        "input": 280935,
+        "cached": 246784,
+        "output": 2916
+      },
+      "seconds": 94.839,
+      "rounds": 11,
+      "wall_seconds": 101.17
+    }
+  ],
+  "remaining_run_directories": 0,
+  "final_privacy_scan": {
+    "files": 87,
+    "environment_values_checked": 77,
+    "leaks": 0
+  },
+  "current_results": [
+    {
+      "arm": "recued-bridge",
+      "right": 28,
+      "total": 28
+    },
+    {
+      "arm": "recued-playwright",
+      "right": 11,
+      "total": 28
+    },
+    {
+      "arm": "browser-use",
+      "right": 24,
+      "total": 28
+    },
+    {
+      "arm": "stagehand",
+      "right": 18,
+      "total": 28
+    }
+  ],
+  "post_measurement_change": "Extended technical-error classification to recognize recorded network resets after HTTP headers; observed outcomes and raw records are unchanged."
+}

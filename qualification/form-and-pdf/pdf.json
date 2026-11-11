@@ -1,0 +1,568 @@
+{
+  "schema": 1,
+  "date": "2026-11-09",
+  "model": "qwen3.7-plus",
+  "settings": {
+    "model": "qwen3.7-plus",
+    "baseUrlEnvironment": "BENCH_BASE_URL",
+    "apiKeyEnvironment": "BENCH_API_KEY",
+    "thinking": "off",
+    "temperature": 0.2,
+    "maxOutputTokens": 4000,
+    "recuedCatalogMode": "full",
+    "arms": [
+      "recued-bridge"
+    ],
+    "tasks": [
+      "K"
+    ],
+    "runs": 1,
+    "maxSeconds": 180,
+    "maxSteps": 30,
+    "minFreeMemoryMiB": 1800,
+    "memoryWaitSeconds": 180,
+    "debug": true
+  },
+  "versions": {
+    "recued": "26.11.9",
+    "bridge": "0.0.8",
+    "browserUse": "0.13.14",
+    "playwrightMcp": "0.0.85",
+    "stagehand": "3.7.3",
+    "playwright": "1.61.1",
+    "triple": "macos-arm64",
+    "node": "v24.19.0",
+    "platform": "darwin-arm64",
+    "benchmark_commit": "8b07c74de182678095e8a17648c34650a3c0fcf3",
+    "benchmark_source_dirty": true
+  },
+  "records": [
+    {
+      "task": "On the W3C page about alternative text in PDFs (https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1) in my browser, find its working example PDF of adding an /Alt entry to an image, and tell me word for word the sentence in that PDF just above its image.",
+      "arm": "recued-bridge",
+      "run": 1,
+      "task_id": "K",
+      "started_at": "2026-11-09T22:42:20.836Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "The sentence in the PDF just above its image is:\n\n\"The following image shows a happy looking dog lying in some grass:\"",
+      "seconds": 46.176,
+      "timed_out": false,
+      "stored_seconds": 50.56,
+      "answer_streamed": true,
+      "error": null,
+      "rounds": 3,
+      "tokens": {
+        "input": 84834,
+        "cached": 54656,
+        "output": 1426
+      },
+      "chat_tokens": {
+        "input": 84834,
+        "cached": 54656,
+        "output": 1426
+      },
+      "recipe_tokens": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "calls": 0
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "recued-core/inspect-web-page",
+          "status": "ok",
+          "args": {
+            "page": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1",
+            "find": "",
+            "from": 0,
+            "block": ""
+          }
+        },
+        {
+          "tool": "recued-core/click-web-element",
+          "status": "ok",
+          "args": {
+            "page": "878202390:BBC1C91CE26FF5E2314A802F2708E0A1",
+            "ref": "e14",
+            "role": "",
+            "text": ""
+          }
+        },
+        {
+          "tool": "recued-core/read-web-text",
+          "status": "ok",
+          "args": {
+            "page": "878202390:48722A69962A98F0915D18FD415E34AD",
+            "find": "",
+            "from": 0
+          }
+        },
+        {
+          "tool": "document.read",
+          "status": "ok",
+          "args": {
+            "file_ref": "file:c4cfa2d520fdd638754d509055705f15"
+          }
+        }
+      ],
+      "evidence": {
+        "browser_toolkit": {
+          "pack_slug": "browser-toolkit",
+          "version": 4,
+          "catalog_tag": "catalog/26.11.9.1",
+          "manifest_sha256": "d1ccfdea8ebfe4d9131c1681fbd36a6b64cdc7ac74e44c49c71645c7e0251885",
+          "recipes_verified": 15,
+          "recipes": [
+            {
+              "slug": "list-browser-tabs",
+              "version": 2,
+              "installed_sha256": "d18b4d184060f94ae288be3897851c7f771c28ec9fe688bfe89ac1b8dbe7b80b",
+              "lowered": true
+            },
+            {
+              "slug": "open-web-page",
+              "version": 3,
+              "installed_sha256": "8107a5d9272b85719594047da4ca6760dd5e5dab868489d5efcd4423a7960fe9",
+              "lowered": true
+            },
+            {
+              "slug": "inspect-web-page",
+              "version": 4,
+              "installed_sha256": "d5c006ac3adce7d96d7f970d62860c43b50498994c3f4e2857e8ae3b1bc5ff57",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-text",
+              "version": 1,
+              "installed_sha256": "61b5a0a72f53aa943aebb3ff47fa4cec91efcfe72f6c5561f71d28492ec3de14",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-element",
+              "version": 4,
+              "installed_sha256": "637af8ed08eebc24d06fcdef4568d96613ea4dc57117c0c93ce8be60e1fc2306",
+              "lowered": true
+            },
+            {
+              "slug": "wait-for-web-element",
+              "version": 3,
+              "installed_sha256": "160c1be18892f4bc4238a9907cdd8bdf28dbf12c478fa1757dae67cb6284a6aa",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-table",
+              "version": 3,
+              "installed_sha256": "919abf6792804d0559979cffccc9e13eaff368909bd252d6bec87dfeea22d6f5",
+              "lowered": true
+            },
+            {
+              "slug": "save-web-file",
+              "version": 1,
+              "installed_sha256": "f995e8261f3208be1ed95fcd9d91a4007e5d59a965a2d2a83bccad06736a5ca6",
+              "lowered": true
+            },
+            {
+              "slug": "screenshot-web-page",
+              "version": 3,
+              "installed_sha256": "0fa034bceb1cea8c1506b5bddb1018b3963851d709fdfbdce34dfa1fbcaefbf6",
+              "lowered": true
+            },
+            {
+              "slug": "ask-web-page",
+              "version": 1,
+              "installed_sha256": "03f3320be5c96a58abd7a6d6725292322b5970090ed7846fc947098ed658b9e9",
+              "lowered": true
+            },
+            {
+              "slug": "scroll-web-page",
+              "version": 1,
+              "installed_sha256": "eb0a938adb0598c42fa09dd14428292e5a65f865c90aa91dc9805e4f8d50e4ce",
+              "lowered": true
+            },
+            {
+              "slug": "type-into-web-page",
+              "version": 3,
+              "installed_sha256": "00c3be3333031c6de644620d93c7c5156f3129a207a1bd33f5c6a1dd5fe09445",
+              "lowered": true
+            },
+            {
+              "slug": "click-web-element",
+              "version": 3,
+              "installed_sha256": "539bd39a80adb24ae3c22aa7cacddd641b52f4f1025269aac646bba5d29a4eec",
+              "lowered": true
+            },
+            {
+              "slug": "press-on-web-page",
+              "version": 1,
+              "installed_sha256": "317822f9496f50070b3f28ba6c65ee6cf5d465a7e7e2a47e78bba0785772e9e9",
+              "lowered": true
+            },
+            {
+              "slug": "act-on-web-page",
+              "version": 2,
+              "installed_sha256": "f30e2145c5161f0e1342ab4c3f59cbfb2ee34c4080ffe1c07ea6f861d53bfce0",
+              "lowered": true
+            }
+          ],
+          "catalogs": []
+        },
+        "pdf_toolkit": {
+          "pack_slug": "pdftotext",
+          "version": 5,
+          "catalog_tag": "catalog/26.11.9.1",
+          "manifest_sha256": "f8d76dc2b0eca0017456ce5ceb0d21de49ac4f9482d74311827c14624da8803d",
+          "recipes_verified": 2,
+          "recipes": [
+            {
+              "slug": "extract-pdf-text-pdftotext",
+              "version": 1,
+              "installed_sha256": "5a8f5dd785e623b73309507af37eb1de47b0d3afc928b118b61ac655dfb7c6b8",
+              "lowered": true
+            },
+            {
+              "slug": "summarize-pdf-pdftotext",
+              "version": 2,
+              "installed_sha256": "b48982d43c0103c554150c09a31629aa2514f7018c45e01b199cbdc70e1e8cbb",
+              "lowered": true
+            }
+          ],
+          "catalogs": [
+            "pdftotext"
+          ]
+        },
+        "uploaded": false,
+        "saved_file": false,
+        "model_call_failures": [],
+        "turn_statuses": [
+          "completed"
+        ],
+        "pending_asks": [],
+        "tool_errors": [
+          "recued-core/inspect-web-page: {\"ok\":true,\"result\":{\"ran_without_asking\":\"What this did in the browser ran without asking the user, since “Don’t ask about browser actions” is on in this chat.\",\"recipe_id\":\"inspect-web-page\",\"recipe_hash\":\"c2432b3a\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"page\":\"878202390:BBC1C91CE26FF5E2314A802F2708E0A1\",\"url\":\"https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1\",\"title\":\"PDF1: Applying text alternatives to images with the Alt entry in PDF documents | WAI | W3C\",\"outline\":\"[Skip to content](e1 #main)\\n[WCAG 2.1 Techniques](e2)\\nExamples of ways to meet WCAG; not required\\n[About WCAG Techniques](e3)\\n[link](e4) [link](e5)\\nPage Contents\\n- [About this Technique](e6 #technique)\\n- [Description](e7 #description)\\n- [Examples](e8 #examples)\\n- [Related Resources](e9 #resources)\\n- [Related Techniques](e10 #related)\\n- [Tests](e11 #tests)\\n# Technique PDF1:Applying text alternatives to images with the Alt entry in PDF d",
+          "recued-core/click-web-element: {\"ok\":true,\"result\":{\"ran_without_asking\":\"What this did in the browser ran without asking the user, since “Don’t ask about browser actions” is on in this chat.\",\"recipe_id\":\"click-web-element\",\"recipe_hash\":\"f72f506d\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"clicked\":1,\"page\":\"878202390:48722A69962A98F0915D18FD415E34AD\",\"url\":\"https://www.w3.org/WAI/WCAG21/working-examples/pdf-alt-entry-to-an-image/alt-entry-to-an-image.pdf\",\"title\":\"\",\"changes\":\"(The page now, as Inspect a web page answers it: lines 1 to 1 of 1.)\\n(Frame \\\"924C21789B78262A4F4C6CF78B9F60A5\\\": the Browser Bridge cannot read it.)\\n(End of the page.)\"},\"label\":\"Clicked\"}],\"sidebar\":[{\"type\":\"json\",\"data\":{\"clicked\":1,\"page\":\"878202390:48722A69962A98F0915D18FD415E34AD\",\"url\":\"https://www.w3.org/WAI/WCAG21/working-examples/pdf-alt-entry-to-an-image/alt-entry-to-an-image.pdf\",\"title\":\"\",\"changes\":\"(The page now, as Inspect a web page answers it: lines 1 t",
+          "recued-core/read-web-text: {\"ok\":true,\"result\":{\"recipe_id\":\"read-web-text\",\"recipe_hash\":\"3ab86e47\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"page\":\"878202390:48722A69962A98F0915D18FD415E34AD\",\"url\":\"https://www.w3.org/WAI/WCAG21/working-examples/pdf-alt-entry-to-an-image/alt-entry-to-an-image.pdf\",\"title\":\"\",\"text\":\"(This tab shows a PDF, which a page read cannot see into. Recued kept it among the user's files as “alt-entry-to-an-image.pdf” (file:c4cfa2d520fdd638754d509055705f15): read its text with document.read, passing that file_ref.)\\n(Frame \\\"924C21789B78262A4F4C6CF78B9F60A5\\\": the Browser Bridge cannot read it.)\\n(End of the page.)\",\"truncated\":false,\"pdf\":{\"file_ref\":\"file:c4cfa2d520fdd638754d509055705f15\",\"filename\":\"alt-entry-to-an-image.pdf\",\"mime_type\":\"application/pdf\",\"size_bytes\":82487,\"note\":\"(This tab shows a PDF, which a page read cannot see into. Recued kept it among the user's files as “alt-entry-to-an-image.pdf” (file:c4cfa2d5",
+          "document.read: {\"ok\":true,\"source_citations\":[{\"kind\":\"file\",\"file_ref\":\"file:c4cfa2d520fdd638754d509055705f15\",\"collection_slug\":\"received\",\"content_hash\":\"c3f07fb8c50d8e14568352d35f33bda80adf630acb97b3bd260ee36adb3de82b\",\"id\":\"src_6e3bfea4f2c643964fe67b48\",\"label\":\"alt-entry-to-an-image.pdf\",\"read_at\":1794264234615,\"read_version\":\"5cae1deaa6b2fd0c7c939ca7320b3ad2c67aabfd00c2e7de84e83e2f922310bd\"}],\"result\":{\"status\":\"read\",\"file_ref\":\"file:c4cfa2d520fdd638754d509055705f15\",\"content_hash\":\"c3f07fb8c50d8e14568352d35f33bda80adf630acb97b3bd260ee36adb3de82b\",\"read_version\":\"5cae1deaa6b2fd0c7c939ca7320b3ad2c67aabfd00c2e7de84e83e2f922310bd\",\"filename\":\"alt-entry-to-an-image.pdf\",\"converter\":\"pdftotext\",\"cached\":false,\"body\":\"The following image shows a happy looking dog lying in some grass:\\n\\f\",\"offset\":0,\"next_offset\":null,\"source_ref\":\"#source/src_6e3bfea4f2c643964fe67b48\",\"source_kind\":\"file\",\"read_at\":1794264234615,\"citation_hint\":\"Cite claims supported by this read as [source](#source"
+        ]
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:43:22.522Z",
+          "seconds": 15.762,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 617,
+            "prompt_tokens": 27644,
+            "prompt_tokens_details": {
+              "text_tokens": 27644,
+              "cached_tokens": 0
+            },
+            "total_tokens": 28261
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-pdf-text-pdftotext",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/summarize-pdf-pdftotext",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [
+            "recued-core/click-web-element"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:43:38.781Z",
+          "seconds": 13.379,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 663,
+            "prompt_tokens": 27999,
+            "prompt_tokens_details": {
+              "text_tokens": 27999,
+              "cached_tokens": 27008
+            },
+            "total_tokens": 28662
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-pdf-text-pdftotext",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/summarize-pdf-pdftotext",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [
+            "recued-core/read-web-text"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:43:54.630Z",
+          "seconds": 4.833,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 146,
+            "prompt_tokens": 29191,
+            "prompt_tokens_details": {
+              "text_tokens": 29191,
+              "cached_tokens": 27648
+            },
+            "total_tokens": 29337
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-pdf-text-pdftotext",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/summarize-pdf-pdftotext",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:43:59.481Z",
+          "seconds": 4.341,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 149,
+            "prompt_tokens": 6542,
+            "prompt_tokens_details": {
+              "text_tokens": 6542,
+              "cached_tokens": 0
+            },
+            "total_tokens": 6691
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 4,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {},
+      "live_events": []
+    }
+  ]
+}

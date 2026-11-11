@@ -1,0 +1,335 @@
+{
+  "date": "2026-11-10T12:33:13.127Z",
+  "arm": "openclaw-browser",
+  "model": "qwen3.7-plus",
+  "settings": {
+    "model": "qwen3.7-plus",
+    "baseUrlEnvironment": "BENCH_BASE_URL",
+    "apiKeyEnvironment": "BENCH_API_KEY",
+    "thinking": "off",
+    "temperature": 0.2,
+    "maxOutputTokens": 4000,
+    "recuedCatalogMode": "full",
+    "arms": [
+      "openclaw-browser"
+    ],
+    "tasks": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "X",
+      "Y"
+    ],
+    "runs": 2,
+    "maxSeconds": 480,
+    "maxSteps": 30,
+    "minFreeMemoryMiB": 1800,
+    "memoryWaitSeconds": 180
+  },
+  "versions": {
+    "recued": "26.11.9",
+    "bridge": "0.0.8",
+    "browserUse": "0.13.14",
+    "playwrightMcp": "0.0.85",
+    "stagehand": "3.7.3",
+    "playwright": "1.61.1",
+    "openclaw": "2026.11.2",
+    "triple": "macos-arm64",
+    "browserHarness": "0.1.13",
+    "node": "v24.19.0",
+    "platform": "darwin-arm64",
+    "benchmark_commit": "75915eaa3c8846b0e83c1fa2bbc0876880cef3ce",
+    "benchmark_source_dirty": false
+  },
+  "initial_measurement": {
+    "records": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser/records.json",
+    "source_commit": "665ee3634858b53d959d8893859d1fae342cc8c0",
+    "source_dirty": false,
+    "scheduled": 28,
+    "original_correct": 23,
+    "correct_after_file_evidence_correction": 24
+  },
+  "passive_file_evidence_correction": {
+    "receipt": "qualification/openclaw/native-download-repair.json",
+    "record": "L/R1",
+    "model_reruns": 0,
+    "answer_tokens_seconds_rounds_model_calls_unchanged": true
+  },
+  "retry": {
+    "source_commit": "75915eaa3c8846b0e83c1fa2bbc0876880cef3ce",
+    "source_dirty": false,
+    "record": {
+      "task": "L",
+      "run": 2,
+      "attempt": 2,
+      "right": false,
+      "seconds": 348.268,
+      "rounds": 40,
+      "tokens": {
+        "input": null,
+        "output": null,
+        "cached": null
+      },
+      "outcome": {
+        "status": "wrong",
+        "kind": "wrong-action",
+        "retryable": false,
+        "reason": "Completed the ZIP with a shell client while the required browser download remained incomplete."
+      },
+      "qualified": false,
+      "benchmark_commit": "75915eaa3c8846b0e83c1fa2bbc0876880cef3ce",
+      "source_dirty": false
+    },
+    "initial_provider_failure": "UND_ERR_CONNECT_TIMEOUT",
+    "additional_provider_failure": "ECONNRESET",
+    "final_classification": "The final reply claimed a complete shell-downloaded ZIP without a completed browser download. This is a conclusive wrong method, independent of the retained provider error; no further retry."
+  },
+  "latest": {
+    "records": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-technical-retry/records.json",
+    "sha256": "b34cd79b82f147350648569702ce8a4290061306e6d108b7193aa14904bf2684",
+    "report": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-technical-retry/report.md",
+    "vectors": "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-technical-retry/results.json",
+    "scheduled": 28,
+    "physical_attempts": 29,
+    "correct": 24,
+    "wrong": 4,
+    "remaining_retryable": 0,
+    "qualified": 27,
+    "wrong_results": [
+      {
+        "task": "J",
+        "run": 2,
+        "attempt": 1,
+        "right": false,
+        "seconds": 480.035,
+        "rounds": 28,
+        "tokens": {
+          "input": 1529860,
+          "output": 3214,
+          "cached": null
+        },
+        "outcome": {
+          "status": "wrong",
+          "kind": "answer-or-capability",
+          "retryable": false,
+          "reason": "Agent did not complete the task within its native time or step budget."
+        },
+        "qualified": true,
+        "benchmark_commit": "665ee3634858b53d959d8893859d1fae342cc8c0",
+        "source_dirty": false
+      },
+      {
+        "task": "L",
+        "run": 2,
+        "attempt": 2,
+        "right": false,
+        "seconds": 348.268,
+        "rounds": 40,
+        "tokens": {
+          "input": null,
+          "output": null,
+          "cached": null
+        },
+        "outcome": {
+          "status": "wrong",
+          "kind": "wrong-action",
+          "retryable": false,
+          "reason": "Completed the ZIP with a shell client while the required browser download remained incomplete."
+        },
+        "qualified": false,
+        "benchmark_commit": "75915eaa3c8846b0e83c1fa2bbc0876880cef3ce",
+        "source_dirty": false
+      },
+      {
+        "task": "X",
+        "run": 1,
+        "attempt": 1,
+        "right": false,
+        "seconds": 185.518,
+        "rounds": 10,
+        "tokens": {
+          "input": 140998,
+          "output": 933,
+          "cached": null
+        },
+        "outcome": {
+          "status": "wrong",
+          "kind": "wrong-action",
+          "retryable": false,
+          "reason": "the site's record: deleted Tia \u2014 School trip form; deleted Bob \u2014 Invoice 1043 for October, where it expects deleted Bob \u2014 Invoice 1043 for October"
+        },
+        "qualified": true,
+        "benchmark_commit": "665ee3634858b53d959d8893859d1fae342cc8c0",
+        "source_dirty": false
+      },
+      {
+        "task": "X",
+        "run": 2,
+        "attempt": 1,
+        "right": false,
+        "seconds": 144.926,
+        "rounds": 22,
+        "tokens": {
+          "input": 459835,
+          "output": 2266,
+          "cached": null
+        },
+        "outcome": {
+          "status": "wrong",
+          "kind": "wrong-action",
+          "retryable": false,
+          "reason": "the site's record: deleted Kim \u2014 Meeting moved to Thursday; deleted Ivy \u2014 Newsletter: autumn picks; deleted Ada \u2014 Lunch on Friday?; deleted Jay \u2014 Your receipt from the cafe; deleted Bob \u2014 Invoice 1043 for October, where it expects deleted Bob \u2014 Invoice 1043 for October"
+        },
+        "qualified": true,
+        "benchmark_commit": "665ee3634858b53d959d8893859d1fae342cc8c0",
+        "source_dirty": false
+      }
+    ]
+  },
+  "native_accounting": {
+    "complete_physical_attempts": 27,
+    "native_input_output_totals_match_separate_gateway": true,
+    "incomplete_physical_attempts": [
+      {
+        "task": "L",
+        "run": 2,
+        "attempt": 1,
+        "right": false,
+        "seconds": 534.436,
+        "rounds": 43,
+        "tokens": {
+          "input": null,
+          "output": null,
+          "cached": null
+        },
+        "outcome": {
+          "status": "failed",
+          "kind": "technical",
+          "retryable": true,
+          "reason": "Provider network error: UND_ERR_CONNECT_TIMEOUT"
+        },
+        "qualified": false,
+        "benchmark_commit": "665ee3634858b53d959d8893859d1fae342cc8c0",
+        "source_dirty": false
+      },
+      {
+        "task": "L",
+        "run": 2,
+        "attempt": 2,
+        "right": false,
+        "seconds": 348.268,
+        "rounds": 40,
+        "tokens": {
+          "input": null,
+          "output": null,
+          "cached": null
+        },
+        "outcome": {
+          "status": "wrong",
+          "kind": "wrong-action",
+          "retryable": false,
+          "reason": "Completed the ZIP with a shell client while the required browser download remained incomplete."
+        },
+        "qualified": false,
+        "benchmark_commit": "75915eaa3c8846b0e83c1fa2bbc0876880cef3ce",
+        "source_dirty": false
+      }
+    ],
+    "all_round_counts_match_unique_native_call_ids": true,
+    "unknown_native_tokens_remain_null": true,
+    "primary_counters": "OpenClaw SDK usage, never gateway substitution"
+  },
+  "http_review": {
+    "allowed_pdf_extraction": [
+      "K/R1",
+      "K/R2"
+    ],
+    "wrong_shell_zip_workarounds": [
+      "L/R2 attempt 1",
+      "L/R2 attempt 2"
+    ],
+    "note": "Discovered PDF download plus local text extraction is allowed. A requested browser download must complete through the browser; shell ZIP files cannot satisfy it."
+  },
+  "combined": {
+    "records": "results/showcase/2026-11-10-qwen3.7-plus-six-arms/records.json",
+    "sha256": "29d6455fcf8a60a87cba79640515b3765ceee0a2d1cbc5f4e6ac4c0091bbd50c",
+    "scheduled": 168,
+    "physical_attempts": 173,
+    "correct_by_arm": {
+      "recued-bridge": 28,
+      "recued-playwright": 11,
+      "browser-use": 24,
+      "stagehand": 18,
+      "openclaw-browser-use": 23,
+      "openclaw-browser": 24
+    },
+    "remaining_retryable": 0,
+    "source_records_preserved_after_retry_index_rebasing": true,
+    "prior_showcase_sha256_before_additional_privacy_processing": {
+      "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/records.json": "69dd6f5be1b7a2c34ca7458a759f8635927bd52fdde27be41377027083f51022",
+      "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/report.md": "bcc9bfe28b49008fecb5a1aa85cb060b0d599631d7961b2b862ba98c56e56772",
+      "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/results.json": "046d5a94eda9ade4018d03102243842a71ed1df5e27e75bcad67825640bff554",
+      "results/showcase/2026-11-09-qwen3.7-plus/records.json": "12d2f07b2944cd1a16cace617cdc761e2e6591531b76f3638c52b9e4ca7a1101",
+      "results/showcase/2026-11-09-qwen3.7-plus/report.md": "319c37b97aaf73aa9754eabb367a6c86fbf2ed0e729388a92893e415ea49fe6f",
+      "results/showcase/2026-11-09-qwen3.7-plus/results.json": "4cb2920c357613f3aced5518dc0dcaeee0e3c2cad08d4a684a9044d523b89851",
+      "results/showcase/2026-11-10-qwen3.7-plus-five-arms/records.json": "6b8a43d54e695206a52afa903b08c5df086f1ce4623d41138990e4198483413b",
+      "results/showcase/2026-11-10-qwen3.7-plus-five-arms/report.md": "0a1ee3637e99a15f71e36dcbb44e17800d56d85d53c6c0fe67a63c3d681f9393",
+      "results/showcase/2026-11-10-qwen3.7-plus-five-arms/results.json": "6dc6bf985d6a9fd5eb8bd937520166247213f808b8b957ea70ac9d495d5b8191",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/records.json": "abf578f9f98fb91ee9e12555d688e063aeff28e8dff025077a4bbc12e2246d86",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/report.md": "60bb2ceadd1b86d112eb0d08523c4ff1c46afd88d53fabc734536ea2f91e65cb",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/results.json": "17e9a3877135167f8ab4dc3857626c0a12ea4488fff565412c2f4e724d1f52f1",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/records.json": "5d6911b3a2df8a675213ffd9f7ff9da678f57311096cb70caf52f8de73bd52ce",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/report.md": "d518a4ebf159317cddd54dab88a0c3420c37ba987720ccf58f9de7178ee94f48",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/results.json": "79b41912ca24faf557d73299e703862c86ad6f159f406558f177b11206d34966"
+    },
+    "current_showcase_sha256": {
+      "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/records.json": "69dd6f5be1b7a2c34ca7458a759f8635927bd52fdde27be41377027083f51022",
+      "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/report.md": "bcc9bfe28b49008fecb5a1aa85cb060b0d599631d7961b2b862ba98c56e56772",
+      "results/showcase/2026-11-09-qwen3.7-plus-technical-retry/results.json": "046d5a94eda9ade4018d03102243842a71ed1df5e27e75bcad67825640bff554",
+      "results/showcase/2026-11-09-qwen3.7-plus/records.json": "12d2f07b2944cd1a16cace617cdc761e2e6591531b76f3638c52b9e4ca7a1101",
+      "results/showcase/2026-11-09-qwen3.7-plus/report.md": "319c37b97aaf73aa9754eabb367a6c86fbf2ed0e729388a92893e415ea49fe6f",
+      "results/showcase/2026-11-09-qwen3.7-plus/results.json": "4cb2920c357613f3aced5518dc0dcaeee0e3c2cad08d4a684a9044d523b89851",
+      "results/showcase/2026-11-10-qwen3.7-plus-five-arms/records.json": "057096838440ca087614f3bd3faf4e1560fc36a33d9a356b40c4749110717942",
+      "results/showcase/2026-11-10-qwen3.7-plus-five-arms/report.md": "0a1ee3637e99a15f71e36dcbb44e17800d56d85d53c6c0fe67a63c3d681f9393",
+      "results/showcase/2026-11-10-qwen3.7-plus-five-arms/results.json": "6dc6bf985d6a9fd5eb8bd937520166247213f808b8b957ea70ac9d495d5b8191",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/records.json": "1a10e4b73922ae46c5187d9b7c55bb477838edcdabd5d369c2e860120954a6df",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/report.md": "60bb2ceadd1b86d112eb0d08523c4ff1c46afd88d53fabc734536ea2f91e65cb",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use-technical-retry/results.json": "17e9a3877135167f8ab4dc3857626c0a12ea4488fff565412c2f4e724d1f52f1",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/records.json": "b6a2eb9b0b042de5f9b730b3a6c276044ab0e161aa23e07ddf941b0f72be499f",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/report.md": "d518a4ebf159317cddd54dab88a0c3420c37ba987720ccf58f9de7178ee94f48",
+      "results/showcase/2026-11-10-qwen3.7-plus-openclaw-browser-use/results.json": "79b41912ca24faf557d73299e703862c86ad6f159f406558f177b11206d34966"
+    },
+    "showcase_preservation": {
+      "earlier_showcase_files": 15,
+      "byte_identical": 12,
+      "records_with_path_only_redaction": 3,
+      "original_four_arm_files_byte_identical": 6,
+      "all_answers_tokens_seconds_rounds_model_calls_settings_versions_reasoning_outcomes_unchanged": true
+    },
+    "additional_privacy_receipt": "qualification/openclaw/truncated-path-redaction.json"
+  },
+  "checks": {
+    "unit_tests": 36,
+    "browser_file_checks": 6,
+    "model_calls_for_file_checks": 0,
+    "file_receipt": "qualification/openclaw/native-file-evidence.json"
+  },
+  "scope": [
+    "Built-in browser measured on macOS arm64 in a later separate batch; the existing five arms were reused without rerunning them.",
+    "All earlier measurements and verdicts are unchanged. Twelve of 15 earlier showcase files remain byte-identical; three raw record files receive only the declared privacy redactions and a processing-receipt link. Historical input hashes are mapped to current public hashes by the additional privacy receipt.",
+    "Native browser timeouts and model recovery calls remain in elapsed times and round/token totals.",
+    "Task J/R2 exhausted its native budget without a confirmed upload; X/R1 and X/R2 deleted unrelated items; L/R2 completed a shell workaround while its browser download remained incomplete. These are final wrong results.",
+    "Owned-directory file-size samples can include shell fallback downloads and do not prove browser transfer progress.",
+    "New OpenClaw Linux setup qualification remains pending; the original four-arm Linux receipts retain their historical scope.",
+    "Repository stays local with no remote or publication."
+  ]
+}

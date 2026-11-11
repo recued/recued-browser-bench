@@ -1,0 +1,460 @@
+{
+  "schema": 2,
+  "date": "2026-11-10",
+  "model": "qwen3.7-plus",
+  "settings": {
+    "model": "qwen3.7-plus",
+    "baseUrlEnvironment": "BENCH_BASE_URL",
+    "apiKeyEnvironment": "BENCH_API_KEY",
+    "thinking": "off",
+    "temperature": 0.2,
+    "maxOutputTokens": 4000,
+    "recuedCatalogMode": "full",
+    "arms": [
+      "hermes"
+    ],
+    "tasks": [
+      "B"
+    ],
+    "runs": 1,
+    "maxSeconds": 480,
+    "maxSteps": 30,
+    "minFreeMemoryMiB": 1800,
+    "memoryWaitSeconds": 180
+  },
+  "versions": {
+    "recued": "26.11.9",
+    "bridge": "0.0.8",
+    "browserUse": "0.13.14",
+    "playwrightMcp": "0.0.85",
+    "stagehand": "3.7.3",
+    "playwright": "1.61.1",
+    "openclaw": "2026.11.2",
+    "triple": "macos-arm64",
+    "browserHarness": "0.1.13",
+    "hermes": "0.23.1",
+    "hermesSourceSha256": "52a8eb321f368576034f40595491abf9646b60c3861eee0cf45f610e5faa9bb6",
+    "hermesPythonVersion": "3.14.6",
+    "hermesBrowserHarness": "0.1.13",
+    "node": "v24.19.0",
+    "platform": "darwin-arm64",
+    "benchmark_commit": "41042e283c6b0aba0a97f5edce63cb5f8e52453f",
+    "benchmark_source_dirty": true
+  },
+  "reasoning_policy": "requested-off-and-no-reasoning-content-v1",
+  "records": [
+    {
+      "task": "In my browser, what is the top story on Hacker News (https://news.ycombinator.com/) right now, and how many points does it have?",
+      "arm": "hermes",
+      "run": 1,
+      "attempt": 1,
+      "task_id": "B",
+      "started_at": "2026-11-10T13:31:12.938Z",
+      "versions": {
+        "recued": "26.11.9",
+        "bridge": "0.0.8",
+        "browserUse": "0.13.14",
+        "playwrightMcp": "0.0.85",
+        "stagehand": "3.7.3",
+        "playwright": "1.61.1",
+        "openclaw": "2026.11.2",
+        "triple": "macos-arm64",
+        "browserHarness": "0.1.13",
+        "hermes": "0.23.1",
+        "hermesSourceSha256": "52a8eb321f368576034f40595491abf9646b60c3861eee0cf45f610e5faa9bb6",
+        "hermesPythonVersion": "3.14.6",
+        "hermesBrowserHarness": "0.1.13",
+        "node": "v24.19.0",
+        "platform": "darwin-arm64",
+        "benchmark_commit": "41042e283c6b0aba0a97f5edce63cb5f8e52453f",
+        "benchmark_source_dirty": true
+      },
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "The top story on Hacker News is **\"AlphaProof Code\"** with **130 points**.",
+      "seconds": 19.694072008132935,
+      "rounds": 3,
+      "tokens": {
+        "input": 31997,
+        "output": 269,
+        "cached": null
+      },
+      "timed_out": false,
+      "error": null,
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "browser_exec",
+          "phase": "start",
+          "args": {
+            "code": "# Navigating to Hacker News\nnew_tab(\"https://news.ycombinator.com/\")\nwait_for_load()\ninfo = page_info()\nprint(info)"
+          }
+        },
+        {
+          "tool": "browser_exec",
+          "phase": "result",
+          "args": {
+            "code": "# Navigating to Hacker News\nnew_tab(\"https://news.ycombinator.com/\")\nwait_for_load()\ninfo = page_info()\nprint(info)"
+          },
+          "result": "\"{\\\"success\\\": true, \\\"exit_code\\\": 0, \\\"output\\\": \\\"{'url': 'https://news.ycombinator.com/', 'title': '🐴 Hacker News', 'w': 756, 'h': 413, 'sx': 0, 'sy': 0, 'pw': 804, 'ph': 1217}\\\\n\\\", \\\"workspace\\\": \\\"[local]/workspace\\\"}\""
+        },
+        {
+          "tool": "browser_exec",
+          "phase": "start",
+          "args": {
+            "code": "# Extracting top story title and points\nresult = js(\"\"\"(() => {\n  const topStory = document.querySelector('.athing');\n  if (!topStory) return 'No stories found';\n  \n  const titleEl = topStory.querySelector('.titleline a');\n  const title = titleEl ? titleEl.textContent.trim() : 'No title';\n  \n  // Points are in the next row (subtext)\n  const subtextRow = topStory.nextElementSibling;\n  const scoreEl = subtextRow ? subtextRow.querySelector('.score') : null;\n  const points = scoreEl ? scoreEl.textContent.trim() : 'No points';\n  \n  return { title, points };\n})()\"\"\")\nprint(result)"
+          }
+        },
+        {
+          "tool": "browser_exec",
+          "phase": "result",
+          "args": {
+            "code": "# Extracting top story title and points\nresult = js(\"\"\"(() => {\n  const topStory = document.querySelector('.athing');\n  if (!topStory) return 'No stories found';\n  \n  const titleEl = topStory.querySelector('.titleline a');\n  const title = titleEl ? titleEl.textContent.trim() : 'No title';\n  \n  // Points are in the next row (subtext)\n  const subtextRow = topStory.nextElementSibling;\n  const scoreEl = subtextRow ? subtextRow.querySelector('.score') : null;\n  const points = scoreEl ? scoreEl.textContent.trim() : 'No points';\n  \n  return { title, points };\n})()\"\"\")\nprint(result)"
+          },
+          "result": "\"{\\\"success\\\": true, \\\"exit_code\\\": 0, \\\"output\\\": \\\"{'title': 'AlphaProof Code', 'points': '130 points'}\\\\n\\\", \\\"workspace\\\": \\\"[local]/workspace\\\"}\""
+        }
+      ],
+      "evidence": {
+        "uploaded": false,
+        "upload_observation": {
+          "uploaded": false
+        },
+        "files": [],
+        "browser_downloads": [],
+        "saved_file": false,
+        "native_completed": true,
+        "native_clock": {
+          "source": "native-assistant-event",
+          "started_at": 1794317477039.0579,
+          "ended_at": 1794317496733.13
+        },
+        "native_model_calls": [
+          {
+            "kind": "primary",
+            "call_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:1",
+            "retry": 0,
+            "started": {
+              "kind": "pre_api_request",
+              "observed_at": 1794317478.848205,
+              "api_request_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:1",
+              "retry_count": 0,
+              "api_call_count": 1,
+              "model": "qwen3.7-plus",
+              "provider": "custom",
+              "api_mode": "chat_completions",
+              "started_at": 1794317478.8453429,
+              "tool_count": 15,
+              "message_count": 2,
+              "request_char_count": 14252
+            },
+            "terminal": {
+              "kind": "post_api_request",
+              "observed_at": 1794317485.318721,
+              "api_request_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:1",
+              "api_call_count": 1,
+              "model": "qwen3.7-plus",
+              "provider": "custom",
+              "api_mode": "chat_completions",
+              "started_at": 1794317478.8453429,
+              "ended_at": 1794317485.297156,
+              "api_duration": 6.451813220977783,
+              "first_chunk_at": 1794317484.0494561,
+              "finish_reason": "tool_calls",
+              "usage": {
+                "input_tokens": 10372,
+                "output_tokens": 69,
+                "cache_read_tokens": 0,
+                "cache_write_tokens": 0,
+                "reasoning_tokens": 0,
+                "request_count": 1,
+                "prompt_tokens": 10372,
+                "total_tokens": 10441
+              },
+              "context_length": 1000000,
+              "message_count": 2,
+              "assistant_content_chars": 33,
+              "assistant_tool_call_count": 1
+            }
+          },
+          {
+            "kind": "primary",
+            "call_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:2",
+            "retry": 0,
+            "started": {
+              "kind": "pre_api_request",
+              "observed_at": 1794317488.727925,
+              "api_request_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:2",
+              "retry_count": 0,
+              "api_call_count": 2,
+              "model": "qwen3.7-plus",
+              "provider": "custom",
+              "api_mode": "chat_completions",
+              "started_at": 1794317488.725284,
+              "tool_count": 15,
+              "message_count": 4,
+              "request_char_count": 15460
+            },
+            "terminal": {
+              "kind": "post_api_request",
+              "observed_at": 1794317493.66469,
+              "api_request_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:2",
+              "api_call_count": 2,
+              "model": "qwen3.7-plus",
+              "provider": "custom",
+              "api_mode": "chat_completions",
+              "started_at": 1794317488.725284,
+              "ended_at": 1794317493.6606479,
+              "api_duration": 4.93536376953125,
+              "first_chunk_at": 1794317490.65423,
+              "finish_reason": "tool_calls",
+              "usage": {
+                "input_tokens": 10645,
+                "output_tokens": 181,
+                "cache_read_tokens": 0,
+                "cache_write_tokens": 0,
+                "reasoning_tokens": 0,
+                "request_count": 1,
+                "prompt_tokens": 10645,
+                "total_tokens": 10826
+              },
+              "context_length": 1000000,
+              "message_count": 4,
+              "assistant_content_chars": 0,
+              "assistant_tool_call_count": 1
+            }
+          },
+          {
+            "kind": "primary",
+            "call_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:3",
+            "retry": 0,
+            "started": {
+              "kind": "pre_api_request",
+              "observed_at": 1794317493.771426,
+              "api_request_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:3",
+              "retry_count": 0,
+              "api_call_count": 3,
+              "model": "qwen3.7-plus",
+              "provider": "custom",
+              "api_mode": "chat_completions",
+              "started_at": 1794317493.769928,
+              "tool_count": 15,
+              "message_count": 6,
+              "request_char_count": 17056
+            },
+            "terminal": {
+              "kind": "post_api_request",
+              "observed_at": 1794317496.738039,
+              "api_request_id": "63fd29bb-00a8-48cc-a154-dea26a861d38:63fd29bb-00a8-48cc-a154-dea26a861d38:a2987a13:api:3",
+              "api_call_count": 3,
+              "model": "qwen3.7-plus",
+              "provider": "custom",
+              "api_mode": "chat_completions",
+              "started_at": 1794317493.769928,
+              "ended_at": 1794317496.734567,
+              "api_duration": 2.9646389484405518,
+              "first_chunk_at": 1794317496.498241,
+              "finish_reason": "stop",
+              "usage": {
+                "input_tokens": 10468,
+                "output_tokens": 19,
+                "cache_read_tokens": 512,
+                "cache_write_tokens": 0,
+                "reasoning_tokens": 0,
+                "request_count": 1,
+                "prompt_tokens": 10980,
+                "total_tokens": 10999
+              },
+              "context_length": 1000000,
+              "message_count": 6,
+              "assistant_content_chars": 74,
+              "assistant_tool_call_count": 0
+            }
+          }
+        ],
+        "native_accounting_complete": true,
+        "native_summary": {
+          "counters": {
+            "session_prompt_tokens": 31997,
+            "session_completion_tokens": 269,
+            "session_api_calls": 3,
+            "session_input_tokens": 31485,
+            "session_output_tokens": 269,
+            "session_cache_read_tokens": 512
+          },
+          "completed": true,
+          "aborted": false,
+          "api_calls": 3,
+          "cache_availability": "native canonical usage does not distinguish missing cache detail from zero"
+        },
+        "native_tools": [
+          "browser_exec",
+          "clarify",
+          "execute_code",
+          "manage_connections",
+          "patch",
+          "read_file",
+          "search_files",
+          "skill_manage",
+          "skill_view",
+          "skills_list",
+          "terminal",
+          "write_file",
+          "tool_search",
+          "tool_describe",
+          "tool_call"
+        ],
+        "browser_profile": "fresh Hermes local Chromium through default browser_exec and browser-harness",
+        "model_context_window": 1000000
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-10T13:31:19.198Z",
+          "seconds": 6.097,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 69,
+            "completion_tokens_details": {
+              "text_tokens": 69
+            },
+            "prompt_tokens": 10372,
+            "prompt_tokens_details": {
+              "text_tokens": 10372
+            },
+            "total_tokens": 10441
+          },
+          "tools": [
+            "browser_exec",
+            "clarify",
+            "execute_code",
+            "manage_connections",
+            "patch",
+            "read_file",
+            "search_files",
+            "skill_manage",
+            "skill_view",
+            "skills_list",
+            "terminal",
+            "write_file",
+            "tool_search",
+            "tool_describe",
+            "tool_call"
+          ],
+          "tool_calls": [
+            "browser_exec"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-10T13:31:28.731Z",
+          "seconds": 4.928,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 181,
+            "completion_tokens_details": {
+              "text_tokens": 181
+            },
+            "prompt_tokens": 10645,
+            "prompt_tokens_details": {
+              "text_tokens": 10645
+            },
+            "total_tokens": 10826
+          },
+          "tools": [
+            "browser_exec",
+            "clarify",
+            "execute_code",
+            "manage_connections",
+            "patch",
+            "read_file",
+            "search_files",
+            "skill_manage",
+            "skill_view",
+            "skills_list",
+            "terminal",
+            "write_file",
+            "tool_search",
+            "tool_describe",
+            "tool_call"
+          ],
+          "tool_calls": [
+            "browser_exec"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-10T13:31:33.773Z",
+          "seconds": 2.958,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 19,
+            "prompt_tokens": 10980,
+            "prompt_tokens_details": {
+              "cached_tokens": 512,
+              "text_tokens": 10980
+            },
+            "total_tokens": 10999
+          },
+          "tools": [
+            "browser_exec",
+            "clarify",
+            "execute_code",
+            "manage_connections",
+            "patch",
+            "read_file",
+            "search_files",
+            "skill_manage",
+            "skill_view",
+            "skills_list",
+            "terminal",
+            "write_file",
+            "tool_search",
+            "tool_describe",
+            "tool_call"
+          ],
+          "tool_calls": [],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "wall_seconds": 24.745,
+      "reasoning": {
+        "checked": 0,
+        "calls": 3,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported",
+        "counter_verified": false,
+        "accepted": true,
+        "acceptance_basis": "requested-off-and-no-reasoning-content"
+      },
+      "qualified": true,
+      "right": true,
+      "missing": [],
+      "oracle": {
+        "title": "AlphaProof Code",
+        "points": 130
+      },
+      "live_events": [],
+      "outcome": {
+        "status": "right",
+        "kind": null,
+        "retryable": false,
+        "reason": ""
+      }
+    }
+  ]
+}

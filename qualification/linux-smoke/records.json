@@ -1,0 +1,1233 @@
+{
+  "schema": 1,
+  "date": "2026-11-09",
+  "model": "qwen3.7-plus",
+  "settings": {
+    "model": "qwen3.7-plus",
+    "baseUrlEnvironment": "BENCH_BASE_URL",
+    "apiKeyEnvironment": "BENCH_API_KEY",
+    "thinking": "off",
+    "temperature": 0.2,
+    "maxOutputTokens": 4000,
+    "recuedCatalogMode": "full",
+    "arms": [
+      "recued-bridge",
+      "recued-playwright",
+      "browser-use",
+      "stagehand"
+    ],
+    "tasks": [
+      "B"
+    ],
+    "runs": 1,
+    "maxSeconds": 180,
+    "maxSteps": 30,
+    "minFreeMemoryMiB": 1800,
+    "memoryWaitSeconds": 180
+  },
+  "versions": {
+    "recued": "26.11.9",
+    "bridge": "0.0.8",
+    "browserUse": "0.13.14",
+    "playwrightMcp": "0.0.85",
+    "stagehand": "3.7.3",
+    "playwright": "1.61.1",
+    "triple": "linux-arm64",
+    "node": "v24.19.0",
+    "platform": "linux-arm64",
+    "benchmark_commit": null,
+    "benchmark_source_dirty": null
+  },
+  "records": [
+    {
+      "task": "In my browser, what is the top story on Hacker News (https://news.ycombinator.com/) right now, and how many points does it have?",
+      "arm": "recued-bridge",
+      "run": 1,
+      "task_id": "B",
+      "started_at": "2026-11-09T21:15:39.007Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "The top story on Hacker News is \"USPS now offers official ZIP Code boundary polygons\" with 148 points.",
+      "seconds": 16.99,
+      "timed_out": false,
+      "stored_seconds": 17.019,
+      "answer_streamed": true,
+      "error": null,
+      "rounds": 1,
+      "tokens": {
+        "input": 28875,
+        "cached": 0,
+        "output": 557
+      },
+      "chat_tokens": {
+        "input": 28875,
+        "cached": 0,
+        "output": 557
+      },
+      "recipe_tokens": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "calls": 0
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "recued-core/inspect-web-page",
+          "status": "ok"
+        }
+      ],
+      "evidence": {
+        "browser_toolkit": {
+          "version": 4,
+          "catalog_tag": "catalog/26.11.9.1",
+          "manifest_sha256": "d1ccfdea8ebfe4d9131c1681fbd36a6b64cdc7ac74e44c49c71645c7e0251885",
+          "recipes_verified": 15,
+          "recipes": [
+            {
+              "slug": "list-browser-tabs",
+              "version": 2,
+              "installed_sha256": "d18b4d184060f94ae288be3897851c7f771c28ec9fe688bfe89ac1b8dbe7b80b",
+              "lowered": true
+            },
+            {
+              "slug": "open-web-page",
+              "version": 3,
+              "installed_sha256": "8107a5d9272b85719594047da4ca6760dd5e5dab868489d5efcd4423a7960fe9",
+              "lowered": true
+            },
+            {
+              "slug": "inspect-web-page",
+              "version": 4,
+              "installed_sha256": "d5c006ac3adce7d96d7f970d62860c43b50498994c3f4e2857e8ae3b1bc5ff57",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-text",
+              "version": 1,
+              "installed_sha256": "61b5a0a72f53aa943aebb3ff47fa4cec91efcfe72f6c5561f71d28492ec3de14",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-element",
+              "version": 4,
+              "installed_sha256": "637af8ed08eebc24d06fcdef4568d96613ea4dc57117c0c93ce8be60e1fc2306",
+              "lowered": true
+            },
+            {
+              "slug": "wait-for-web-element",
+              "version": 3,
+              "installed_sha256": "160c1be18892f4bc4238a9907cdd8bdf28dbf12c478fa1757dae67cb6284a6aa",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-table",
+              "version": 3,
+              "installed_sha256": "919abf6792804d0559979cffccc9e13eaff368909bd252d6bec87dfeea22d6f5",
+              "lowered": true
+            },
+            {
+              "slug": "save-web-file",
+              "version": 1,
+              "installed_sha256": "f995e8261f3208be1ed95fcd9d91a4007e5d59a965a2d2a83bccad06736a5ca6",
+              "lowered": true
+            },
+            {
+              "slug": "screenshot-web-page",
+              "version": 3,
+              "installed_sha256": "0fa034bceb1cea8c1506b5bddb1018b3963851d709fdfbdce34dfa1fbcaefbf6",
+              "lowered": true
+            },
+            {
+              "slug": "ask-web-page",
+              "version": 1,
+              "installed_sha256": "03f3320be5c96a58abd7a6d6725292322b5970090ed7846fc947098ed658b9e9",
+              "lowered": true
+            },
+            {
+              "slug": "scroll-web-page",
+              "version": 1,
+              "installed_sha256": "eb0a938adb0598c42fa09dd14428292e5a65f865c90aa91dc9805e4f8d50e4ce",
+              "lowered": true
+            },
+            {
+              "slug": "type-into-web-page",
+              "version": 3,
+              "installed_sha256": "00c3be3333031c6de644620d93c7c5156f3129a207a1bd33f5c6a1dd5fe09445",
+              "lowered": true
+            },
+            {
+              "slug": "click-web-element",
+              "version": 3,
+              "installed_sha256": "539bd39a80adb24ae3c22aa7cacddd641b52f4f1025269aac646bba5d29a4eec",
+              "lowered": true
+            },
+            {
+              "slug": "press-on-web-page",
+              "version": 1,
+              "installed_sha256": "317822f9496f50070b3f28ba6c65ee6cf5d465a7e7e2a47e78bba0785772e9e9",
+              "lowered": true
+            },
+            {
+              "slug": "act-on-web-page",
+              "version": 2,
+              "installed_sha256": "f30e2145c5161f0e1342ab4c3f59cbfb2ee34c4080ffe1c07ea6f861d53bfce0",
+              "lowered": true
+            }
+          ]
+        },
+        "uploaded": false,
+        "saved_file": false,
+        "model_call_failures": [],
+        "turn_statuses": [
+          "completed"
+        ],
+        "pending_asks": [],
+        "tool_errors": [
+          "recued-core/inspect-web-page: {\"ok\":true,\"result\":{\"ran_without_asking\":\"What this did in the browser ran without asking the user, since “Don’t ask about browser actions” is on in this chat.\",\"recipe_id\":\"inspect-web-page\",\"recipe_hash\":\"c2432b3a\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"page\":\"1127366810:D958D8207920BD1E812D34C334777269\",\"url\":\"https://news.ycombinator.com/\",\"title\":\"Hacker News\",\"outline\":\"| [link](e1) | [Hacker News](e2) [new](e3) | [past](e4) | [comments](e5) | [ask](e6) | [show](e7) | [jobs](e8) | [submit](e9) | [login](e10)\\n| 1. | [upvote](e11) | [USPS now offers official ZIP Code boundary polygons](e12) ([usps.com](e13))\\n| | 148 points by [munro](e14) [1 hour ago](e15) | [hide](e16) | [56 comments](e17)\\n| 2. | [upvote](e18) | [Payments Canada announces launch of Canada's R…Rail (RTR) payment system](e19) ([payments.ca](e20))…(b1)\\n| | 396 points by [ocd](e21) [5 hours ago](e22) | [hide](e23) | [215 comments](e24)\\n| 3. |"
+        ]
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T21:16:21.198Z",
+          "seconds": 14.577,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 557,
+            "prompt_tokens": 28875,
+            "prompt_tokens_details": {
+              "text_tokens": 28875,
+              "cached_tokens": 0
+            },
+            "total_tokens": 29432
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 1,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {
+        "title": "USPS now offers official ZIP Code boundary polygons",
+        "points": 148
+      },
+      "live_events": []
+    },
+    {
+      "task": "In my browser, what is the top story on Hacker News (https://news.ycombinator.com/) right now, and how many points does it have?",
+      "arm": "recued-playwright",
+      "run": 1,
+      "task_id": "B",
+      "started_at": "2026-11-09T21:16:41.744Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "The top story on Hacker News is \"USPS now offers official ZIP Code boundary polygons\", and it has 148 points.",
+      "seconds": 24.232,
+      "timed_out": false,
+      "stored_seconds": 24.258,
+      "answer_streamed": true,
+      "error": null,
+      "rounds": 3,
+      "tokens": {
+        "input": 87823,
+        "cached": 23552,
+        "output": 557
+      },
+      "chat_tokens": {
+        "input": 87823,
+        "cached": 23552,
+        "output": 557
+      },
+      "recipe_tokens": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "calls": 0
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+          "status": "ok"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+          "status": "ok"
+        }
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "model_call_failures": [],
+        "turn_statuses": [
+          "completed"
+        ],
+        "pending_asks": [],
+        "tool_errors": [],
+        "mcp_tools": [
+          "browser_click",
+          "browser_close",
+          "browser_console_messages",
+          "browser_drag",
+          "browser_drop",
+          "browser_emulate_media",
+          "browser_evaluate",
+          "browser_file_upload",
+          "browser_fill_form",
+          "browser_find",
+          "browser_handle_dialog",
+          "browser_hover",
+          "browser_navigate",
+          "browser_navigate_back",
+          "browser_network_request",
+          "browser_network_requests",
+          "browser_press_key",
+          "browser_resize",
+          "browser_run_code_unsafe",
+          "browser_select_option",
+          "browser_snapshot",
+          "browser_tabs",
+          "browser_take_screenshot",
+          "browser_type",
+          "browser_wait_for"
+        ],
+        "mcp_pack": "mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff"
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T21:16:45.054Z",
+          "seconds": 8.988,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 229,
+            "prompt_tokens": 23983,
+            "prompt_tokens_details": {
+              "text_tokens": 23983,
+              "cached_tokens": 0
+            },
+            "total_tokens": 24212
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:16:57.517Z",
+          "seconds": 5.944,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 196,
+            "prompt_tokens": 24203,
+            "prompt_tokens_details": {
+              "text_tokens": 24203,
+              "cached_tokens": 23552
+            },
+            "total_tokens": 24399
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:17:04.029Z",
+          "seconds": 5.168,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 132,
+            "prompt_tokens": 39637,
+            "prompt_tokens_details": {
+              "text_tokens": 39637,
+              "cached_tokens": 0
+            },
+            "total_tokens": 39769
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 3,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {
+        "title": "USPS now offers official ZIP Code boundary polygons",
+        "points": 148
+      },
+      "live_events": []
+    },
+    {
+      "task": "In my browser, what is the top story on Hacker News (https://news.ycombinator.com/) right now, and how many points does it have?",
+      "arm": "browser-use",
+      "run": 1,
+      "task_id": "B",
+      "started_at": "2026-11-09T21:17:15.204Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "The top story on Hacker News right now is:\n\nTitle: USPS now offers official ZIP Code boundary polygons\nPoints: 148 points",
+      "timed_out": false,
+      "error": null,
+      "seconds": 25.76371717453003,
+      "launch_seconds": 0.21358895301818848,
+      "steps": 3,
+      "rounds": 2,
+      "tokens": {
+        "input": 31600,
+        "cached": 5120,
+        "output": 718
+      },
+      "approvals": 0,
+      "actions": [
+        "navigate",
+        "extract",
+        "done"
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "files": [],
+        "agent_errors": []
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T21:17:20.255Z",
+          "seconds": 11.47,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 356,
+            "prompt_tokens": 14692,
+            "prompt_tokens_details": {
+              "text_tokens": 14692,
+              "cached_tokens": 0
+            },
+            "total_tokens": 15048
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:17:31.794Z",
+          "seconds": 2.236,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 24,
+            "prompt_tokens": 2079,
+            "prompt_tokens_details": {
+              "text_tokens": 2079,
+              "cached_tokens": 0
+            },
+            "total_tokens": 2103
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:17:34.145Z",
+          "seconds": 7.613,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 338,
+            "prompt_tokens": 14829,
+            "prompt_tokens_details": {
+              "text_tokens": 14829,
+              "cached_tokens": 5120
+            },
+            "total_tokens": 15167
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 3,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {
+        "title": "USPS now offers official ZIP Code boundary polygons",
+        "points": 148
+      },
+      "live_events": []
+    },
+    {
+      "task": "In my browser, what is the top story on Hacker News (https://news.ycombinator.com/) right now, and how many points does it have?",
+      "arm": "stagehand",
+      "run": 1,
+      "task_id": "B",
+      "started_at": "2026-11-09T21:17:45.619Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "Successfully navigated to Hacker News (https://news.ycombinator.com/) and identified the top story. The top story is \"USPS now offers official ZIP Code boundary polygons\" with 148 points. This was confirmed using both ariaTree analysis and the extract tool.",
+      "seconds": 31.948,
+      "rounds": 7,
+      "timed_out": false,
+      "error": null,
+      "tokens": {
+        "input": 58416,
+        "cached": 19456,
+        "output": 426
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "type": "goto"
+        },
+        {
+          "type": "ariaTree"
+        },
+        {
+          "type": "extract",
+          "instruction": "Extract the title and points of the top story (story #1) on Hacker News"
+        },
+        {
+          "type": "done"
+        }
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "files": [],
+        "native_agent_steps": [
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "goto"
+            ],
+            "usage": {
+              "inputTokens": 3106,
+              "outputTokens": 60,
+              "totalTokens": 3166,
+              "cachedInputTokens": 0
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "ariaTree"
+            ],
+            "usage": {
+              "inputTokens": 3201,
+              "outputTokens": 33,
+              "totalTokens": 3234,
+              "cachedInputTokens": 2816
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "extract"
+            ],
+            "usage": {
+              "inputTokens": 14312,
+              "outputTokens": 157,
+              "totalTokens": 14469,
+              "cachedInputTokens": 2816
+            }
+          },
+          {
+            "finish_reason": "stop",
+            "tools": [],
+            "usage": {
+              "inputTokens": 14512,
+              "outputTokens": 48,
+              "totalTokens": 14560,
+              "cachedInputTokens": 13824
+            }
+          }
+        ],
+        "native_model_calls": [
+          {
+            "usage": {
+              "inputTokens": 3106,
+              "outputTokens": 60,
+              "totalTokens": 3166,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 3201,
+              "outputTokens": 33,
+              "totalTokens": 3234,
+              "cachedInputTokens": 2816
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 14312,
+              "outputTokens": 157,
+              "totalTokens": 14469,
+              "cachedInputTokens": 2816
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 11133,
+              "outputTokens": 22,
+              "totalTokens": 11155,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 192,
+              "outputTokens": 17,
+              "totalTokens": 209,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 14512,
+              "outputTokens": 48,
+              "totalTokens": 14560,
+              "cachedInputTokens": 13824
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 11960,
+              "outputTokens": 89,
+              "totalTokens": 12049,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          }
+        ],
+        "native_metrics": {
+          "actPromptTokens": 0,
+          "actCompletionTokens": 0,
+          "actReasoningTokens": 0,
+          "actCachedInputTokens": 0,
+          "actInferenceTimeMs": 0,
+          "extractPromptTokens": 11325,
+          "extractCompletionTokens": 39,
+          "extractReasoningTokens": 0,
+          "extractCachedInputTokens": 0,
+          "extractInferenceTimeMs": 6584,
+          "observePromptTokens": 0,
+          "observeCompletionTokens": 0,
+          "observeReasoningTokens": 0,
+          "observeCachedInputTokens": 0,
+          "observeInferenceTimeMs": 0,
+          "agentPromptTokens": 35131,
+          "agentCompletionTokens": 298,
+          "agentReasoningTokens": 0,
+          "agentCachedInputTokens": 19456,
+          "agentInferenceTimeMs": 31947,
+          "totalPromptTokens": 46456,
+          "totalCompletionTokens": 337,
+          "totalReasoningTokens": 0,
+          "totalCachedInputTokens": 19456,
+          "totalInferenceTimeMs": 38531
+        },
+        "native_agent_usage": {
+          "input_tokens": 35131,
+          "output_tokens": 298,
+          "reasoning_tokens": 0,
+          "cached_input_tokens": 19456,
+          "inference_time_ms": 31947
+        },
+        "native_completed": true,
+        "native_success": true
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T21:17:46.147Z",
+          "seconds": 6.199,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 60,
+            "prompt_tokens": 3106,
+            "prompt_tokens_details": {
+              "text_tokens": 3106,
+              "cached_tokens": 0
+            },
+            "total_tokens": 3166
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "goto"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:17:55.393Z",
+          "seconds": 2.749,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 33,
+            "prompt_tokens": 3201,
+            "prompt_tokens_details": {
+              "text_tokens": 3201,
+              "cached_tokens": 2816
+            },
+            "total_tokens": 3234
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "ariaTree"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:17:58.216Z",
+          "seconds": 5.31,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 157,
+            "prompt_tokens": 14312,
+            "prompt_tokens_details": {
+              "text_tokens": 14312,
+              "cached_tokens": 2816
+            },
+            "total_tokens": 14469
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "extract"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:18:03.606Z",
+          "seconds": 3.417,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 22,
+            "prompt_tokens": 11133,
+            "prompt_tokens_details": {
+              "text_tokens": 11133,
+              "cached_tokens": 0
+            },
+            "total_tokens": 11155
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:18:07.028Z",
+          "seconds": 3.154,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 17,
+            "prompt_tokens": 192,
+            "prompt_tokens_details": {
+              "text_tokens": 192,
+              "cached_tokens": 0
+            },
+            "total_tokens": 209
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:18:10.187Z",
+          "seconds": 3.375,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 48,
+            "prompt_tokens": 14512,
+            "prompt_tokens_details": {
+              "text_tokens": 14512,
+              "cached_tokens": 13824
+            },
+            "total_tokens": 14560
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T21:18:13.578Z",
+          "seconds": 4.487,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 89,
+            "prompt_tokens": 11960,
+            "prompt_tokens_details": {
+              "text_tokens": 11960,
+              "cached_tokens": 0
+            },
+            "total_tokens": 12049
+          },
+          "tools": [
+            "done"
+          ],
+          "tool_calls": [
+            "done"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 7,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": false,
+      "missing": [
+        "current top story points"
+      ],
+      "oracle": {
+        "title": "USPS now offers official ZIP Code boundary polygons",
+        "points": 152
+      },
+      "live_events": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen3.7-plus",
+  "baseUrlEnvironment": "BENCH_BASE_URL",
+  "apiKeyEnvironment": "BENCH_API_KEY",
+  "thinking": "off",
+  "temperature": 0.2,
+  "maxOutputTokens": 4000,
+  "recuedCatalogMode": "full",
+  "arms": ["recued-bridge", "recued-playwright", "browser-use", "stagehand", "openclaw-browser-use", "openclaw-browser", "hermes"],
+  "tasks": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "X", "Y"],
+  "runs": 2,
+  "maxSeconds": 480,
+  "maxSteps": 30,
+  "minFreeMemoryMiB": 1800,
+  "memoryWaitSeconds": 180
+}

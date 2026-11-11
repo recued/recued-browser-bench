@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "date": "2026-11-09",
+  "measured_source_commit": "e0d69483de4912d20cac3265f396ec52b6100c14",
+  "measured_source_dirty": false,
+  "attempts": 112,
+  "complete_rotating_schedule_verified": true,
+  "shared_settings_verified": true,
+  "reasoning_policy": "requested-off-and-no-reasoning-content-v1",
+  "qualification_metadata_applied_after_measurement": true,
+  "original_records_sha256": "4987fdc47e1df6a85d8a89aebc2def27b15b534cc0c268d508e381c02605ea44",
+  "final_records_sha256": "12d2f07b2944cd1a16cace617cdc761e2e6591531b76f3638c52b9e4ca7a1101",
+  "unchanged_measurements_sha256": "46fc9420754929d5ffdbd8cc49343bd085f596049461e89e7a0de92472670fa5",
+  "legacy_qualified_attempts": 0,
+  "accepted_thinking_evidence_attempts": 108,
+  "explicit_counter_verified_attempts": 0,
+  "right_answers": 80,
+  "model_call_failures": [
+    {
+      "task": "K",
+      "arm": "stagehand",
+      "run": 1
+    },
+    {
+      "task": "X",
+      "arm": "browser-use",
+      "run": 2
+    },
+    {
+      "task": "Y",
+      "arm": "recued-bridge",
+      "run": 2
+    },
+    {
+      "task": "Y",
+      "arm": "recued-playwright",
+      "run": 2
+    }
+  ],
+  "notes": [
+    "All 112 attempts retained; no retries or substitutions.",
+    "Raw omitted reasoning counters remain null. Failed or incomplete provider calls do not qualify under the accepted policy.",
+    "The final two Recued attempts failed before receiving an upstream HTTP response; their null answer clocks and model-round counts are preserved."
+  ],
+  "final_checks": {
+    "node": "v24.19.0",
+    "focused_tests_passed": 15,
+    "privacy_scan": {
+      "public_candidate_files": 80,
+      "environment_values_checked": 77,
+      "leaks": 0
+    },
+    "measurement_fingerprint_verified": true,
+    "report_regeneration_verified": true,
+    "old_benchmark_clean": true,
+    "remote_count": 0,
+    "remaining_run_directories": 0
+  }
+}

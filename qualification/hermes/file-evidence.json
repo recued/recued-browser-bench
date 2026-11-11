@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-10T13:47:03.268Z",
+  "hermes": "0.23.1",
+  "hermes_source_sha256": "52a8eb321f368576034f40595491abf9646b60c3861eee0cf45f610e5faa9bb6",
+  "browser_harness": "0.1.13",
+  "python": "3.14.6",
+  "model_calls": 0,
+  "cases": [
+    {
+      "name": "native browser download and rejection of shell-only file",
+      "pass": true,
+      "observed": {
+        "files": [
+          {
+            "name": "fixture.bin",
+            "size_bytes": 1024
+          },
+          {
+            "name": "shell-written.bin",
+            "size_bytes": 1024
+          }
+        ],
+        "browser_downloads": [
+          {
+            "name": "fixture.bin",
+            "pending": false,
+            "saved": true
+          }
+        ],
+        "saved_file": true
+      }
+    },
+    {
+      "name": "correct attachment and submission",
+      "pass": true,
+      "expected_upload": true,
+      "observed": {
+        "uploaded": true,
+        "selections": [
+          {
+            "name": "qualification-upload.txt",
+            "size_bytes": 29,
+            "matches_attachment": true,
+            "selected_at": 1794318406485
+          }
+        ],
+        "submissions": [
+          {
+            "started_at": 1794318406488,
+            "file_names": [],
+            "filename_compatible": true
+          }
+        ]
+      },
+      "server_posts": [
+        {
+          "expected_name": true,
+          "expected_content": true
+        }
+      ]
+    },
+    {
+      "name": "same filename with incorrect bytes",
+      "pass": true,
+      "expected_upload": false,
+      "observed": {
+        "uploaded": false,
+        "selections": [
+          {
+            "name": "qualification-upload.txt",
+            "size_bytes": 13,
+            "matches_attachment": false,
+            "selected_at": 1794318412777
+          }
+        ],
+        "submissions": [
+          {
+            "started_at": 1794318412781,
+            "file_names": [],
+            "filename_compatible": true
+          }
+        ]
+      },
+      "server_posts": [
+        {
+          "expected_name": true,
+          "expected_content": false
+        }
+      ]
+    },
+    {
+      "name": "correct selection without submission",
+      "pass": true,
+      "expected_upload": false,
+      "observed": {
+        "uploaded": false,
+        "selections": [
+          {
+            "name": "qualification-upload.txt",
+            "size_bytes": 29,
+            "matches_attachment": true,
+            "selected_at": 1794318417125
+          }
+        ],
+        "submissions": []
+      },
+      "server_posts": []
+    },
+    {
+      "name": "observer attaches after native page navigation",
+      "pass": true,
+      "expected_upload": true,
+      "observed": {
+        "uploaded": true,
+        "selections": [
+          {
+            "name": "qualification-upload.txt",
+            "size_bytes": 29,
+            "matches_attachment": true,
+            "selected_at": 1794318421622
+          }
+        ],
+        "submissions": [
+          {
+            "started_at": 1794318421625,
+            "file_names": [],
+            "filename_compatible": true
+          }
+        ]
+      },
+      "server_posts": [
+        {
+          "expected_name": true,
+          "expected_content": true
+        }
+      ]
+    }
+  ]
+}

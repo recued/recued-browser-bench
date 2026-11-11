@@ -1,0 +1,278 @@
+{
+  "set": "dev",
+  "tuned_on": true,
+  "about": "The twelve tasks the Browser Toolkit was developed against (D-335): this is a tuned development set, not evidence of performance on unseen tasks. Task words and addresses are reused verbatim. The shared JavaScript grader applies to every arm; file actions and the requested PDF sentence have stricter checks than the original development harness.",
+  "from": {
+    "repository": "recued-dev",
+    "files": [
+      "scripts/drives/d-335-toolkit-measure.mjs",
+      "scripts/drives/d-335-browser-use-measure.py",
+      "scripts/drives/d-335-unified-tasks.json"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "A",
+      "what": "compare three open tabs",
+      "ask": "Using these three Wikipedia articles about programming languages in my browser: https://en.wikipedia.org/wiki/Python_(programming_language), https://en.wikipedia.org/wiki/Rust_(programming_language) and https://en.wikipedia.org/wiki/Go_(programming_language), tell me for each language the year it first appeared and who designed it, as a short table.",
+      "tabs": [
+        "https://en.wikipedia.org/wiki/Python_(programming_language)",
+        "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+        "https://en.wikipedia.org/wiki/Go_(programming_language)"
+      ],
+      "expect": [
+        {
+          "pattern": "1991",
+          "flags": ""
+        },
+        {
+          "pattern": "Guido",
+          "flags": "i"
+        },
+        {
+          "pattern": "2012",
+          "flags": ""
+        },
+        {
+          "pattern": "Hoare",
+          "flags": "i"
+        },
+        {
+          "pattern": "2009",
+          "flags": ""
+        },
+        {
+          "pattern": "Pike|Griesemer|Thompson",
+          "flags": "i"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "what": "open a site and read its list",
+      "ask": "In my browser, what is the top story on Hacker News (https://news.ycombinator.com/) right now, and how many points does it have?",
+      "tabs": [
+        "https://news.ycombinator.com/"
+      ],
+      "expect": [
+        {
+          "pattern": "points?",
+          "flags": "i"
+        }
+      ],
+      "reads_the_page_after": "top_story"
+    },
+    {
+      "id": "C",
+      "what": "search on a site, then read the result",
+      "ask": "On Wikipedia (https://en.wikipedia.org/wiki/Main_Page) in my browser, search for Ada Lovelace and tell me what the caption under the picture at the top of her article says.",
+      "tabs": [
+        "https://en.wikipedia.org/wiki/Main_Page"
+      ],
+      "expect": [],
+      "reads_the_page_after": "caption"
+    },
+    {
+      "id": "D",
+      "what": "read far down a long page",
+      "ask": "On the Ada Lovelace Wikipedia article (https://en.wikipedia.org/wiki/Ada_Lovelace) in my browser, which article is listed last under \"See also\"? Give its title.",
+      "tabs": [
+        "https://en.wikipedia.org/wiki/Ada_Lovelace"
+      ],
+      "expect": [],
+      "reads_the_page_after": "see_also"
+    },
+    {
+      "id": "E",
+      "what": "read a long section as text",
+      "ask": "On the Ada Lovelace Wikipedia article (https://en.wikipedia.org/wiki/Ada_Lovelace) in my browser, read the section about her work and sum it up in three sentences, from what the page says.",
+      "tabs": [
+        "https://en.wikipedia.org/wiki/Ada_Lovelace"
+      ],
+      "expect": [
+        {
+          "pattern": "Menabrea|Bernoulli|Note G",
+          "flags": "i"
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "what": "fill in and send a form",
+      "ask": "On httpbin's pizza order form (https://httpbin.org/forms/post) in my browser, order a large pizza with bacon and mushroom for Ada Test, telephone 555-0100, email ada@example.com, delivery at 19:30, with the delivery instructions \"Ring twice\". Submit the order, then tell me what the page that comes back lists under \"form\": each field by the name it gives, with its value.",
+      "tabs": [
+        "https://httpbin.org/forms/post"
+      ],
+      "expect": [
+        {
+          "pattern": "custname\\W+Ada Test",
+          "flags": "i"
+        },
+        {
+          "pattern": "custtel\\W+555-0100",
+          "flags": ""
+        },
+        {
+          "pattern": "custemail\\W+ada@example\\.com",
+          "flags": "i"
+        },
+        {
+          "pattern": "size\\W+large",
+          "flags": "i"
+        },
+        {
+          "pattern": "topping\\W+(bacon\\W+mushroom|mushroom\\W+bacon)",
+          "flags": "i"
+        },
+        {
+          "pattern": "delivery\\W+19:30",
+          "flags": ""
+        },
+        {
+          "pattern": "comments\\W+Ring twice",
+          "flags": "i"
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "what": "read a list across pages",
+      "ask": "On Quotes to Scrape (https://quotes.toscrape.com/) in my browser, go through its first three pages of quotes: how many of those quotes are tagged \"love\", and who said each of them?",
+      "tabs": [
+        "https://quotes.toscrape.com/"
+      ],
+      "expect": [
+        {
+          "pattern": "\\b(6|six)\\b",
+          "flags": "i"
+        },
+        {
+          "pattern": "Gide",
+          "flags": "i"
+        },
+        {
+          "pattern": "Monroe",
+          "flags": "i"
+        },
+        {
+          "pattern": "Marley",
+          "flags": "i"
+        },
+        {
+          "pattern": "Wiesel",
+          "flags": "i"
+        },
+        {
+          "pattern": "Nietzsche",
+          "flags": "i"
+        },
+        {
+          "pattern": "Neruda",
+          "flags": "i"
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "what": "wait for what a page shows late",
+      "ask": "On https://quotes.toscrape.com/js-delayed/page/5/ in my browser, the quotes appear some seconds after the page loads. Who said the second quote on that page, and what are its tags?",
+      "tabs": [
+        "https://quotes.toscrape.com/js-delayed/page/5/"
+      ],
+      "expect": [
+        {
+          "pattern": "Lewis",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\bbooks\\b",
+          "flags": "i"
+        },
+        {
+          "pattern": "inspirational",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\breading\\b",
+          "flags": "i"
+        }
+      ]
+    },
+    {
+      "id": "I",
+      "what": "find a category and compare its list",
+      "ask": "On the Books to Scrape shop (https://books.toscrape.com/) in my browser, which book in the Travel category is the cheapest, and what does it cost?",
+      "tabs": [
+        "https://books.toscrape.com/"
+      ],
+      "expect": [
+        {
+          "pattern": "Little Dribbling",
+          "flags": "i"
+        },
+        {
+          "pattern": "23\\.21",
+          "flags": ""
+        }
+      ]
+    },
+    {
+      "id": "J",
+      "what": "upload one of my files",
+      "ask": "Upload the attached file d335-upload-check.txt with the file uploader on Expand Testing's practice site (https://practice.expandtesting.com/upload) in my browser. Once it is uploaded, tell me the heading the page shows and the file name it lists.",
+      "tabs": [
+        "https://practice.expandtesting.com/upload"
+      ],
+      "expect": [
+        {
+          "pattern": "File Uploaded",
+          "flags": "i"
+        },
+        {
+          "pattern": "\\d{10,}_d335-upload-check\\.txt",
+          "flags": "i"
+        }
+      ],
+      "attach": {
+        "filename": "d335-upload-check.txt",
+        "mime_type": "text/plain",
+        "text": "D-335 head to head: a file to upload.\n"
+      }
+    },
+    {
+      "id": "K",
+      "what": "read a PDF a page links to",
+      "ask": "On the W3C page about alternative text in PDFs (https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1) in my browser, find its working example PDF of adding an /Alt entry to an image, and tell me word for word the sentence in that PDF just above its image.",
+      "tabs": [
+        "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF1"
+      ],
+      "expect": [
+        {
+          "pattern": "The\\s+following\\s+image\\s+shows\\s+a\\s+happy\\s+looking\\s+dog\\s+lying\\s+in\\s+some\\s+grass",
+          "flags": "i"
+        }
+      ],
+      "packs": [
+        "pdftotext"
+      ]
+    },
+    {
+      "id": "L",
+      "what": "save a file a page links to",
+      "ask": "On the Python 3.13.0 release page (https://www.python.org/downloads/release/python-3130/) in my browser, save the Windows embeddable package (64-bit) among my files, then tell me the name it was saved under and its exact size in bytes.",
+      "tabs": [
+        "https://www.python.org/downloads/release/python-3130/"
+      ],
+      "expect": [
+        {
+          "pattern": "python-3\\.13\\.0-embed-amd64\\.zip",
+          "flags": "i"
+        },
+        {
+          "pattern": "12[,.\\s\\u00a0\\u202f]?499[,.\\s\\u00a0\\u202f]?601",
+          "flags": ""
+        }
+      ]
+    }
+  ]
+}

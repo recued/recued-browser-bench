@@ -1,0 +1,11 @@
+{
+  "name": "recued-bench-openclaw-runtime",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=24.16.0 <25 || >=26.1.0"
+  },
+  "dependencies": {
+    "openclaw": "2026.11.2"
+  }
+}

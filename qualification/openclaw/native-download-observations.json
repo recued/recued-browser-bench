@@ -1,0 +1,225 @@
+{
+  "date": "2026-11-10T12:33:13.134Z",
+  "scope": "Passive sizes from task-owned directories; these files can be shell fallbacks. Only the browser event plus verified saved native artifact establishes a browser download.",
+  "samples": [
+    {
+      "observed_at": "2026-11-10T11:49:59.818702+00:00",
+      "task": "L",
+      "run": 1,
+      "native_calls_started": 5,
+      "native_calls_completed": 4,
+      "native_calls_failed": 0,
+      "tool_errors": 0,
+      "last_event_age_seconds": 0.3,
+      "download_files": []
+    },
+    {
+      "observed_at": "2026-11-10T11:51:00.599539+00:00",
+      "task": "L",
+      "run": 1,
+      "native_calls_started": 10,
+      "native_calls_completed": 10,
+      "native_calls_failed": 0,
+      "tool_errors": 2,
+      "last_event_age_seconds": 0.7,
+      "download_files": []
+    },
+    {
+      "observed_at": "2026-11-10T11:51:59.912626+00:00",
+      "task": "L",
+      "run": 2,
+      "native_calls_started": 3,
+      "native_calls_completed": 2,
+      "native_calls_failed": 0,
+      "tool_errors": 0,
+      "last_event_age_seconds": 2.8,
+      "download_files": []
+    },
+    {
+      "observed_at": "2026-11-10T11:54:04.397405+00:00",
+      "task": "L",
+      "run": 2,
+      "native_calls_started": 14,
+      "native_calls_completed": 13,
+      "native_calls_failed": 0,
+      "tool_errors": 8,
+      "last_event_age_seconds": 0.3,
+      "download_files": []
+    },
+    {
+      "observed_at": "2026-11-10T11:57:00.750425+00:00",
+      "task": "L",
+      "run": 2,
+      "native_calls_started": 43,
+      "native_calls_completed": 42,
+      "native_calls_failed": 1,
+      "tool_errors": 9,
+      "last_event_age_seconds": 0.5,
+      "download_files": []
+    },
+    {
+      "observed_at": "2026-11-10T11:57:50.424668+00:00",
+      "task": "L",
+      "run": 2,
+      "native_calls_started": 43,
+      "native_calls_completed": 42,
+      "native_calls_failed": 1,
+      "tool_errors": 9,
+      "last_event_age_seconds": 0.1,
+      "download_files": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "bytes": 733184
+        }
+      ]
+    },
+    {
+      "observed_at": "2026-11-10T11:58:50.375081+00:00",
+      "task": "L",
+      "run": 2,
+      "native_calls_started": 43,
+      "native_calls_completed": 42,
+      "native_calls_failed": 1,
+      "tool_errors": 9,
+      "last_event_age_seconds": 1.1,
+      "download_files": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "bytes": 1650688
+        }
+      ]
+    },
+    {
+      "observed_at": "2026-11-10T12:00:02.073480+00:00",
+      "task": "L",
+      "run": 2,
+      "native_calls_started": 43,
+      "native_calls_completed": 42,
+      "native_calls_failed": 1,
+      "tool_errors": 9,
+      "last_event_age_seconds": 0.8,
+      "download_files": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "bytes": 2617344
+        }
+      ]
+    },
+    {
+      "observed_at": "2026-11-10T12:18:30.653466+00:00",
+      "task": "L",
+      "run": 2,
+      "attempt": 2,
+      "native_calls_started": 3,
+      "native_calls_completed": 2,
+      "native_calls_failed": 0,
+      "tool_errors": 0,
+      "last_event_age_seconds": 0,
+      "download_files": []
+    },
+    {
+      "observed_at": "2026-11-10T12:19:59.551199+00:00",
+      "task": "L",
+      "run": 2,
+      "attempt": 2,
+      "native_calls_started": 14,
+      "native_calls_completed": 14,
+      "native_calls_failed": 0,
+      "tool_errors": 2,
+      "last_event_age_seconds": 9.5,
+      "download_files": []
+    },
+    {
+      "observed_at": "2026-11-10T12:23:11.921311+00:00",
+      "task": "L",
+      "run": 2,
+      "attempt": 2,
+      "native_calls_started": 37,
+      "native_calls_completed": 35,
+      "native_calls_failed": 1,
+      "tool_errors": 6,
+      "last_event_age_seconds": 2.2,
+      "download_files": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "bytes": 11321344
+        }
+      ]
+    }
+  ],
+  "final_attempt_files": [
+    {
+      "run": 1,
+      "attempt": 1,
+      "files": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "size_bytes": 12499601,
+          "sha256": "01c32d0737432240adcf0bbc1d32327f0976d3a1e1427774bc8febc8f1c03111",
+          "source": "native-browser-tool"
+        }
+      ],
+      "browser_downloads": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "pending": false,
+          "saved": false,
+          "native_saved": true
+        }
+      ],
+      "saved_file": true,
+      "outcome": {
+        "status": "right",
+        "kind": null,
+        "retryable": false,
+        "reason": ""
+      }
+    },
+    {
+      "run": 2,
+      "attempt": 1,
+      "files": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "size_bytes": 2617344
+        }
+      ],
+      "browser_downloads": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "pending": true
+        }
+      ],
+      "saved_file": false,
+      "outcome": {
+        "status": "failed",
+        "kind": "technical",
+        "retryable": true,
+        "reason": "Provider network error: UND_ERR_CONNECT_TIMEOUT"
+      }
+    },
+    {
+      "run": 2,
+      "attempt": 2,
+      "files": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "size_bytes": 12499601
+        }
+      ],
+      "browser_downloads": [
+        {
+          "name": "python-3.13.0-embed-amd64.zip",
+          "pending": true
+        }
+      ],
+      "saved_file": false,
+      "outcome": {
+        "status": "wrong",
+        "kind": "wrong-action",
+        "retryable": false,
+        "reason": "Completed the ZIP with a shell client while the required browser download remained incomplete."
+      }
+    }
+  ]
+}

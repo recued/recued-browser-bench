@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-09",
+  "setup_source_commit": "a16a77f964a707b22b43373f9f197538dab5fdc8",
+  "run_source_commit": "a16a77f964a707b22b43373f9f197538dab5fdc8",
+  "method": "Final clean-clone sources mounted read-only in the isolated Debian 13 arm64 container; ./setup rerun, 15 focused tests, then released Recued + Bridge task K.",
+  "tests": {
+    "passed": 15,
+    "failed": 0
+  },
+  "live": {
+    "attempts": 1,
+    "right": true,
+    "answer": "The sentence in the PDF just above its image is:\n\nThe following image shows a happy looking dog lying in some grass:",
+    "rounds": 4,
+    "pdf_toolkit": {
+      "pack_slug": "pdftotext",
+      "version": 5,
+      "catalog_tag": "catalog/26.11.9.1",
+      "manifest_sha256": "f8d76dc2b0eca0017456ce5ceb0d21de49ac4f9482d74311827c14624da8803d",
+      "recipes_verified": 2,
+      "recipes": [
+        {
+          "slug": "extract-pdf-text-pdftotext",
+          "version": 1,
+          "installed_sha256": "5a8f5dd785e623b73309507af37eb1de47b0d3afc928b118b61ac655dfb7c6b8",
+          "lowered": true
+        },
+        {
+          "slug": "summarize-pdf-pdftotext",
+          "version": 2,
+          "installed_sha256": "b48982d43c0103c554150c09a31629aa2514f7018c45e01b199cbdc70e1e8cbb",
+          "lowered": true
+        }
+      ],
+      "catalogs": [
+        "pdftotext"
+      ]
+    }
+  },
+  "host_gateway": {
+    "calls": 5,
+    "all_requested_off": true,
+    "provider_failures": 0
+  },
+  "counter": "Optional provider reasoning counter omitted; raw null retained."
+}

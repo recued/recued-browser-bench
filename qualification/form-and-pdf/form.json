@@ -1,0 +1,3274 @@
+{
+  "schema": 1,
+  "date": "2026-11-09",
+  "model": "qwen3.7-plus",
+  "settings": {
+    "model": "qwen3.7-plus",
+    "baseUrlEnvironment": "BENCH_BASE_URL",
+    "apiKeyEnvironment": "BENCH_API_KEY",
+    "thinking": "off",
+    "temperature": 0.2,
+    "maxOutputTokens": 4000,
+    "recuedCatalogMode": "full",
+    "arms": [
+      "recued-bridge",
+      "recued-playwright",
+      "browser-use",
+      "stagehand"
+    ],
+    "tasks": [
+      "F"
+    ],
+    "runs": 1,
+    "maxSeconds": 180,
+    "maxSteps": 30,
+    "minFreeMemoryMiB": 1800,
+    "memoryWaitSeconds": 180,
+    "debug": true
+  },
+  "versions": {
+    "recued": "26.11.9",
+    "bridge": "0.0.8",
+    "browserUse": "0.13.14",
+    "playwrightMcp": "0.0.85",
+    "stagehand": "3.7.3",
+    "playwright": "1.61.1",
+    "triple": "macos-arm64",
+    "node": "v24.19.0",
+    "platform": "darwin-arm64",
+    "benchmark_commit": "8b07c74de182678095e8a17648c34650a3c0fcf3",
+    "benchmark_source_dirty": false
+  },
+  "records": [
+    {
+      "task": "On httpbin's pizza order form (https://httpbin.org/forms/post) in my browser, order a large pizza with bacon and mushroom for Ada Test, telephone 555-0100, email ada@example.com, delivery at 19:30, with the delivery instructions \"Ring twice\". Submit the order, then tell me what the page that comes back lists under \"form\": each field by the name it gives, with its value.",
+      "arm": "recued-bridge",
+      "run": 1,
+      "task_id": "F",
+      "started_at": "2026-11-09T22:21:14.598Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "The order was submitted. The page lists these fields under \"form\":\n\n- comments: Ring twice\n- custemail: ada@example.com\n- custname: Ada Test\n- custtel: 555-0100\n- delivery: 19:30\n- size: large\n- topping: bacon, mushroom",
+      "seconds": 45.192,
+      "timed_out": false,
+      "stored_seconds": 45.222,
+      "answer_streamed": true,
+      "error": null,
+      "rounds": 3,
+      "tokens": {
+        "input": 80092,
+        "cached": 50048,
+        "output": 1272
+      },
+      "chat_tokens": {
+        "input": 80092,
+        "cached": 50048,
+        "output": 1272
+      },
+      "recipe_tokens": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "calls": 0
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "recued-core/inspect-web-page",
+          "status": "ok",
+          "args": {
+            "page": "https://httpbin.org/forms/post",
+            "find": "",
+            "from": 0,
+            "block": ""
+          }
+        },
+        {
+          "tool": "recued-core/act-on-web-page",
+          "status": "ok",
+          "args": {
+            "page": "1311140170:C52E5A6AA286FD1542AF4270E16F17E6",
+            "steps": [
+              {
+                "do": "type",
+                "ref": "e1",
+                "value": "Ada Test"
+              },
+              {
+                "do": "type",
+                "ref": "e2",
+                "value": "555-0100"
+              },
+              {
+                "do": "type",
+                "ref": "e3",
+                "value": "ada@example.com"
+              },
+              {
+                "do": "click",
+                "ref": "e6"
+              },
+              {
+                "do": "click",
+                "ref": "e7"
+              },
+              {
+                "do": "click",
+                "ref": "e10"
+              },
+              {
+                "do": "type",
+                "ref": "e11",
+                "value": "19:30"
+              },
+              {
+                "do": "type",
+                "ref": "e12",
+                "value": "Ring twice"
+              },
+              {
+                "do": "click",
+                "ref": "e13"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "recued-core/inspect-web-page",
+          "status": "ok",
+          "args": {
+            "page": "1311140170:9002323301A57BB16FACE41FB1D5AE64",
+            "block": "b1",
+            "find": "",
+            "from": 0
+          }
+        }
+      ],
+      "evidence": {
+        "browser_toolkit": {
+          "version": 4,
+          "catalog_tag": "catalog/26.11.9.1",
+          "manifest_sha256": "d1ccfdea8ebfe4d9131c1681fbd36a6b64cdc7ac74e44c49c71645c7e0251885",
+          "recipes_verified": 15,
+          "recipes": [
+            {
+              "slug": "list-browser-tabs",
+              "version": 2,
+              "installed_sha256": "d18b4d184060f94ae288be3897851c7f771c28ec9fe688bfe89ac1b8dbe7b80b",
+              "lowered": true
+            },
+            {
+              "slug": "open-web-page",
+              "version": 3,
+              "installed_sha256": "8107a5d9272b85719594047da4ca6760dd5e5dab868489d5efcd4423a7960fe9",
+              "lowered": true
+            },
+            {
+              "slug": "inspect-web-page",
+              "version": 4,
+              "installed_sha256": "d5c006ac3adce7d96d7f970d62860c43b50498994c3f4e2857e8ae3b1bc5ff57",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-text",
+              "version": 1,
+              "installed_sha256": "61b5a0a72f53aa943aebb3ff47fa4cec91efcfe72f6c5561f71d28492ec3de14",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-element",
+              "version": 4,
+              "installed_sha256": "637af8ed08eebc24d06fcdef4568d96613ea4dc57117c0c93ce8be60e1fc2306",
+              "lowered": true
+            },
+            {
+              "slug": "wait-for-web-element",
+              "version": 3,
+              "installed_sha256": "160c1be18892f4bc4238a9907cdd8bdf28dbf12c478fa1757dae67cb6284a6aa",
+              "lowered": true
+            },
+            {
+              "slug": "read-web-table",
+              "version": 3,
+              "installed_sha256": "919abf6792804d0559979cffccc9e13eaff368909bd252d6bec87dfeea22d6f5",
+              "lowered": true
+            },
+            {
+              "slug": "save-web-file",
+              "version": 1,
+              "installed_sha256": "f995e8261f3208be1ed95fcd9d91a4007e5d59a965a2d2a83bccad06736a5ca6",
+              "lowered": true
+            },
+            {
+              "slug": "screenshot-web-page",
+              "version": 3,
+              "installed_sha256": "0fa034bceb1cea8c1506b5bddb1018b3963851d709fdfbdce34dfa1fbcaefbf6",
+              "lowered": true
+            },
+            {
+              "slug": "ask-web-page",
+              "version": 1,
+              "installed_sha256": "03f3320be5c96a58abd7a6d6725292322b5970090ed7846fc947098ed658b9e9",
+              "lowered": true
+            },
+            {
+              "slug": "scroll-web-page",
+              "version": 1,
+              "installed_sha256": "eb0a938adb0598c42fa09dd14428292e5a65f865c90aa91dc9805e4f8d50e4ce",
+              "lowered": true
+            },
+            {
+              "slug": "type-into-web-page",
+              "version": 3,
+              "installed_sha256": "00c3be3333031c6de644620d93c7c5156f3129a207a1bd33f5c6a1dd5fe09445",
+              "lowered": true
+            },
+            {
+              "slug": "click-web-element",
+              "version": 3,
+              "installed_sha256": "539bd39a80adb24ae3c22aa7cacddd641b52f4f1025269aac646bba5d29a4eec",
+              "lowered": true
+            },
+            {
+              "slug": "press-on-web-page",
+              "version": 1,
+              "installed_sha256": "317822f9496f50070b3f28ba6c65ee6cf5d465a7e7e2a47e78bba0785772e9e9",
+              "lowered": true
+            },
+            {
+              "slug": "act-on-web-page",
+              "version": 2,
+              "installed_sha256": "f30e2145c5161f0e1342ab4c3f59cbfb2ee34c4080ffe1c07ea6f861d53bfce0",
+              "lowered": true
+            }
+          ]
+        },
+        "uploaded": false,
+        "saved_file": false,
+        "model_call_failures": [],
+        "turn_statuses": [
+          "completed"
+        ],
+        "pending_asks": [],
+        "tool_errors": [
+          "recued-core/inspect-web-page: {\"ok\":true,\"result\":{\"ran_without_asking\":\"What this did in the browser ran without asking the user, since “Don’t ask about browser actions” is on in this chat.\",\"recipe_id\":\"inspect-web-page\",\"recipe_hash\":\"c2432b3a\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"page\":\"1311140170:C52E5A6AA286FD1542AF4270E16F17E6\",\"url\":\"https://httpbin.org/forms/post\",\"title\":\"\",\"outline\":\"Customer name: [text field \\\"custname\\\"](e1)\\nTelephone: [phone field \\\"custtel\\\"](e2)\\nE-mail address: [email field \\\"custemail\\\"](e3)\\nPizza Size\\n[radio button \\\"size\\\"](e4) Small\\n[radio button \\\"size\\\"](e5) Medium\\n[radio button \\\"size\\\"](e6) Large\\nPizza Toppings\\n[checkbox \\\"topping\\\"](e7) Bacon\\n[checkbox \\\"topping\\\"](e8) Extra Cheese\\n[checkbox \\\"topping\\\"](e9) Onion\\n[checkbox \\\"topping\\\"](e10) Mushroom\\nPreferred delivery time: [time field \\\"delivery\\\"](e11)\\nDelivery instructions: [text area](e12)\\n[Submit order](e13)\\n(End of the page.)\",\"t",
+          "recued-core/act-on-web-page: {\"ok\":true,\"result\":{\"ran_without_asking\":\"What this did in the browser ran without asking the user, since “Don’t ask about browser actions” is on in this chat.\",\"recipe_id\":\"act-on-web-page\",\"recipe_hash\":\"84ebe8dd\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"done\":9,\"of\":9,\"steps\":[\"typed into e1\",\"typed into e2\",\"typed into e3\",\"clicked e6\",\"clicked e7\",\"clicked e10\",\"typed into e11\",\"typed into e12\",\"clicked e13, which sent its form\"],\"page\":\"1311140170:9002323301A57BB16FACE41FB1D5AE64\",\"url\":\"https://httpbin.org/post\",\"title\":\"\",\"changes\":\"(The page now, as Inspect a web page answers it: lines 1 to 1 of 1.)\\n{ \\\"args\\\": {}, \\\"headers\\\": { \\\"Accept\\\": \\\"text/html,application/…\\\"bacon\\\", \\\"mushroom\\\" ] }, \\\"json\\\": null }…(b1)\\n(End of the page.)\"},\"label\":\"Done\"}],\"sidebar\":[{\"type\":\"json\",\"data\":{\"done\":9,\"of\":9,\"steps\":[\"typed into e1\",\"typed into e2\",\"typed into e3\",\"clicked e6\",\"clicked e7\",\"clicked e10\",\"typed in",
+          "recued-core/inspect-web-page: {\"ok\":true,\"result\":{\"recipe_id\":\"inspect-web-page\",\"recipe_hash\":\"c2432b3a\",\"success\":true,\"audit_exempt\":false,\"output\":{\"render\":[{\"type\":\"json\",\"data\":{\"page\":\"1311140170:9002323301A57BB16FACE41FB1D5AE64\",\"url\":\"https://httpbin.org/post\",\"title\":\"\",\"block\":\"b1\",\"text\":\"{\\n  \\\"args\\\": {},\\n  \\\"headers\\\": {\\n    \\\"Accept\\\": \\\"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\\\",\\n    \\\"Accept-Encoding\\\": \\\"gzip, deflate, br, zstd\\\",\\n    \\\"Accept-Language\\\": \\\"en-US,en;q=0.9\\\",\\n    \\\"Cache-Control\\\": \\\"max-age=0\\\",\\n    \\\"Content-Length\\\": \\\"141\\\",\\n    \\\"Content-Type\\\": \\\"application/x-www-form-urlencoded\\\",\\n    \\\"Host\\\": \\\"httpbin.org\\\",\\n    \\\"Origin\\\": \\\"https://httpbin.org\\\",\\n    \\\"Priority\\\": \\\"u=0, i\\\",\\n    \\\"Referer\\\": \\\"https://httpbin.org/forms/post\\\",\\n    \\\"Sec-Ch-Ua\\\": \\\"\\\\\\\"Chromium\\\\\\\";v=\\\\\\\"149\\\\\\\", \\\\\\\"Not)A;Brand\\\\\\\";v=\\\\\\\"24\\\\\\\"\\\",\\n    \\\"Sec-Ch-Ua"
+        ]
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:21:58.951Z",
+          "seconds": 18.121,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 680,
+            "prompt_tokens": 26061,
+            "prompt_tokens_details": {
+              "text_tokens": 26061,
+              "cached_tokens": 0
+            },
+            "total_tokens": 26741
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [
+            "recued-core/act-on-web-page"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:22:20.393Z",
+          "seconds": 13.603,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 282,
+            "prompt_tokens": 26583,
+            "prompt_tokens_details": {
+              "text_tokens": 26583,
+              "cached_tokens": 24704
+            },
+            "total_tokens": 26865
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [
+            "recued-core/inspect-web-page"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:22:34.035Z",
+          "seconds": 8.005,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 310,
+            "prompt_tokens": 27448,
+            "prompt_tokens_details": {
+              "text_tokens": 27448,
+              "cached_tokens": 25344
+            },
+            "total_tokens": 27758
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/act-on-web-page",
+            "recued-core/ask-web-page",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/click-web-element",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/inspect-web-page",
+            "recued-core/list-browser-tabs",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/open-web-page",
+            "recued-core/press-on-web-page",
+            "recued-core/read-web-element",
+            "recued-core/read-web-table",
+            "recued-core/read-web-text",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/save-web-file",
+            "recued-core/screenshot-web-page",
+            "recued-core/scroll-web-page",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued-core/type-into-web-page",
+            "recued-core/wait-for-web-element"
+          ],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 3,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {},
+      "live_events": []
+    },
+    {
+      "task": "On httpbin's pizza order form (https://httpbin.org/forms/post) in my browser, order a large pizza with bacon and mushroom for Ada Test, telephone 555-0100, email ada@example.com, delivery at 19:30, with the delivery instructions \"Ring twice\". Submit the order, then tell me what the page that comes back lists under \"form\": each field by the name it gives, with its value.",
+      "arm": "recued-playwright",
+      "run": 1,
+      "task_id": "F",
+      "started_at": "2026-11-09T22:22:44.743Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "I will fill out the pizza order form and submit it now.\n\nThe AI used all of this turn's tool budget before finishing an answer. Ask it to continue — or narrow the request if this keeps happening.",
+      "seconds": 165.958,
+      "timed_out": false,
+      "stored_seconds": 165.985,
+      "answer_streamed": true,
+      "error": null,
+      "rounds": 11,
+      "tokens": {
+        "input": 322408,
+        "cached": 246272,
+        "output": 6419
+      },
+      "chat_tokens": {
+        "input": 322408,
+        "cached": 246272,
+        "output": 6419
+      },
+      "recipe_tokens": {
+        "input": 0,
+        "cached": 0,
+        "output": 0,
+        "calls": 0
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+          "status": "ok",
+          "args": {
+            "url": "https://httpbin.org/forms/post",
+            "connection": "playwright"
+          }
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+          "status": "ok",
+          "args": {
+            "connection": "playwright"
+          }
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "fields": [
+              {
+                "ref": "e5",
+                "value": "Ada Test"
+              },
+              {
+                "ref": "e8",
+                "value": "555-0100"
+              },
+              {
+                "ref": "e11",
+                "value": "ada@example.com"
+              },
+              {
+                "ref": "e22",
+                "value": "on"
+              },
+              {
+                "ref": "e27",
+                "value": "on"
+              },
+              {
+                "ref": "e36",
+                "value": "on"
+              },
+              {
+                "ref": "e39",
+                "value": "19:30"
+              },
+              {
+                "ref": "e42",
+                "value": "Ring twice"
+              }
+            ]
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1' on connection 'playwright' invoked tool 'browser_fill_form' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_fill_form\":\n✖ Invalid input: expected string, received undefined\n  → at fields[0].target\n✖ Invalid input: expected string, received undefined\n  → at fields[0].name\n✖ Invalid option: expected one of \"textbox\"|\"checkbox\"|\"radio\"|\"combobox\"|\"slider\"\n  → at fields[0].type\n✖ Invalid input: expected string, received undefined\n  → at fields[1].target\n✖ Invalid input: expected string, received undefined\n  → at fields[1].name\n✖ Invalid option: expected one",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e5",
+            "text": "Ada Test"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_type\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e8",
+            "text": "555-0100"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_type\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e11",
+            "text": "ada@example.com"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_type\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e22"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_click\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e27"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_click\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e36"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_click\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e39",
+            "text": "19:30"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_type\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e42",
+            "text": "Ring twice"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_type\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "ref": "e44"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nInvalid arguments for tool \"browser_click\":\n✖ Invalid input: expected string, received undefined\n  → at target.",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "Customer name:",
+            "text": "Ada Test"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: \"Customer name:\" is not a valid target. Use a ref from the page snapshot (e.g. \"e5\"), a CSS selector, or a locator (e.g. \"getByRole('button', { name: 'Submit' })\")..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "Telephone:",
+            "text": "555-0100"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: \"Telephone:\" is not a valid target. Use a ref from the page snapshot (e.g. \"e5\"), a CSS selector, or a locator (e.g. \"getByRole('button', { name: 'Submit' })\")..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "E-mail address:",
+            "text": "ada@example.com"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: \"E-mail address:\" is not a valid target. Use a ref from the page snapshot (e.g. \"e5\"), a CSS selector, or a locator (e.g. \"getByRole('button', { name: 'Submit' })\")..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "Large"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nError: \"Large\" does not match any elements..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "Bacon"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nError: \"Bacon\" does not match any elements..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "Mushroom"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nError: \"Mushroom\" does not match any elements..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "Preferred delivery time:",
+            "text": "19:30"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: \"Preferred delivery time:\" is not a valid target. Use a ref from the page snapshot (e.g. \"e5\"), a CSS selector, or a locator (e.g. \"getByRole('button', { name: 'Submit' })\")..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "Delivery instructions:",
+            "text": "Ring twice"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: \"Delivery instructions:\" is not a valid target. Use a ref from the page snapshot (e.g. \"e5\"), a CSS selector, or a locator (e.g. \"getByRole('button', { name: 'Submit' })\")..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "Submit order"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nError: \"Submit order\" does not match any elements..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e5",
+            "text": "Ada Test"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: Ref e5 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e8",
+            "text": "555-0100"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: Ref e8 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e11",
+            "text": "ada@example.com"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: Ref e11 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e22"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nError: Ref e22 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e27"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nError: Ref e27 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e36"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nError: Ref e36 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e39",
+            "text": "19:30"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: Ref e39 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e42",
+            "text": "Ring twice"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7' on connection 'playwright' invoked tool 'browser_type' and the server returned an error — ### Error\nError: Ref e42 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+          "status": "error",
+          "args": {
+            "connection": "playwright",
+            "target": "e44"
+          },
+          "detail": "D-165 gateway: mcp operation 'recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e' on connection 'playwright' invoked tool 'browser_click' and the server returned an error — ### Error\nError: Ref e44 not found in the current page snapshot. Try capturing new snapshot..",
+          "reason": "execution_error"
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+          "status": "ok",
+          "args": {
+            "connection": "playwright"
+          }
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+          "status": "ok",
+          "args": {
+            "connection": "playwright"
+          }
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+          "status": "ok",
+          "args": {
+            "connection": "playwright"
+          }
+        },
+        {
+          "tool": "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+          "status": "ok",
+          "args": {
+            "connection": "playwright"
+          }
+        }
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "model_call_failures": [],
+        "turn_statuses": [
+          "completed"
+        ],
+        "pending_asks": [],
+        "tool_errors": [],
+        "mcp_tools": [
+          "browser_click",
+          "browser_close",
+          "browser_console_messages",
+          "browser_drag",
+          "browser_drop",
+          "browser_emulate_media",
+          "browser_evaluate",
+          "browser_file_upload",
+          "browser_fill_form",
+          "browser_find",
+          "browser_handle_dialog",
+          "browser_hover",
+          "browser_navigate",
+          "browser_navigate_back",
+          "browser_network_request",
+          "browser_network_requests",
+          "browser_press_key",
+          "browser_resize",
+          "browser_run_code_unsafe",
+          "browser_select_option",
+          "browser_snapshot",
+          "browser_tabs",
+          "browser_take_screenshot",
+          "browser_type",
+          "browser_wait_for"
+        ],
+        "mcp_pack": "mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff"
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:22:48.650Z",
+          "seconds": 10.832,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 278,
+            "prompt_tokens": 24048,
+            "prompt_tokens_details": {
+              "text_tokens": 24048,
+              "cached_tokens": 0
+            },
+            "total_tokens": 24326
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:23:01.794Z",
+          "seconds": 5.772,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 193,
+            "prompt_tokens": 24261,
+            "prompt_tokens_details": {
+              "text_tokens": 24261,
+              "cached_tokens": 23552
+            },
+            "total_tokens": 24454
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:23:08.157Z",
+          "seconds": 11.008,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 532,
+            "prompt_tokens": 25047,
+            "prompt_tokens_details": {
+              "text_tokens": 25047,
+              "cached_tokens": 23552
+            },
+            "total_tokens": 25579
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:23:19.737Z",
+          "seconds": 23.411,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 1307,
+            "prompt_tokens": 25516,
+            "prompt_tokens_details": {
+              "text_tokens": 25516,
+              "cached_tokens": 23552
+            },
+            "total_tokens": 26823
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:23:48.083Z",
+          "seconds": 26.335,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 1220,
+            "prompt_tokens": 27558,
+            "prompt_tokens_details": {
+              "text_tokens": 27558,
+              "cached_tokens": 23552
+            },
+            "total_tokens": 28778
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:24:19.439Z",
+          "seconds": 25.042,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 1275,
+            "prompt_tokens": 29698,
+            "prompt_tokens_details": {
+              "text_tokens": 29698,
+              "cached_tokens": 27008
+            },
+            "total_tokens": 30973
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:24:49.562Z",
+          "seconds": 11.52,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 308,
+            "prompt_tokens": 31684,
+            "prompt_tokens_details": {
+              "text_tokens": 31684,
+              "cached_tokens": 29312
+            },
+            "total_tokens": 31992
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:25:01.707Z",
+          "seconds": 6.735,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 255,
+            "prompt_tokens": 32470,
+            "prompt_tokens_details": {
+              "text_tokens": 32470,
+              "cached_tokens": 0
+            },
+            "total_tokens": 32725
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:25:09.079Z",
+          "seconds": 6.776,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 281,
+            "prompt_tokens": 33256,
+            "prompt_tokens_details": {
+              "text_tokens": 33256,
+              "cached_tokens": 30464
+            },
+            "total_tokens": 33537
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:25:16.480Z",
+          "seconds": 8.753,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 389,
+            "prompt_tokens": 34042,
+            "prompt_tokens_details": {
+              "text_tokens": 34042,
+              "cached_tokens": 32640
+            },
+            "total_tokens": 34431
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:25:25.847Z",
+          "seconds": 8.671,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 381,
+            "prompt_tokens": 34828,
+            "prompt_tokens_details": {
+              "text_tokens": 34828,
+              "cached_tokens": 32640
+            },
+            "total_tokens": 35209
+          },
+          "tools": [
+            "contact.search",
+            "contact.read",
+            "contact.write",
+            "mail.search",
+            "mail.read",
+            "document.read",
+            "document.search",
+            "calendar.search",
+            "memory.search",
+            "memory.relations",
+            "memory.write",
+            "memory.forget",
+            "deal.search",
+            "account.search",
+            "work.search",
+            "work.read",
+            "situation.query",
+            "work.type",
+            "work.create",
+            "calendar.create",
+            "calendar.update",
+            "work.update",
+            "episode.record",
+            "file.search",
+            "recipe.run",
+            "recipe.stop",
+            "recipe.schedule",
+            "schedule.run_prompt",
+            "schedule.list",
+            "schedule.update",
+            "schedule.pause",
+            "schedule.resume",
+            "schedule.remove",
+            "recall.search",
+            "request.dissection",
+            "recued-core/cancel-reminder",
+            "recued-core/change-reminder",
+            "recued-core/check-camera-home-assistant",
+            "recued-core/check-device-health-home-assistant",
+            "recued-core/check-house-before-leaving-home-assistant",
+            "recued-core/control-device-home-assistant",
+            "recued-core/extract-commitments-from-mail",
+            "recued-core/extract-tasks-from-mail",
+            "recued-core/list-folders",
+            "recued-core/list-reminders",
+            "recued-core/open-commitments",
+            "recued-core/recent-notes-by-topic",
+            "recued-core/remind-me-of",
+            "recued-core/save-file-to-folder",
+            "recued-core/send-composed-mail",
+            "recued-core/stalled-projects",
+            "recued-core/today",
+            "recued-core/triage-inbox",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drag_05dc43ec",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_press_key_09487b46",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_click_0987402e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_handle_dialog_0b4409e5",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_wait_for_117a837e",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_type_156c36e7",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_emulate_media_2d7aac09",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_517fc8c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_fill_form_52f193c1",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_close_64d069c9",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_navigate_back_75a27e05",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_resize_78926ca0",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_take_screenshot_94e9bd7a",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_select_option_a1330dca",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_console_messages_a8c7ee91",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_file_upload_b127a942",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_run_code_unsafe_beac4803",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_find_c1b2a462",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_hover_e0f8dbb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_drop_e3c11eb8",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_request_f296124d",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_evaluate_f2c9fb17",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_tabs_f406fe14",
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_network_requests_f4e383f6"
+          ],
+          "tool_calls": [
+            "recued_op_recued-local.mcp-2200e76f5c1b6d3e6d2d2b7715bc48ff.browser_snapshot_e493518f"
+          ],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 11,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": false,
+      "missing": [
+        "answer: custname\\W+Ada Test",
+        "answer: custtel\\W+555-0100",
+        "answer: custemail\\W+ada@example\\.com",
+        "answer: size\\W+large",
+        "answer: topping\\W+(bacon\\W+mushroom|mushroom\\W+bacon)",
+        "answer: delivery\\W+19:30",
+        "answer: comments\\W+Ring twice"
+      ],
+      "oracle": {},
+      "live_events": []
+    },
+    {
+      "task": "On httpbin's pizza order form (https://httpbin.org/forms/post) in my browser, order a large pizza with bacon and mushroom for Ada Test, telephone 555-0100, email ada@example.com, delivery at 19:30, with the delivery instructions \"Ring twice\". Submit the order, then tell me what the page that comes back lists under \"form\": each field by the name it gives, with its value.",
+      "arm": "browser-use",
+      "run": 1,
+      "task_id": "F",
+      "started_at": "2026-11-09T22:25:37.150Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "The response page lists the following under \"form\":\n\n- custname: Ada Test\n- custtel: 555-0100\n- custemail: ada@example.com\n- size: large\n- topping: [\"bacon\", \"mushroom\"]\n- delivery: 19:30\n- comments: Ring twice",
+      "timed_out": false,
+      "error": null,
+      "seconds": 49.88731813430786,
+      "launch_seconds": 0.4964327812194824,
+      "steps": 4,
+      "rounds": 3,
+      "tokens": {
+        "input": 19657,
+        "cached": 10240,
+        "output": 1725
+      },
+      "approvals": 0,
+      "actions": [
+        "navigate",
+        "input",
+        "input",
+        "input",
+        "click",
+        "click",
+        "click",
+        "input",
+        "input",
+        "click",
+        "done"
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "files": [],
+        "agent_errors": []
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:25:42.666Z",
+          "seconds": 17.419,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 590,
+            "prompt_tokens": 6282,
+            "prompt_tokens_details": {
+              "text_tokens": 6282,
+              "cached_tokens": 0
+            },
+            "total_tokens": 6872
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:02.745Z",
+          "seconds": 11.948,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 556,
+            "prompt_tokens": 6567,
+            "prompt_tokens_details": {
+              "text_tokens": 6567,
+              "cached_tokens": 5120
+            },
+            "total_tokens": 7123
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:16.934Z",
+          "seconds": 11.771,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 579,
+            "prompt_tokens": 6808,
+            "prompt_tokens_details": {
+              "text_tokens": 6808,
+              "cached_tokens": 5120
+            },
+            "total_tokens": 7387
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 3,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {},
+      "live_events": []
+    },
+    {
+      "task": "On httpbin's pizza order form (https://httpbin.org/forms/post) in my browser, order a large pizza with bacon and mushroom for Ada Test, telephone 555-0100, email ada@example.com, delivery at 19:30, with the delivery instructions \"Ring twice\". Submit the order, then tell me what the page that comes back lists under \"form\": each field by the name it gives, with its value.",
+      "arm": "stagehand",
+      "run": 1,
+      "task_id": "F",
+      "started_at": "2026-11-09T22:26:29.160Z",
+      "settings": {
+        "model": "qwen3.7-plus",
+        "thinking": "off",
+        "temperature": 0.2,
+        "frequency_penalty": 0,
+        "max_output_tokens": 4000
+      },
+      "answer": "The page lists the following under \"form\":\n\n- comments: \"Ring twice\"\n- custemail: \"ada@example.com\"\n- custname: \"Ada Test\"\n- custtel: \"555-0100\"\n- delivery: \"19:30\"\n- size: \"large\"\n- topping: [\"bacon\", \"mushroom\"]",
+      "seconds": 79.957,
+      "rounds": 20,
+      "timed_out": false,
+      "error": null,
+      "tokens": {
+        "input": 65863,
+        "cached": 40576,
+        "output": 1846
+      },
+      "approvals": 0,
+      "actions": [
+        {
+          "type": "goto"
+        },
+        {
+          "type": "ariaTree"
+        },
+        {
+          "type": "fillForm"
+        },
+        {
+          "type": "act"
+        },
+        {
+          "type": "act"
+        },
+        {
+          "type": "act"
+        },
+        {
+          "type": "act"
+        },
+        {
+          "type": "act",
+          "action": "click the Large radio button"
+        },
+        {
+          "type": "act",
+          "action": "click the Bacon checkbox"
+        },
+        {
+          "type": "act",
+          "action": "click the Mushroom checkbox"
+        },
+        {
+          "type": "act",
+          "action": "type 19:30 into the Preferred delivery time input"
+        },
+        {
+          "type": "act",
+          "action": "click the Submit order button"
+        },
+        {
+          "type": "ariaTree"
+        },
+        {
+          "type": "extract",
+          "instruction": "Extract all fields from the form object with their names and values"
+        },
+        {
+          "type": "done"
+        }
+      ],
+      "evidence": {
+        "uploaded": false,
+        "saved_file": false,
+        "files": [],
+        "native_agent_steps": [
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "goto"
+            ],
+            "usage": {
+              "inputTokens": 3230,
+              "outputTokens": 46,
+              "totalTokens": 3276,
+              "cachedInputTokens": 0
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "ariaTree"
+            ],
+            "usage": {
+              "inputTokens": 3309,
+              "outputTokens": 29,
+              "totalTokens": 3338,
+              "cachedInputTokens": 2816
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "fillForm"
+            ],
+            "usage": {
+              "inputTokens": 3997,
+              "outputTokens": 205,
+              "totalTokens": 4202,
+              "cachedInputTokens": 2816
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "act"
+            ],
+            "usage": {
+              "inputTokens": 4813,
+              "outputTokens": 96,
+              "totalTokens": 4909,
+              "cachedInputTokens": 3456
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "act"
+            ],
+            "usage": {
+              "inputTokens": 4989,
+              "outputTokens": 37,
+              "totalTokens": 5026,
+              "cachedInputTokens": 4608
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "act"
+            ],
+            "usage": {
+              "inputTokens": 5106,
+              "outputTokens": 37,
+              "totalTokens": 5143,
+              "cachedInputTokens": 4608
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "act"
+            ],
+            "usage": {
+              "inputTokens": 5223,
+              "outputTokens": 153,
+              "totalTokens": 5376,
+              "cachedInputTokens": 4608
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "act"
+            ],
+            "usage": {
+              "inputTokens": 5459,
+              "outputTokens": 49,
+              "totalTokens": 5508,
+              "cachedInputTokens": 4608
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "ariaTree"
+            ],
+            "usage": {
+              "inputTokens": 5582,
+              "outputTokens": 43,
+              "totalTokens": 5625,
+              "cachedInputTokens": 5120
+            }
+          },
+          {
+            "finish_reason": "tool-calls",
+            "tools": [
+              "extract"
+            ],
+            "usage": {
+              "inputTokens": 5679,
+              "outputTokens": 179,
+              "totalTokens": 5858,
+              "cachedInputTokens": 2816
+            }
+          },
+          {
+            "finish_reason": "stop",
+            "tools": [],
+            "usage": {
+              "inputTokens": 5938,
+              "outputTokens": 120,
+              "totalTokens": 6058,
+              "cachedInputTokens": 5120
+            }
+          }
+        ],
+        "native_model_calls": [
+          {
+            "usage": {
+              "inputTokens": 3230,
+              "outputTokens": 46,
+              "totalTokens": 3276,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 3309,
+              "outputTokens": 29,
+              "totalTokens": 3338,
+              "cachedInputTokens": 2816
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 3997,
+              "outputTokens": 205,
+              "totalTokens": 4202,
+              "cachedInputTokens": 2816
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 943,
+              "outputTokens": 208,
+              "totalTokens": 1151,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 4813,
+              "outputTokens": 96,
+              "totalTokens": 4909,
+              "cachedInputTokens": 3456
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 1389,
+              "outputTokens": 59,
+              "totalTokens": 1448,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 4989,
+              "outputTokens": 37,
+              "totalTokens": 5026,
+              "cachedInputTokens": 4608
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 1391,
+              "outputTokens": 57,
+              "totalTokens": 1448,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 5106,
+              "outputTokens": 37,
+              "totalTokens": 5143,
+              "cachedInputTokens": 4608
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 1394,
+              "outputTokens": 57,
+              "totalTokens": 1451,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 5223,
+              "outputTokens": 153,
+              "totalTokens": 5376,
+              "cachedInputTokens": 4608
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 1406,
+              "outputTokens": 72,
+              "totalTokens": 1478,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 5459,
+              "outputTokens": 49,
+              "totalTokens": 5508,
+              "cachedInputTokens": 4608
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 1410,
+              "outputTokens": 57,
+              "totalTokens": 1467,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 5582,
+              "outputTokens": 43,
+              "totalTokens": 5625,
+              "cachedInputTokens": 5120
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 5679,
+              "outputTokens": 179,
+              "totalTokens": 5858,
+              "cachedInputTokens": 2816
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 793,
+              "outputTokens": 101,
+              "totalTokens": 894,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 260,
+              "outputTokens": 19,
+              "totalTokens": 279,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 5938,
+              "outputTokens": 120,
+              "totalTokens": 6058,
+              "cachedInputTokens": 5120
+            },
+            "error": false
+          },
+          {
+            "usage": {
+              "inputTokens": 3552,
+              "outputTokens": 222,
+              "totalTokens": 3774,
+              "cachedInputTokens": 0
+            },
+            "error": false
+          }
+        ],
+        "native_metrics": {
+          "actPromptTokens": 6990,
+          "actCompletionTokens": 302,
+          "actReasoningTokens": 0,
+          "actCachedInputTokens": 0,
+          "actInferenceTimeMs": 16653,
+          "extractPromptTokens": 1053,
+          "extractCompletionTokens": 120,
+          "extractReasoningTokens": 0,
+          "extractCachedInputTokens": 0,
+          "extractInferenceTimeMs": 6543,
+          "observePromptTokens": 943,
+          "observeCompletionTokens": 208,
+          "observeReasoningTokens": 0,
+          "observeCachedInputTokens": 0,
+          "observeInferenceTimeMs": 5587,
+          "agentPromptTokens": 53325,
+          "agentCompletionTokens": 994,
+          "agentReasoningTokens": 0,
+          "agentCachedInputTokens": 40576,
+          "agentInferenceTimeMs": 79955,
+          "totalPromptTokens": 62311,
+          "totalCompletionTokens": 1624,
+          "totalReasoningTokens": 0,
+          "totalCachedInputTokens": 40576,
+          "totalInferenceTimeMs": 108738
+        },
+        "native_agent_usage": {
+          "input_tokens": 53325,
+          "output_tokens": 994,
+          "reasoning_tokens": 0,
+          "cached_input_tokens": 40576,
+          "inference_time_ms": 79955
+        },
+        "native_completion_assessment": "Successfully navigated to httpbin's pizza order form, filled in all required fields (Customer name: Ada Test, Telephone: 555-0100, Email: ada@example.com, Pizza Size: Large, Toppings: Bacon and Mushroom, Delivery time: 19:30, Delivery instructions: Ring twice), submitted the form, and extracted the form data from the response page. The task was completed successfully.",
+        "native_completed": true,
+        "native_success": true
+      },
+      "model_calls": [
+        {
+          "started_at": "2026-11-09T22:26:29.837Z",
+          "seconds": 3.441,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 46,
+            "prompt_tokens": 3230,
+            "prompt_tokens_details": {
+              "text_tokens": 3230,
+              "cached_tokens": 0
+            },
+            "total_tokens": 3276
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "goto"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:35.121Z",
+          "seconds": 2.28,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 29,
+            "prompt_tokens": 3309,
+            "prompt_tokens_details": {
+              "text_tokens": 3309,
+              "cached_tokens": 2816
+            },
+            "total_tokens": 3338
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "ariaTree"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:37.422Z",
+          "seconds": 5.534,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 205,
+            "prompt_tokens": 3997,
+            "prompt_tokens_details": {
+              "text_tokens": 3997,
+              "cached_tokens": 2816
+            },
+            "total_tokens": 4202
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "fillForm"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:42.974Z",
+          "seconds": 5.58,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 208,
+            "prompt_tokens": 943,
+            "prompt_tokens_details": {
+              "text_tokens": 943,
+              "cached_tokens": 0
+            },
+            "total_tokens": 1151
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:48.604Z",
+          "seconds": 3.773,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 96,
+            "prompt_tokens": 4813,
+            "prompt_tokens_details": {
+              "text_tokens": 4813,
+              "cached_tokens": 3456
+            },
+            "total_tokens": 4909
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "act"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:52.899Z",
+          "seconds": 2.997,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 59,
+            "prompt_tokens": 1389,
+            "prompt_tokens_details": {
+              "text_tokens": 1389,
+              "cached_tokens": 0
+            },
+            "total_tokens": 1448
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:55.916Z",
+          "seconds": 2.297,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 37,
+            "prompt_tokens": 4989,
+            "prompt_tokens_details": {
+              "text_tokens": 4989,
+              "cached_tokens": 4608
+            },
+            "total_tokens": 5026
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "act"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:26:58.735Z",
+          "seconds": 3.472,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 57,
+            "prompt_tokens": 1391,
+            "prompt_tokens_details": {
+              "text_tokens": 1391,
+              "cached_tokens": 0
+            },
+            "total_tokens": 1448
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:02.223Z",
+          "seconds": 2.955,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 37,
+            "prompt_tokens": 5106,
+            "prompt_tokens_details": {
+              "text_tokens": 5106,
+              "cached_tokens": 4608
+            },
+            "total_tokens": 5143
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "act"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:05.697Z",
+          "seconds": 3.065,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 57,
+            "prompt_tokens": 1394,
+            "prompt_tokens_details": {
+              "text_tokens": 1394,
+              "cached_tokens": 0
+            },
+            "total_tokens": 1451
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:08.775Z",
+          "seconds": 5.471,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 153,
+            "prompt_tokens": 5223,
+            "prompt_tokens_details": {
+              "text_tokens": 5223,
+              "cached_tokens": 4608
+            },
+            "total_tokens": 5376
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "act"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:14.768Z",
+          "seconds": 3.414,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 72,
+            "prompt_tokens": 1406,
+            "prompt_tokens_details": {
+              "text_tokens": 1406,
+              "cached_tokens": 0
+            },
+            "total_tokens": 1478
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:18.217Z",
+          "seconds": 2.724,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 49,
+            "prompt_tokens": 5459,
+            "prompt_tokens_details": {
+              "text_tokens": 5459,
+              "cached_tokens": 4608
+            },
+            "total_tokens": 5508
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "act"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:21.463Z",
+          "seconds": 3.682,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 57,
+            "prompt_tokens": 1410,
+            "prompt_tokens_details": {
+              "text_tokens": 1410,
+              "cached_tokens": 0
+            },
+            "total_tokens": 1467
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:25.175Z",
+          "seconds": 2.748,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 43,
+            "prompt_tokens": 5582,
+            "prompt_tokens_details": {
+              "text_tokens": 5582,
+              "cached_tokens": 5120
+            },
+            "total_tokens": 5625
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "ariaTree"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:27.935Z",
+          "seconds": 4.994,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 179,
+            "prompt_tokens": 5679,
+            "prompt_tokens_details": {
+              "text_tokens": 5679,
+              "cached_tokens": 2816
+            },
+            "total_tokens": 5858
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [
+            "extract"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:32.942Z",
+          "seconds": 4.135,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 101,
+            "prompt_tokens": 793,
+            "prompt_tokens_details": {
+              "text_tokens": 793,
+              "cached_tokens": 0
+            },
+            "total_tokens": 894
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:37.082Z",
+          "seconds": 2.399,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 19,
+            "prompt_tokens": 260,
+            "prompt_tokens_details": {
+              "text_tokens": 260,
+              "cached_tokens": 0
+            },
+            "total_tokens": 279
+          },
+          "tools": [],
+          "tool_calls": [],
+          "structured_output": true,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:39.485Z",
+          "seconds": 4.298,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 120,
+            "prompt_tokens": 5938,
+            "prompt_tokens_details": {
+              "text_tokens": 5938,
+              "cached_tokens": 5120
+            },
+            "total_tokens": 6058
+          },
+          "tools": [
+            "act",
+            "ariaTree",
+            "extract",
+            "fillForm",
+            "goto",
+            "keys",
+            "navback",
+            "scroll",
+            "think",
+            "wait"
+          ],
+          "tool_calls": [],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        },
+        {
+          "started_at": "2026-11-09T22:27:43.795Z",
+          "seconds": 5.981,
+          "status": 200,
+          "reasoning_tokens": null,
+          "usage": {
+            "completion_tokens": 222,
+            "prompt_tokens": 3552,
+            "prompt_tokens_details": {
+              "text_tokens": 3552,
+              "cached_tokens": 0
+            },
+            "total_tokens": 3774
+          },
+          "tools": [
+            "done"
+          ],
+          "tool_calls": [
+            "done"
+          ],
+          "structured_output": false,
+          "requested_enable_thinking": false,
+          "reasoning_content_present": false
+        }
+      ],
+      "reasoning": {
+        "checked": 0,
+        "calls": 20,
+        "all_zero": null,
+        "requested_switch_verified": true,
+        "reasoning_content_seen": false,
+        "status": "counter-unreported"
+      },
+      "qualified": false,
+      "right": true,
+      "missing": [],
+      "oracle": {},
+      "live_events": []
+    }
+  ]
+}
