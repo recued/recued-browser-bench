@@ -252,7 +252,7 @@ were browser-use **0.13.14**, Playwright MCP **0.0.85**, and Stagehand **4.4.0**
 Stagehand 4 removed the native `agent()` API requested here, so this benchmark
 pins **3.7.3**, the newest supported `v3-latest` native-agent release.
 Their resolved npm/Python dependencies are pinned in the lockfiles. Frameworks are
-installed, not vendored. The harness and fixtures are AGPL-3.0; browser-use,
+installed, not vendored. The harness and fixtures are MIT-licensed; browser-use,
 Stagehand, OpenClaw and Hermes are MIT, and Playwright MCP is Apache-2.0.
 
 OpenClaw 2026.11.2 was checked against npm on 2026-11-10. Its
@@ -468,5 +468,7 @@ and all **27 earlier showcase files** remain byte-identical.
 
 The Recued and browser-use harnesses, tasks A–L and report calculations were adapted
 from the existing browser-agent-bench without changing that repository. X/Y's fixture
-comes from Recued's live-site drive. See [LICENSE](../LICENSE) for AGPL-3.0 and
-[Bridge provenance](../bridge/PROVENANCE.md) for the checked-in extension.
+comes from Recued's live-site drive. The copyright owner has made these benchmark
+adaptations available under [MIT](../LICENSE). This does not change the licenses
+of the upstream projects or bundled extension. See [component notices](../NOTICE.md)
+and [Bridge provenance](../bridge/PROVENANCE.md).

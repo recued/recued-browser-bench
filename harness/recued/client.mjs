@@ -1,5 +1,7 @@
+// SPDX-License-Identifier: MIT
 // Pairing, uploads and RPC framing adapted from browser-agent-bench's Recued
-// harness and Recued v26.11.9's public dev/headless-client.ts (AGPL-3.0).
+// harness and Recued v26.11.9's public dev/headless-client.ts (originally AGPL-3.0).
+// This benchmark adaptation is MIT-licensed by the copyright owner; see NOTICE.md.
 import WebSocket from 'ws';
 import { generateMnemonic } from '@scure/bip39';
 import { wordlist } from '@scure/bip39/wordlists/english';

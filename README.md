@@ -1048,7 +1048,7 @@ Copy `bench.config.example.json` to `bench.config.json` for shared settings;
 `results.json`, including failure reasons and retry eligibility. Only observed
 technical failures are retryable; wrong actions and budget exhaustion stay final.[^retry]
 
-The harness is **AGPL-3.0-only**. Product names identify the compared projects;
+The benchmark harness is **MIT-licensed**. Bundled Bridge and downloaded Recued retain their own licenses; see [component notices](NOTICE.md). Product names identify the compared projects;
 this is Recued’s independent comparison and does not imply their endorsement.[^license]
 
 [^catalog]: browser-use still has its own browser tool schemas and agent instructions.

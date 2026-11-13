@@ -1,4 +1,6 @@
-"""Adapted from browser-agent-bench/harness/browser-use/measure.py (AGPL-3.0).
+# SPDX-License-Identifier: MIT
+"""Adapted from browser-agent-bench/harness/browser-use/measure.py (originally AGPL-3.0).
+This benchmark adaptation is MIT-licensed by the copyright owner; see NOTICE.md.
 
 One process, one task; framework-native usage/history, judge and vision disabled.
 The parent owns grading, timeouts, the fixture event oracle and redaction.
